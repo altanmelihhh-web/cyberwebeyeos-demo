@@ -22,3 +22,7 @@ Arayüz 390 px (telefon) ve 820 px (tablet) genişlikte yatay kaydırma olmadan 
 ## Dış bağımlılık
 Hub'lar, Blacklist, Netwatch, F5 Admin Operations ve blockharbor-demo gibi alt uygulamalar
 iframe ile dış GitHub Pages adreslerinden yüklenir (`apps/` altındaki kopyalar hariç).
+
+## Lisans ve veri
+Lisans: Tüm hakları saklıdır © 2026 Cyberwebeyeos — demo yalnız tanıtım amaçlıdır; kaynak kod özeldir.
+Veri: tamamı sentetik; gerçek cihaz, kişi, adres veya kural içermez.

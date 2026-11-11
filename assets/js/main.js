@@ -4,7 +4,7 @@
 // ============================================================================
 
 
-// 2. Dashboard veri y�kleme fonksiyonlarini debug modunda �alistir
+// 2. Dashboard veri yükleme fonksiyonlarini debug modunda çalistir
 function debugDashboardData() {
   console.log("=== Dashboard Debug Basliyor ===");
   
@@ -64,7 +64,7 @@ function debugDashboardData() {
 
 // 3. Dashboard'daki isler kartinin DOM'da var olup olmadigini kontrol et
 function checkDashboardTasksDOM() {
-  console.log("=== Dashboard DOM Kontrol� ===");
+  console.log("=== Dashboard DOM Kontrolü ===");
   
   const dashboardGrid = document.querySelector('.dashboard-grid');
   console.log("Dashboard grid bulundu mu?", !!dashboardGrid);
@@ -82,14 +82,14 @@ function checkDashboardTasksDOM() {
     console.log("Isler karti bulundu mu?", !!tasksCard);
     
     if (tasksCard) {
-      // Tab i�eriklerini kontrol et
+      // Tab içeriklerini kontrol et
       const periodicContent = tasksCard.querySelector('#periodic-dashboard');
       const cabContent = tasksCard.querySelector('#cab-dashboard');
       const roadmapContent = tasksCard.querySelector('#roadmap-dashboard');
       
-      console.log("Periyodik i�erik var mi?", !!periodicContent);
-      console.log("CAB i�erik var mi?", !!cabContent);
-      console.log("Road Map i�erik var mi?", !!roadmapContent);
+      console.log("Periyodik içerik var mi?", !!periodicContent);
+      console.log("CAB içerik var mi?", !!cabContent);
+      console.log("Road Map içerik var mi?", !!roadmapContent);
       
       // Tablo body'leri kontrol et
       const periodicTbody = document.getElementById('dashboard-periodic-tasks');
@@ -101,25 +101,25 @@ function checkDashboardTasksDOM() {
       console.log("Road Map tbody var mi?", !!roadmapTbody);
       
       if (periodicTbody) {
-        console.log("Periyodik tbody i�erigi:", periodicTbody.innerHTML);
+        console.log("Periyodik tbody içerigi:", periodicTbody.innerHTML);
       }
       if (roadmapTbody) {
-        console.log("Road Map tbody i�erigi:", roadmapTbody.innerHTML);
+        console.log("Road Map tbody içerigi:", roadmapTbody.innerHTML);
       }
     }
   }
   
-  console.log("=== DOM Kontrol� Bitti ===");
+  console.log("=== DOM Kontrolü Bitti ===");
 }
 
-// 4. Manuel olarak dashboard verilerini yeniden y�kle
+// 4. Manuel olarak dashboard verilerini yeniden yükle
 function refreshDashboardTasks() {
   console.log("Dashboard isleri manuel olarak yenileniyor...");
   
-  // �nce DOM'u kontrol et
+  // önce DOM'u kontrol et
   checkDashboardTasksDOM();
   
-  // Sonra verileri y�kle
+  // Sonra verileri yükle
   if (typeof loadDashboardTasks === 'function') {
     loadDashboardTasks();
   } else {
@@ -127,17 +127,17 @@ function refreshDashboardTasks() {
   }
 }
 
-// 5. Sayfa y�klendiginde otomatik kontrol
+// 5. Sayfa yüklendiginde otomatik kontrol
 document.addEventListener('DOMContentLoaded', function() {
-  console.log("Sayfa y�klendi. Dashboard kontrolleri basliyor...");
+  console.log("Sayfa yüklendi. Dashboard kontrolleri basliyor...");
   
-  // Eger dashboard g�r�n�yorsa verileri y�kle
+  // Eger dashboard görünüyorsa verileri yükle
   const dashboardPage = document.getElementById('dashboard-page');
   if (dashboardPage && dashboardPage.style.display !== 'none') {
-    console.log("Dashboard sayfasi g�r�n�r durumda. Veriler y�kleniyor...");
+    console.log("Dashboard sayfasi görünür durumda. Veriler yükleniyor...");
     setTimeout(() => {
       refreshDashboardTasks();
-    }, 1000); // 1 saniye bekle, DOM'un tamamen y�klenmesi i�in
+    }, 1000); // 1 saniye bekle, DOM'un tamamen yüklenmesi için
   }
 });
 
@@ -166,7 +166,7 @@ function loadDocuments(path) {
 }
 
 
-// Ana uygulama kontrolc�s�
+// Ana uygulama kontrolcüsü
 const App = {
     currentPage: 'dashboard',
     
@@ -177,7 +177,7 @@ const App = {
     },
     
     async loadComponents() {
-        // Component'leri y�kle
+        // Component'leri yükle
         await this.loadComponent('sidebar-container', 'components/sidebar.html');
         await this.loadComponent('header-container', 'components/header.html');
         await this.loadComponent('modals-container', 'modals/backup-details-modal.html');
@@ -189,7 +189,7 @@ const App = {
             const html = await response.text();
             document.getElementById(containerId).innerHTML = html;
         } catch (error) {
-            console.error(`Component y�klenemedi: ${componentPath}`, error);
+            console.error(`Component yüklenemedi: ${componentPath}`, error);
         }
     },
     
@@ -202,12 +202,12 @@ const App = {
             const html = await response.text();
             container.innerHTML = html;
             
-            // Sayfa �zel init fonksiyonunu �agir
+            // Sayfa özel init fonksiyonunu çağır
             if (window[`init${this.capitalize(pageName)}Page`]) {
                 window[`init${this.capitalize(pageName)}Page`]();
             }
         } catch (error) {
-            console.error(`Sayfa y�klenemedi: ${pageName}`, error);
+            console.error(`Sayfa yüklenemedi: ${pageName}`, error);
         }
     },
     
@@ -218,7 +218,7 @@ const App = {
     setupEventListeners() {
         // Global event listener'lar
         document.addEventListener('click', (e) => {
-            // Men� tiklamalari
+            // Menü tiklamalari
             if (e.target.matches('[data-page]')) {
                 e.preventDefault();
                 this.showPage(e.target.dataset.page);
@@ -310,7 +310,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function startBackupMonitoring() {
-    // Ilk y�kleme
+    // Ilk yükleme
     refreshBackupStatus();
     
     // Her 5 dakikada bir otomatik yenile
@@ -323,7 +323,7 @@ function stopBackupMonitoring() {
     }
 }
 
-// Multi-endpoint data fetcher - D�ZELTME
+// Multi-endpoint data fetcher - DÜZELTME
 async function fetchMultiEndpointData() {
     console.log('🔄 === FETCHING BACKUP DATA ===');
     const errors = [];
@@ -436,7 +436,7 @@ function reclassifyStaleSummary(source) {
     return source;
 }
 
-// Veri birlestirme fonksiyonu - D�ZELTME
+// Veri birlestirme fonksiyonu - DÜZELTME
 function mergeBackupData(prodData, testData) {
     // Her iki veri de yoksa
     if (!prodData && !testData) {
@@ -451,7 +451,7 @@ function mergeBackupData(prodData, testData) {
         };
     }
     
-    // Sadece bir tanesi varsa, o veriyi direkt d�nd�r
+    // Sadece bir tanesi varsa, o veriyi direkt döndür
     if (!prodData && testData) {
         testData.is_test_only = true;
         return testData;
@@ -525,10 +525,10 @@ function mergeBackupData(prodData, testData) {
 
 async function refreshBackupStatus() {
     try {
-        // Loading overlay g�ster
+        // Loading overlay göster
         showLoadingOverlay(true);
 
-        // Multi-endpoint veri �ek
+        // Multi-endpoint veri çek
         const { data, errors } = await fetchMultiEndpointData();
 
         // Veri başarıyla alındıysa kaydet ve göster
@@ -538,10 +538,10 @@ async function refreshBackupStatus() {
             // Cache'e kaydet (kalıcı olsun)
             saveBackupDataToCache(data);
 
-            // Dashboard widget'i g�ncelle
+            // Dashboard widget'i güncelle
             updateDashboardWidget(data);
 
-            // Eger backup monitoring sayfasindaysak, o sayfayi da g�ncelle
+            // Eger backup monitoring sayfasindaysak, o sayfayi da güncelle
             if (App.currentPage === 'backup-monitoring') {
                 updateBackupDetailsPage(data);
             }
@@ -553,7 +553,7 @@ async function refreshBackupStatus() {
                 showToast('Uyarı', 'Veri güncellendi ama bazı endpointler hata verdi', 'warning');
                 console.warn('Endpoint errors:', errors);
             } else {
-                showToast('Basarili', 'Backup verileri g�ncellendi', 'success');
+                showToast('Basarili', 'Backup verileri güncellendi', 'success');
             }
         } else {
             // Veri alınamadıysa cached data kullanmaya devam et
@@ -661,9 +661,9 @@ function getA10StatusText(status, details) {
         case 'SUCCESS': 
             return '<span style="color: #27ae60;"><i class="fas fa-check-circle"></i> Basarili</span>';
         case 'RECENT':
-            return '<span style="color: #27ae60;"><i class="fas fa-check-circle"></i> Son 3 g�n i�inde y�klendi</span>';
+            return '<span style="color: #27ae60;"><i class="fas fa-check-circle"></i> Son 3 gün içinde yüklendi</span>';
         case 'OLD':
-            return '<span style="color: #f39c12;"><i class="fas fa-exclamation-triangle"></i> Eski y�kleme</span>';
+            return '<span style="color: #f39c12;"><i class="fas fa-exclamation-triangle"></i> Eski yükleme</span>';
         case 'FAILED': 
             return '<span style="color: #e74c3c;"><i class="fas fa-times-circle"></i> Basarisiz</span>';
         case 'NO_LOGS': 
@@ -675,7 +675,7 @@ function getA10StatusText(status, details) {
     }
 }
 
-// Dashboard widget g�ncelleme - D�ZELTME
+// Dashboard widget güncelleme - DÜZELTME
 function updateDashboardWidget(data) {
     console.log('Updating dashboard widget with data:', data);
     
@@ -715,7 +715,7 @@ function updateDashboardWidget(data) {
         badge.innerHTML = `<i class="${statusIcon}"></i> ${statusText}`;
     }
     
-    // Statistics - toplam degerleri g�ster
+    // Statistics - toplam degerleri göster
     console.log('📊 Widget istatistikleri güncelleniyor:', {
         total_dirs: data.backup_summary?.total_dirs || 0,
         successful: data.backup_summary?.successful || 0,
@@ -752,13 +752,13 @@ function updateDashboardWidget(data) {
         }
     }
     
-    // Production Scope breakdown - D�ZELTME
+    // Production Scope breakdown - DÜZELTME
     const prodData = data.production_data || data;
     const prodScopes = prodData.scope_breakdown || data.scope_breakdown || {};
     
     console.log('Production scope data:', prodScopes);
     
-    // Her scope i�in kontrol et
+    // Her scope için kontrol et
     ['cyberwebeyeos_prod', 'cyberwebeyeos_drc', 'ornek-musteri-a_prod', 'ornek-musteri-a_drc'].forEach(scope => {
         const scopeData = prodScopes[scope] || { success: 0, failed: 0 };
         updateElement(`prod-${scope.replace('_', '-')}-success`, scopeData.success || 0);
@@ -897,8 +897,8 @@ function updateLastUpdateInfo(data) {
 
 // Backup monitoring page functions
 async function refreshBackupDetails() {
-    // Onceden currentBackupData varsa fetch hi� �al��m�yordu, buton bu y�zden
-    // ilk y�klemeden sonra tepkisiz kal�yordu. Her t�klamada sunucudan yeniden �ek.
+    // Onceden currentBackupData varsa fetch hiç çalışmıyordu, buton bu yüzden
+    // ilk yüklemeden sonra tepkisiz kalıyordu. Her tıklamada sunucudan yeniden çek.
     await refreshBackupStatus();
 
     if (currentBackupData) {
@@ -982,13 +982,13 @@ function updateBackupDetailsPage(data) {
         updateElement('header-data-age', `${Math.round(hoursAgo * 10) / 10} hours ago`);
     }
     
-    // Update tabs content - her zaman �agir
+    // Update tabs content - her zaman çağır
     updateScopeDetails(data);
     updateServerDetails(data);
     updateWhitelistDetails(data);
     updateFailedDirs(data);
     
-    // Debug i�in veriyi logla
+    // Debug için veriyi logla
     console.log('updateBackupDetailsPage - Full data:', data);
     console.log('updateBackupDetailsPage - Scope breakdown:', data.scope_breakdown);
     if (data.production_data) {
@@ -1011,15 +1011,15 @@ function updateScopeDetails(data) {
     
     // Production scopes
     if (prodContainer) {
-        // Multi-source veri kontrol�
+        // Multi-source veri kontrolü
         let prodScopes = null;
         
-        // �ncelik sirasi: production_data > direkt data > prod data
+        // öncelik sirasi: production_data > direkt data > prod data
         if (data.production_data && data.production_data.scope_breakdown) {
             prodScopes = data.production_data.scope_breakdown;
             console.log('Using production_data.scope_breakdown');
         } else if (data.scope_breakdown) {
-            // Eger direkt scope_breakdown varsa ve production scope'lari i�eriyorsa
+            // Eger direkt scope_breakdown varsa ve production scope'lari içeriyorsa
             if (data.scope_breakdown.cyberwebeyeos_prod || data.scope_breakdown.cyberwebeyeos_drc || 
                 data.scope_breakdown['ornek-musteri-a_prod'] || data.scope_breakdown['ornek-musteri-a_drc']) {
                 prodScopes = data.scope_breakdown;
@@ -1043,10 +1043,10 @@ function updateScopeDetails(data) {
         if (data.multi_server && data.server_breakdown) {
             prodContainer.innerHTML = generateServerBasedScopeCards(prodScopeList, prodScopes, data.server_breakdown, 'production');
         } else {
-            // Tek server - eski g�r�n�m
+            // Tek server - eski görünüm
             if (!prodScopes || Object.keys(prodScopes).length === 0) {
                 console.log('No production scope data available');
-                prodContainer.innerHTML = '<div class="alert alert-warning">Production scope verisi hen�z y�klenmedi veya bos.</div>';
+                prodContainer.innerHTML = '<div class="alert alert-warning">Production scope verisi henüz yüklenmedi veya bos.</div>';
             } else {
                 const html = generateScopeCards(prodScopeList, { scope_breakdown: prodScopes });
                 prodContainer.innerHTML = html;
@@ -1081,7 +1081,7 @@ function updateScopeDetails(data) {
         
         if (!testScopes || Object.keys(testScopes).length === 0) {
             console.log('No test scope data available');
-            testContainer.innerHTML = '<div class="alert alert-info">Test scope verisi hen�z y�klenmedi veya bos.</div>';
+            testContainer.innerHTML = '<div class="alert alert-info">Test scope verisi henüz yüklenmedi veya bos.</div>';
         } else {
             const html = generateScopeCards(testScopeList, { scope_breakdown: testScopes });
             testContainer.innerHTML = html;
@@ -1091,7 +1091,7 @@ function updateScopeDetails(data) {
     console.log('=== updateScopeDetails END ===');
 }
 
-// Server bazli scope kartlari olustur (multi-server i�in)
+// Server bazli scope kartlari olustur (multi-server için)
 function generateServerBasedScopeCards(scopes, scopeData, serverBreakdown, tenant) {
     if (!scopeData) {
         return '<div class="alert alert-warning">Scope verisi bulunamadi.</div>';
@@ -1127,7 +1127,7 @@ function generateServerBasedScopeCards(scopes, scopeData, serverBreakdown, tenan
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px;">
         `;
         
-        // VirtualBackup scope'lari i�in ayni verileri kullan (su an i�in)
+        // VirtualBackup scope'lari için ayni verileri kullan (su an için)
         ansibleScopes.forEach(scope => {
             const data = scopeData[scope.key] || { success: 0, failed: 0 };
             const vbScope = { ...scope, name: scope.name + ' (VB)' };
@@ -1182,7 +1182,7 @@ function generateScopeCards(scopes, data) {
     
     if (!data || !data.scope_breakdown) {
         console.log('No scope breakdown data in generateScopeCards');
-        return '<div class="alert alert-warning">Scope verisi hen�z y�klenmedi.</div>';
+        return '<div class="alert alert-warning">Scope verisi henüz yüklenmedi.</div>';
     }
     
     const cards = scopes.map(scope => {
@@ -1191,7 +1191,7 @@ function generateScopeCards(scopes, data) {
         
         if (!scopeData) {
             console.log(`No data for scope ${scope.key}`);
-            // Scope verisi yoksa varsayilan degerlerle g�ster
+            // Scope verisi yoksa varsayilan degerlerle göster
             return `
                 <div class="scope-detail-card" style="background: white; border-left: 4px solid ${scope.color}; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
                     <div class="scope-detail-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
@@ -1388,7 +1388,7 @@ function updateFailedDirs(data) {
     }
 }
 
-// Failed Directories i�erik olusturma - YENI server destegi eklendi
+// Failed Directories içerik olusturma - YENI server destegi eklendi
 function generateFailedDirsContent(failedDirs, isMultiServer, scopeData) {
     // Eğer failed_directories boş ama scope_breakdown'da failed var mı kontrol et
     if (failedDirs.length === 0) {
@@ -1426,7 +1426,7 @@ function generateFailedDirsContent(failedDirs, isMultiServer, scopeData) {
         !dir.name || (!dir.name.includes('/F5') && !dir.name.includes('F5/'))
     );
     
-    // F5 cihazlarini scope'a g�re grupla
+    // F5 cihazlarini scope'a göre grupla
     const f5ByScope = {};
     f5Devices.forEach(device => {
         const scope = device.scope || 'Unknown';
@@ -1438,7 +1438,7 @@ function generateFailedDirsContent(failedDirs, isMultiServer, scopeData) {
     
     let tableRows = '';
     
-    // F5 cihazlarini g�ster
+    // F5 cihazlarini göster
     if (Object.keys(f5ByScope).length > 0) {
         tableRows += `
             <tr style="background: #f0f0f0;">
@@ -1487,7 +1487,7 @@ function generateFailedDirsContent(failedDirs, isMultiServer, scopeData) {
         });
     }
     
-    // Diger cihazlari g�ster
+    // Diger cihazlari göster
     if (otherDevices.length > 0) {
         if (f5Devices.length > 0) {
             tableRows += `
@@ -1570,7 +1570,7 @@ function generateFailedDirsContent(failedDirs, isMultiServer, scopeData) {
     `;
 }
 
-// Tab islevselligi - D�ZELTME
+// Tab islevselligi - DÜZELTME
 function initBackupTabs() {
     console.log('Initializing backup tabs...');
     
@@ -1656,7 +1656,7 @@ function initBackupTabs() {
             // Filter content AND update log list if logs tab is active
             filterContentByTenant();
             
-            // Eger log sekmesi aktifse, log listesini de g�ncelle
+            // Eger log sekmesi aktifse, log listesini de güncelle
             const activeTab = document.querySelector('.backup-tabs .tab.active');
             if (activeTab && activeTab.getAttribute('data-tab') === 'logs') {
                 loadLogList();
@@ -1689,19 +1689,19 @@ function initBackupTabs() {
     }
 }
 
-// Server Details fonksiyonu - G�NCELLEME (6 sunucu destegi ve detayli g�r�n�m)
+// Server Details fonksiyonu - GÜNCELLEME (6 sunucu destegi ve detayli görünüm)
 function updateServerDetails(data) {
     const container = document.getElementById('server-details-content');
     if (!container) return;
     
-    // Multi-server destegi kontrol� - hem production hem test i�in
+    // Multi-server destegi kontrolü - hem production hem test için
     const isProductionMultiServer = data.multi_server || false;
     const hasTestData = data.test_data ? true : false;
     
     if (!isProductionMultiServer && !hasTestData) {
         container.innerHTML = `
             <div class="alert alert-info">
-                <i class="fas fa-info-circle"></i> Server detay bilgisi bulunamadi. Multi-server yapisinda detayli bilgi g�r�nt�lenir.
+                <i class="fas fa-info-circle"></i> Server detay bilgisi bulunamadi. Multi-server yapisinda detayli bilgi görüntülenir.
             </div>
         `;
         return;
@@ -1838,7 +1838,7 @@ function generateServerCard(server, stats, successRate, data) {
                 </div>
     `;
     
-    // Sample devices varsa g�ster
+    // Sample devices varsa göster
     if (data.sample_devices && data.sample_devices.length > 0) {
         // Bu sunucuya ait cihazlari filtrele
         const serverDevices = data.sample_devices.filter(d => 
@@ -1849,7 +1849,7 @@ function generateServerCard(server, stats, successRate, data) {
             html += `
                 <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #ecf0f1;">
                     <h6 style="margin-bottom: 10px; color: #2c3e50; font-size: 0.85rem;">
-                        <i class="fas fa-list"></i> �rnek Cihazlar (${serverDevices.length})
+                        <i class="fas fa-list"></i> örnek Cihazlar (${serverDevices.length})
                     </h6>
                     <div style="max-height: 150px; overflow-y: auto;">
             `;
@@ -1878,12 +1878,12 @@ function generateServerCard(server, stats, successRate, data) {
         }
     }
     
-    // Execution time varsa g�ster
+    // Execution time varsa göster
     if (data.execution_time) {
         html += `
             <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ecf0f1;">
                 <i class="fas fa-clock" style="color: #95a5a6;"></i>
-                <span style="font-size: 0.85rem; color: #7f8c8d;">�alisma s�resi: ${data.execution_time} saniye</span>
+                <span style="font-size: 0.85rem; color: #7f8c8d;">çalisma süresi: ${data.execution_time} saniye</span>
             </div>
         `;
     }
@@ -1921,24 +1921,24 @@ function filterContentByTenant() {
     });
 }
 
-// Historical data y�kleme
+// Historical data yükleme
 async function loadHistoricalData() {
     try {
-        // Tenant'a g�re endpoint belirle
+        // Tenant'a göre endpoint belirle
         let endpoint = '';
         if (selectedTenant === 'prod') {
             endpoint = 'backup_receiver_prod.php?action=historical&days=7';
         } else if (selectedTenant === 'test') {
             endpoint = 'backup_receiver_test.php?action=historical&days=7';
         } else {
-            // T�m� se�iliyse her iki endpoint'ten de veri �ek
+            // Tümü seçiliyse her iki endpoint'ten de veri çek
             const prodResponse = await fetch('backup_receiver_prod.php?action=historical&days=7');
             const testResponse = await fetch('backup_receiver_test.php?action=historical&days=7');
             
             const prodData = prodResponse.ok ? await prodResponse.json() : [];
             const testData = testResponse.ok ? await testResponse.json() : [];
             
-            // Verileri birlestir ve tarih sirasina g�re sirala
+            // Verileri birlestir ve tarih sirasina göre sirala
             const allData = [...prodData, ...testData].sort((a, b) => 
                 new Date(b.date) - new Date(a.date)
             );
@@ -1959,7 +1959,7 @@ async function loadHistoricalData() {
         if (container) {
             container.innerHTML = `
                 <div class="alert alert-danger">
-                    <i class="fas fa-exclamation-triangle"></i> Ge�mis veriler y�klenirken hata olustu: ${error.message}
+                    <i class="fas fa-exclamation-triangle"></i> Geçmis veriler yüklenirken hata olustu: ${error.message}
                 </div>
             `;
         }
@@ -1973,7 +1973,7 @@ function updateHistoricalContent(data) {
     if (!data || data.length === 0) {
         container.innerHTML = `
             <div class="alert alert-warning">
-                <i class="fas fa-info-circle"></i> Ge�mis veri bulunamadi.
+                <i class="fas fa-info-circle"></i> Geçmis veri bulunamadi.
             </div>
         `;
         return;
@@ -2052,7 +2052,7 @@ function initBackupMonitoringPage() {
 let currentLogs = [];
 let selectedLogType = 'all';
 
-// Log listesini y�kle
+// Log listesini yükle
 async function loadLogList() {
     try {
         console.log('Loading log list...');
@@ -2091,13 +2091,13 @@ async function loadLogList() {
         
     } catch (error) {
         console.error('Log list load error:', error);
-        showLogError('Log listesi y�klenirken hata olustu: ' + error.message);
+        showLogError('Log listesi yüklenirken hata olustu: ' + error.message);
     } finally {
         showLogLoading(false);
     }
 }
 
-// Log listesini g�ster
+// Log listesini göster
 function displayLogList(logs) {
     const container = document.getElementById('log-list-container');
     if (!container) {
@@ -2105,7 +2105,7 @@ function displayLogList(logs) {
         return;
     }
     
-    // Log tipine g�re filtrele
+    // Log tipine göre filtrele
     let filteredLogs = logs;
     if (selectedLogType !== 'all') {
         filteredLogs = logs.filter(log => log.type === selectedLogType);
@@ -2120,7 +2120,7 @@ function displayLogList(logs) {
         return;
     }
     
-    // Tarihe g�re grupla
+    // Tarihe göre grupla
     const groupedLogs = {};
     filteredLogs.forEach(log => {
         const date = log.date || 'Bilinmeyen';
@@ -2156,7 +2156,7 @@ function displayLogList(logs) {
                             <div>
                                 <div style="font-weight: 600; color: #2c3e50;">${log.filename}</div>
                                 <div style="font-size: 0.85rem; color: #7f8c8d;">
-                                    ${formatFileSize(log.size)} � ${log.modified}
+                                    ${formatFileSize(log.size)} · ${log.modified}
                                 </div>
                             </div>
                         </div>
@@ -2178,7 +2178,7 @@ function displayLogList(logs) {
     container.innerHTML = html;
 }
 
-// Log dosyasini g�r�nt�le
+// Log dosyasini görüntüle
 async function viewLogFile(filename) {
     try {
         showLogModal(true);
@@ -2197,13 +2197,13 @@ async function viewLogFile(filename) {
         
     } catch (error) {
         console.error('Log view error:', error);
-        showModalError('Log g�r�nt�lenirken hata olustu: ' + error.message);
+        showModalError('Log görüntülenirken hata olustu: ' + error.message);
     } finally {
         showModalLoading(false);
     }
 }
 
-// Log i�erigini g�ster
+// Log içerigini göster
 function displayLogContent(data) {
     const modalTitle = document.getElementById('log-modal-title');
     const modalInfo = document.getElementById('log-modal-info');
@@ -2224,7 +2224,7 @@ function displayLogContent(data) {
     }
 }
 
-// Log i�erigini renklendir
+// Log içerigini renklendir
 function highlightLogContent(content) {
     return content
         .replace(/\[([\d\/:\s]+)\]/g, '<span style="color: #3498db; font-weight: 600;">[$1]</span>')
@@ -2262,7 +2262,7 @@ function showLogLoading(show) {
         container.innerHTML = `
             <div class="text-center" style="padding: 40px;">
                 <i class="fas fa-spinner fa-spin" style="font-size: 2rem; color: #3498db;"></i>
-                <p style="margin-top: 10px; color: #7f8c8d;">Log listesi y�kleniyor...</p>
+                <p style="margin-top: 10px; color: #7f8c8d;">Log listesi yükleniyor...</p>
             </div>
         `;
     }
@@ -2294,7 +2294,7 @@ function showModalLoading(show) {
         content.innerHTML = `
             <div class="text-center" style="padding: 40px;">
                 <i class="fas fa-spinner fa-spin" style="font-size: 2rem; color: #3498db;"></i>
-                <p style="margin-top: 10px;">Log i�erigi y�kleniyor...</p>
+                <p style="margin-top: 10px;">Log içerigi yükleniyor...</p>
             </div>
         `;
     }
@@ -2329,7 +2329,7 @@ function setupLogFilterButtons() {
             selectedLogType = this.dataset.logtype;
             console.log('Log type selected:', selectedLogType);
             
-            // Button stillerini g�ncelle
+            // Button stillerini güncelle
             filterBtns.forEach(b => {
                 b.classList.remove('active');
                 b.style.background = 'white';
@@ -2356,7 +2356,7 @@ function setupLogFilterButtons() {
             }
             this.style.color = 'white';
             
-            // Log listesini g�ncelle
+            // Log listesini güncelle
             displayLogList(currentLogs);
         });
     });
@@ -2386,10 +2386,10 @@ function testLogAPI() {
 // initCurrentPage fonksiyonuna ekleme
 function initDashboardPage() {
     console.log('Dashboard page initialized');
-    // Dashboard i�in �zel islemler varsa buraya eklenebilir
+    // Dashboard için özel islemler varsa buraya eklenebilir
 }
 
-// Console debugging i�in yardimci fonksiyonlar
+// Console debugging için yardimci fonksiyonlar
 window.debugBackup = {
     testAPI: function() {
         console.log('Testing Production backup API...');
@@ -2430,7 +2430,7 @@ console.log('- debugBackup.refreshNow() - Refresh backup status');
 
 // Network Monitor Functions - main.js'e eklenecek
 
-// Network Monitor i�in global degiskenler
+// Network Monitor için global degiskenler
 window.networkMonitor = {
     testInterval: null,
     testRunning: false,
@@ -2452,7 +2452,7 @@ window.saveNetworkConfiguration = function(e) {
     // LocalStorage'a kaydet
     localStorage.setItem('networkMonitorConfig', JSON.stringify(config));
     
-    // PHP'ye g�nder
+    // PHP'ye gönder
     fetch('./network-monitor.php', {
         method: 'POST',
         headers: {
@@ -2514,21 +2514,21 @@ window.toggleNetworkTest = function() {
 window.startNetworkTest = function() {
     const targetUrl = document.getElementById('target-url').value;
     if (!targetUrl) {
-        alert('L�tfen hedef URL giriniz!');
+        alert('Lütfen hedef URL giriniz!');
         return;
     }
     
     window.networkMonitor.testRunning = true;
     updateNetworkTestStatus('running');
     
-    // Ilk testi hemen �alistir
+    // Ilk testi hemen çalistir
     runSingleNetworkTest();
     
     // Periyodik test
     const intervalMinutes = parseInt(document.getElementById('test-interval').value);
     window.networkMonitor.testInterval = setInterval(runSingleNetworkTest, intervalMinutes * 60 * 1000);
     
-    // Buton metnini g�ncelle
+    // Buton metnini güncelle
     const startBtn = document.getElementById('start-test-btn');
     if (startBtn) {
         startBtn.innerHTML = '<i class="fas fa-stop"></i> Test Durdur';
@@ -2546,7 +2546,7 @@ window.stopNetworkTest = function() {
     
     updateNetworkTestStatus('stopped');
     
-    // Buton metnini g�ncelle
+    // Buton metnini güncelle
     const startBtn = document.getElementById('start-test-btn');
     if (startBtn) {
         startBtn.innerHTML = '<i class="fas fa-play"></i> Test Baslat';
@@ -2556,7 +2556,7 @@ window.stopNetworkTest = function() {
 };
 
 window.runSingleNetworkTest = function() {
-    // Saat kontrol�
+    // Saat kontrolü
     if (!isInNetworkTestHours()) {
         addNetworkLogMessage('Test saati disinda, bekleniyor...', 'warning');
         return;
@@ -2570,7 +2570,7 @@ window.runSingleNetworkTest = function() {
         tracerouteTarget: document.getElementById('traceroute-target').value
     };
     
-    // PHP'ye test istegi g�nder
+    // PHP'ye test istegi gönder
     fetch('./network-monitor.php', {
         method: 'POST',
         headers: {
@@ -2600,7 +2600,7 @@ window.runSingleNetworkTest = function() {
 };
 
 window.displayNetworkTestResults = function(results) {
-    // Metrikleri g�ncelle
+    // Metrikleri güncelle
     if (document.getElementById('dns-time')) {
         document.getElementById('dns-time').textContent = results.dns_ms || '-';
     }
@@ -2627,7 +2627,7 @@ window.displayNetworkTestResults = function(results) {
         });
     }
     
-    // Traceroute sonu�lari
+    // Traceroute sonuçlari
     if (results.traceroute && Array.isArray(results.traceroute)) {
         displayNetworkTraceroute(results.traceroute);
     }
@@ -2677,10 +2677,10 @@ window.analyzeNetworkResults = function(results) {
     if (issues.length > 0) {
         addNetworkLogMessage('--- SORUNLAR TESPIT EDILDI ---', 'warning');
         issues.forEach(issue => {
-            addNetworkLogMessage('� ' + issue, 'warning');
+            addNetworkLogMessage('· ' + issue, 'warning');
         });
     } else {
-        addNetworkLogMessage('T�m degerler normal sinirlarda', 'success');
+        addNetworkLogMessage('Tüm degerler normal sinirlarda', 'success');
     }
 };
 
@@ -2711,7 +2711,7 @@ window.addToNetworkHistory = function(results) {
         console.error('LocalStorage error:', e);
     }
     
-    // Tabloyu g�ncelle
+    // Tabloyu güncelle
     updateNetworkHistoryTable();
 };
 
@@ -2720,7 +2720,7 @@ window.updateNetworkHistoryTable = function() {
     if (!tbody) return;
     
     if (window.networkMonitor.testHistory.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="9" class="text-center">Hen�z test ge�misi bulunmuyor</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="9" class="text-center">Henüz test geçmisi bulunmuyor</td></tr>';
         return;
     }
     
@@ -2828,7 +2828,7 @@ window.updateNetworkTestStatus = function(status) {
     switch(status) {
         case 'running':
             statusElement.className = 'status-badge status-success';
-            statusElement.innerHTML = '<i class="fas fa-circle"></i> �alisiyor';
+            statusElement.innerHTML = '<i class="fas fa-circle"></i> çalisiyor';
             break;
         case 'testing':
             statusElement.className = 'status-badge status-info';
@@ -2876,7 +2876,7 @@ window.getNetworkStatusText = function(status) {
     }
 };
 
-// Network Monitor sayfasi g�sterildiginde �alisacak
+// Network Monitor sayfasi gösterildiginde çalisacak
 window.initNetworkMonitor = function() {
     // Form submit handler
     const configForm = document.getElementById('network-config-form');
@@ -2896,10 +2896,10 @@ window.initNetworkMonitor = function() {
         exportBtn.addEventListener('click', exportNetworkToCSV);
     }
     
-    // Kayitli ayarlari y�kle
+    // Kayitli ayarlari yükle
     loadNetworkConfiguration();
     
-    // Test ge�misini y�kle
+    // Test geçmisini yükle
     loadNetworkTestHistory();
 };
 
@@ -2997,7 +2997,7 @@ function showPage(page) {
         }
     });
 
-    // T�m men� linklerini pasif yap
+    // Tüm menü linklerini pasif yap
     document.querySelectorAll('.sidebar-menu a').forEach(link => {
         link.classList.remove('active');
     });
@@ -3008,7 +3008,7 @@ function showPage(page) {
         activeLink.classList.add('active');
     }
 
-    // Se�ilen sayfayi g�ster
+    // Seçilen sayfayi göster
     switch(page) {
         case 'dashboard':
             document.getElementById('dashboard-page').style.display = 'block';
@@ -3202,7 +3202,7 @@ function showPage(page) {
         // Network Monitor case'i
         case 'network-monitor':
             document.getElementById('network-monitor-page').style.display = 'block';
-            initNetworkMonitor(); // Network Monitor'� baslat
+            initNetworkMonitor(); // Network Monitor'ü baslat
             break;
 
         case 'alerts':
@@ -3333,14 +3333,14 @@ function showPage(page) {
 function startNetworkTest() {
     var url = document.getElementById('target-url').value;
     if (!url) {
-        alert('L�tfen URL girin');
+        alert('Lütfen URL girin');
         return;
     }
     
     var output = document.getElementById('test-output');
     output.innerHTML = '<div style="color: #3498db">[' + new Date().toLocaleTimeString() + '] Test baslatiliyor...</div>';
     
-    // PHP'ye istek g�nder
+    // PHP'ye istek gönder
     fetch('./network-monitor.php', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
@@ -3355,7 +3355,7 @@ function startNetworkTest() {
     .then(response => response.json())
     .then(data => {
         if (data.success && data.results) {
-            // Sonu�lari g�ster
+            // Sonuçlari göster
             document.getElementById('dns-time').textContent = data.results.dns_ms || '-';
             document.getElementById('tcp-time').textContent = data.results.tcp_ms || '-';
             document.getElementById('ssl-time').textContent = data.results.ssl_ms || '-';

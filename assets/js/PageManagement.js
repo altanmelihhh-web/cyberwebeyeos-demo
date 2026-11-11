@@ -1,7 +1,7 @@
 // Cyberwebeyeos - Main JavaScript File
 
 // ========================================
-// 1. SAYFA Y�NETIMI (Page Management)
+// 1. SAYFA YÖNETIMI (Page Management)
 // ========================================
 
 // Function to show the selected page
@@ -38,8 +38,8 @@ function showPage(pageId) {
   // If dashboard page is shown, load dashboard certificates
   if (pageId === 'dashboard') {
     loadDashboardCertificates();
-    loadLinks(); // Dashboard i�in linkler
-    loadDashboardTasks(); // Dashboard i�in isler
+    loadLinks(); // Dashboard için linkler
+    loadDashboardTasks(); // Dashboard için isler
   }
   
   // If documents page is shown, load documents via DocMgmt
@@ -68,7 +68,7 @@ function showPage(pageId) {
   if (pageId === 'useful-links') {
     loadLinks();
     console.log("Useful Links page shown - loadLinks called");
-    // Sayfa i�in event listener'lari ekle
+    // Sayfa için event listener'lari ekle
     setTimeout(setupPageEventListeners, 300);
   }
   

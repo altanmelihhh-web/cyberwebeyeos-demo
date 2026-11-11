@@ -13,7 +13,7 @@ const ApiService = {
             const prodData = await this.fetchFromEndpoint(this.prodUrl, endpoint);
             const testData = await this.fetchFromEndpoint(this.testUrl, endpoint);
 
-            // Prod'da hata varsa test gösterme
+            // Prod'da hata varsa test gÃ¶sterme
             if (prodData && prodData.problems_count > 0) {
                 return this.mergeData(prodData, null);
             }
@@ -82,7 +82,7 @@ const ApiService = {
             Object.assign(merged.scope_breakdown, prodData.scope_breakdown);
         }
 
-        // Test verileri (eger gösterilecekse)
+        // Test verileri (eger gÃ¶sterilecekse)
         if (testData && testData.backup_summary) {
             merged.backup_summary.total_dirs += testData.backup_summary.total_dirs || 0;
             merged.backup_summary.successful += testData.backup_summary.successful || 0;

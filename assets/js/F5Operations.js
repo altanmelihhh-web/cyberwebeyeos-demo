@@ -766,7 +766,7 @@ window.f5FavSelectNode = function(name) {
 };
 window.f5RatioModeChange = function() {
     var mode = document.getElementById('f5-ratio-mode-select').value;
-    document.getElementById('f5-ratio-pspk').style.display  = mode === 'pspk'  ? '' : 'none';
+    document.getElementById('f5-ratio-platform').style.display  = mode === 'platform'  ? '' : 'none';
     document.getElementById('f5-ratio-custom').style.display = mode === 'custom' ? '' : 'none';
     if (mode === 'custom') f5RatioCustomInitApps();
 };

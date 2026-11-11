@@ -1,12 +1,12 @@
 // ========================================
-// 2. ISLER Y�NETIMI (Tasks Management)
+// 2. ISLER YÖNETIMI (Tasks Management)
 // ========================================
 
-// Isler sayfasinin y�klenmesi i�in fonksiyon
+// Isler sayfasinin yüklenmesi için fonksiyon
 function loadTasksPage() {
   console.log("=== loadTasksPage CALLED ===");
 
-  // Tab'lar i�in olay dinleyicileri ekle
+  // Tab'lar için olay dinleyicileri ekle
   const tabs = document.querySelectorAll('#tasks-page .tabs .tab');
   console.log('Tabs bulunan miktar:', tabs.length);
 
@@ -19,7 +19,7 @@ function loadTasksPage() {
       tabs.forEach(t => t.classList.remove('active'));
       this.classList.add('active');
       
-      // Ilgili i�erigi g�ster
+      // Ilgili içerigi göster
       const tabContents = document.querySelectorAll('#tasks-page .tab-content');
       tabContents.forEach(content => {
         content.style.display = 'none';
@@ -27,7 +27,7 @@ function loadTasksPage() {
       
       document.getElementById(tabId).style.display = 'block';
       
-      // Ilgili i�erigi y�kle
+      // Ilgili içerigi yükle
       if (tabId === 'periodic-tasks') {
         loadPeriodicTasks();
       } else if (tabId === 'cab-tasks') {
@@ -43,16 +43,16 @@ function loadTasksPage() {
     });
   });
   
-  // Varsayilan olarak Periyodik Isleri y�kle
+  // Varsayilan olarak Periyodik Isleri yükle
   loadPeriodicTasks();
   initCalendar();
 }
 
-// Dashboard i�in isleri y�kle
+// Dashboard için isleri yükle
 function loadDashboardTasks() {
-  console.log("Dashboard isleri y�kleniyor...");
+  console.log("Dashboard isleri yükleniyor...");
   
-  // Dashboard tab'lari i�in olay dinleyicileri
+  // Dashboard tab'lari için olay dinleyicileri
   const dashboardTabs = document.querySelectorAll('.work-tabs .tab');
   dashboardTabs.forEach(tab => {
     tab.addEventListener('click', function() {
@@ -62,7 +62,7 @@ function loadDashboardTasks() {
       dashboardTabs.forEach(t => t.classList.remove('active'));
       this.classList.add('active');
       
-      // Ilgili i�erigi g�ster
+      // Ilgili içerigi göster
       const tabContents = document.querySelectorAll('.work-summary .tab-content');
       tabContents.forEach(content => {
         content.style.display = 'none';
@@ -70,7 +70,7 @@ function loadDashboardTasks() {
       
       document.getElementById(tabId).style.display = 'block';
       
-      // Ilgili i�erigi y�kle
+      // Ilgili içerigi yükle
       if (tabId === 'periodic-dashboard') {
         loadDashboardPeriodicTasks();
       } else if (tabId === 'cab-dashboard') {
@@ -81,19 +81,19 @@ function loadDashboardTasks() {
     });
   });
   
-  // Varsayilan olarak Dashboard Periyodik Isleri y�kle
+  // Varsayilan olarak Dashboard Periyodik Isleri yükle
   loadDashboardPeriodicTasks();
 }
 
-// Isleri y�kleyen fonksiyonlara ekstra kontroller ekle
+// Isleri yükleyen fonksiyonlara ekstra kontroller ekle
 function loadPeriodicTasks() {
   const tasksContainer = document.getElementById('periodic-tasks-body');
   
-  // Y�kleme g�stergesi g�ster
+  // Yükleme göstergesi göster
   tasksContainer.innerHTML = `
     <tr>
       <td colspan="8" class="text-center">
-        <i class="fas fa-sync fa-spin"></i> Isler y�kleniyor...
+        <i class="fas fa-sync fa-spin"></i> Isler yükleniyor...
       </td>
     </tr>
   `;
@@ -133,7 +133,7 @@ function loadPeriodicTasks() {
       
       // Isleri tabloya ekle
       tasks.forEach(task => {
-        // Task tipi 'periodic' veya belirtilmemis olanlari g�ster
+        // Task tipi 'periodic' veya belirtilmemis olanlari göster
         if (!task.type || task.type === 'periodic') {
           tasksContainer.innerHTML += createTaskRow(task);
         }
@@ -143,18 +143,18 @@ function loadPeriodicTasks() {
       setupTaskSearchListeners();
     })
     .catch(error => {
-      console.error('Isler y�klenirken hata:', error);
+      console.error('Isler yüklenirken hata:', error);
       tasksContainer.innerHTML = `
         <tr>
           <td colspan="8" class="text-center">
-            Isler y�klenirken hata olustu: ${error.message}
+            Isler yüklenirken hata olustu: ${error.message}
           </td>
         </tr>
       `;
     });
 }
 
-// CAB planli islerini y�kle
+// CAB planli islerini yükle
 function loadCabTasks() {
   const tasksContainer = document.getElementById('cab-tasks-body');
 
@@ -165,7 +165,7 @@ function loadCabTasks() {
 
   console.log('=== loadCabTasks CALLED ===');
 
-  // Y�kleme g�stergesi g�ster
+  // Yükleme göstergesi göster
   tasksContainer.innerHTML = `
     <tr>
       <td colspan="7" class="text-center">
@@ -249,15 +249,15 @@ function loadCabTasks() {
     });
 }
 
-// Road map islerini y�kle
+// Road map islerini yükle
 function loadRoadmapTasks() {
   const tasksContainer = document.getElementById('roadmap-tasks-body');
   
-  // Y�kleme g�stergesi g�ster
+  // Yükleme göstergesi göster
   tasksContainer.innerHTML = `
     <tr>
       <td colspan="8" class="text-center">
-        <i class="fas fa-sync fa-spin"></i> Road map y�kleniyor...
+        <i class="fas fa-sync fa-spin"></i> Road map yükleniyor...
       </td>
     </tr>
   `;
@@ -307,33 +307,33 @@ function loadRoadmapTasks() {
       setupRoadmapTaskSearchListeners();
     })
     .catch(error => {
-      console.error('Road map y�klenirken hata:', error);
+      console.error('Road map yüklenirken hata:', error);
       tasksContainer.innerHTML = `
         <tr>
           <td colspan="8" class="text-center">
-            Road map y�klenirken hata olustu: ${error.message}
+            Road map yüklenirken hata olustu: ${error.message}
           </td>
         </tr>
       `;
     });
 }
 
-// Dashboard i�in periyodik isleri y�kle
+// Dashboard için periyodik isleri yükle
 function loadDashboardPeriodicTasks() {
   const tasksContainer = document.getElementById('dashboard-periodic-tasks');
   // Null-guard: widget DYF'ye gecti, bu element artik yok — sessizce cik
   if (!tasksContainer) return;
 
-  // Y�kleme g�stergesi g�ster
+  // Yükleme göstergesi göster
   tasksContainer.innerHTML = `
     <tr>
       <td colspan="8" class="text-center">
-        <i class="fas fa-sync fa-spin"></i> Isler y�kleniyor...
+        <i class="fas fa-sync fa-spin"></i> Isler yükleniyor...
       </td>
     </tr>
   `;
   
-  // Isleri al (AJAX) - Yaklasan 10 isi g�ster
+  // Isleri al (AJAX) - Yaklasan 10 isi göster
   fetch('get-tasks.php?type=periodic&limit=10')
     .then(response => {
       if (!response.ok) {
@@ -387,33 +387,33 @@ function loadDashboardPeriodicTasks() {
       });
     })
     .catch(error => {
-      console.error('Dashboard isleri y�klenirken hata:', error);
+      console.error('Dashboard isleri yüklenirken hata:', error);
       tasksContainer.innerHTML = `
         <tr>
           <td colspan="8" class="text-center">
-            Isler y�klenirken hata olustu: ${error.message}
+            Isler yüklenirken hata olustu: ${error.message}
           </td>
         </tr>
       `;
     });
 }
 
-// Dashboard i�in CAB islerini y�kle
+// Dashboard için CAB islerini yükle
 function loadDashboardCabTasks() {
   const tasksContainer = document.getElementById('dashboard-cab-tasks');
   // Null-guard: widget DYF'ye gecti, bu element artik yok — sessizce cik
   if (!tasksContainer) return;
 
-  // Y�kleme g�stergesi g�ster
+  // Yükleme göstergesi göster
   tasksContainer.innerHTML = `
     <tr>
       <td colspan="7" class="text-center">
-        <i class="fas fa-sync fa-spin"></i> Planli �alismalar y�kleniyor...
+        <i class="fas fa-sync fa-spin"></i> Planli çalismalar yükleniyor...
       </td>
     </tr>
   `;
   
-  // Isleri al (AJAX) - Yaklasan 5 planli �alismayi g�ster
+  // Isleri al (AJAX) - Yaklasan 5 planli çalismayi göster
   fetch('get-tasks.php?type=cab&limit=5')
     .then(response => {
       if (!response.ok) {
@@ -443,7 +443,7 @@ function loadDashboardCabTasks() {
         tasksContainer.innerHTML = `
           <tr>
             <td colspan="7" class="text-center">
-              CAB planli �alisma bulunamadi
+              CAB planli çalisma bulunamadi
             </td>
           </tr>
         `;
@@ -460,7 +460,7 @@ function loadDashboardCabTasks() {
           scopeText = task.scope;
         }
         
-        // Islem s�tununu �ikartilmis sade s�tunlu sira olustur
+        // Islem sütununu çikartilmis sade sütunlu sira olustur
         const row = document.createElement('tr');
         
         row.innerHTML = `
@@ -471,7 +471,7 @@ function loadDashboardCabTasks() {
             </div>
             <div class="detail-content" style="display: none;">
               <p><strong>Tip:</strong> ${escapeHtml(task.reason)}</p>
-              <p><strong>A�iklama:</strong> ${escapeHtml(task.description || '-')}</p>
+              <p><strong>Açiklama:</strong> ${escapeHtml(task.description || '-')}</p>
             </div>
           </td>
           <td>${escapeHtml(task.maker)}</td>
@@ -485,33 +485,33 @@ function loadDashboardCabTasks() {
       });
     })
     .catch(error => {
-      console.error('Planli �alismalar y�klenirken hata:', error);
+      console.error('Planli çalismalar yüklenirken hata:', error);
       tasksContainer.innerHTML = `
         <tr>
           <td colspan="7" class="text-center">
-            Planli �alismalar y�klenirken hata olustu: ${error.message}
+            Planli çalismalar yüklenirken hata olustu: ${error.message}
           </td>
         </tr>
       `;
     });
 }
 
-// Dashboard i�in Road Map islerini y�kle
+// Dashboard için Road Map islerini yükle
 function loadDashboardRoadmapTasks() {
   const tasksContainer = document.getElementById('dashboard-roadmap-tasks');
   // Null-guard: widget DYF'ye gecti, bu element artik yok — sessizce cik
   if (!tasksContainer) return;
 
-  // Y�kleme g�stergesi g�ster
+  // Yükleme göstergesi göster
   tasksContainer.innerHTML = `
     <tr>
       <td colspan="7" class="text-center">
-        <i class="fas fa-sync fa-spin"></i> Road map y�kleniyor...
+        <i class="fas fa-sync fa-spin"></i> Road map yükleniyor...
       </td>
     </tr>
   `;
   
-  // Isleri al (AJAX) - En �nemli 5 road map g�ster
+  // Isleri al (AJAX) - En önemli 5 road map göster
   fetch('get-tasks.php?type=roadmap&limit=5')
     .then(response => {
       if (!response.ok) {
@@ -550,7 +550,7 @@ function loadDashboardRoadmapTasks() {
       
       // Isleri tabloya ekle
       roadmapTasks.forEach(task => {
-        // Islem s�tunu olmayan sade bir roadmap satiri olustur
+        // Islem sütunu olmayan sade bir roadmap satiri olustur
         const row = document.createElement('tr');
         
         // Durum sinifi ve metni
@@ -576,7 +576,7 @@ function loadDashboardRoadmapTasks() {
             </div>
             <div class="detail-content" style="display: none;">
               <p><strong>Tip:</strong> ${escapeHtml(task.reason)}</p>
-              <p><strong>A�iklama:</strong> ${escapeHtml(task.description || '-')}</p>
+              <p><strong>Açiklama:</strong> ${escapeHtml(task.description || '-')}</p>
             </div>
           </td>
           <td>${escapeHtml(task.responsible || task.maker)}</td>
@@ -590,18 +590,18 @@ function loadDashboardRoadmapTasks() {
       });
     })
     .catch(error => {
-      console.error('Road map y�klenirken hata:', error);
+      console.error('Road map yüklenirken hata:', error);
       tasksContainer.innerHTML = `
         <tr>
           <td colspan="7" class="text-center">
-            Road map y�klenirken hata olustu: ${error.message}
+            Road map yüklenirken hata olustu: ${error.message}
           </td>
         </tr>
       `;
     });
 }
 
-// Is satiri HTML'i olusturma fonksiyonunu g�ncelle - �oklu scope i�in
+// Is satiri HTML'i olusturma fonksiyonunu güncelle - çoklu scope için
 // Periyodik is satiri HTML'i olustur (6 sutun: Cihaz, Sebep, Aciklama, Tarih, Durum, Islemler)
 function createTaskRow(task) {
   const statusClass = task.status === 'completed' ? 'status-completed' :
@@ -697,12 +697,12 @@ function createRoadmapRow(task) {
   `;
 }
 
-// Is g�r�nt�leme fonksiyonu
+// Is görüntüleme fonksiyonu
 function viewTask(id) {
   window.open(`view-task.php?id=${id}`, '_blank', 'width=800,height=600');
 }
 
-// Silme islemini de d�zenle
+// Silme islemini de düzenle
 function deleteTask(id) {
   if (confirm('Bu isi silmek istediginizden emin misiniz?')) {
     fetch(`delete-task.php?id=${id}`, {
@@ -718,9 +718,9 @@ function deleteTask(id) {
       if (data.success) {
         alert('Is basariyla silindi.');
         
-        // Sayfalari yeniden y�kle
+        // Sayfalari yeniden yükle
         if (document.getElementById('tasks-page').style.display !== 'none') {
-          // Aktif sekmeyi bul ve ilgili i�erigi y�kle
+          // Aktif sekmeyi bul ve ilgili içerigi yükle
           const activeTab = document.querySelector('#tasks-page .tab.active');
           if (activeTab) {
             const tabId = activeTab.getAttribute('data-tab');
@@ -734,7 +734,7 @@ function deleteTask(id) {
           }
         }
         
-        // Dashboard verilerini g�ncelle
+        // Dashboard verilerini güncelle
         if (document.getElementById('dashboard-page').style.display !== 'none') {
           loadDashboardTasks();
         }
@@ -752,8 +752,8 @@ function deleteTask(id) {
   }
 }
 
-// D�zenleme fonksiyonunu g�ncelle - �oklu se�im i�in
-// D�zenleme fonksiyonunu g�ncelle - periyodik alanlar i�in
+// Düzenleme fonksiyonunu güncelle - çoklu seçim için
+// Düzenleme fonksiyonunu güncelle - periyodik alanlar için
 function editTask(id) {
   // Ilgili isin verilerini al
   fetch(`get-tasks.php?id=${id}`)
@@ -770,7 +770,7 @@ function editTask(id) {
       }
       
       // Isi bul
-      const task = Array.isArray(tasks) ? tasks[0] : null; // ID'ye g�re filtreledik, ilk �geyi al
+      const task = Array.isArray(tasks) ? tasks[0] : null; // ID'ye göre filtreledik, ilk öğeyi al
       
       if (!task) {
         alert('Is bulunamadi.');
@@ -789,14 +789,14 @@ function editTask(id) {
       document.getElementById('task-maker').value = task.maker;
       document.getElementById('task-checker').value = task.checker;
       
-      // Etki alani �oklu se�im - scope artik bir dizi veya string olabilir
+      // Etki alani çoklu seçim - scope artik bir dizi veya string olabilir
       const scopeSelect = document.getElementById('task-scope');
       const scopes = Array.isArray(task.scope) ? task.scope : [task.scope];
       
-      // �nceki se�imleri temizle
+      // önceki seçimleri temizle
       Array.from(scopeSelect.options).forEach(option => option.selected = false);
       
-      // Mevcut etki alanlarini se�
+      // Mevcut etki alanlarini seç
       scopes.forEach(scope => {
         Array.from(scopeSelect.options).forEach(option => {
           if (option.value === scope) {
@@ -816,10 +816,10 @@ function editTask(id) {
         toggleTaskFields();
       }
       
-      // Tarih formatini d�zelt (YYYY-MM-DD)
+      // Tarih formatini düzelt (YYYY-MM-DD)
       const taskDate = document.getElementById('task-date');
       const date = new Date(task.date);
-      const formattedDate = date.toISOString().split('T')[0]; // YYYY-MM-DD formatina d�n�st�r
+      const formattedDate = date.toISOString().split('T')[0]; // YYYY-MM-DD formatina dönüstür
       taskDate.value = formattedDate;
       
       // Periyodik alanlari doldur
@@ -827,13 +827,13 @@ function editTask(id) {
         const isRecurringCheckbox = document.getElementById('is-recurring');
         if (isRecurringCheckbox) {
           isRecurringCheckbox.checked = true;
-          toggleRecurringOptions(); // Periyodik alanlari g�ster
+          toggleRecurringOptions(); // Periyodik alanlari göster
           
           // Interval ve birim
           document.getElementById('recurring-interval').value = task.recurringInterval || 30;
           document.getElementById('recurring-unit').value = task.recurringUnit || 'day';
           
-          // Bildirim g�nleri
+          // Bildirim günleri
           document.getElementById('notification-days').value = task.notificationDays || 7;
           
           // Mail bildirimi
@@ -875,16 +875,16 @@ function editTask(id) {
         }
       }
       
-      // Form basligini ve butonunu g�ncelle
-      document.querySelector('#add-task-modal .modal-title').textContent = 'Is D�zenle';
+      // Form basligini ve butonunu güncelle
+      document.querySelector('#add-task-modal .modal-title').textContent = 'Is Düzenle';
       document.querySelector('#add-task-form .submit-btn').textContent = 'Degisiklikleri Kaydet';
       
-      // Form veri �zniteligi ekle
+      // Form veri özniteligi ekle
       const form = document.getElementById('add-task-form');
       form.setAttribute('data-edit-id', id);
       form.setAttribute('data-edit-mode', 'true');
       
-      // Modali g�ster
+      // Modali göster
       openModal('add-task-modal');
     })
     .catch(error => {
@@ -911,12 +911,12 @@ function calculateNextDate(dateStr, interval, unit) {
       date.setDate(date.getDate() + interval);
   }
   
-  return date.toISOString().split('T')[0]; // YYYY-MM-DD formatina d�n�st�r
+  return date.toISOString().split('T')[0]; // YYYY-MM-DD formatina dönüstür
 }
 
-// Periyodik g�revleri kontrol eden ve bildirimleri g�steren fonksiyon
+// Periyodik görevleri kontrol eden ve bildirimleri gösteren fonksiyon
 function checkPeriodicTasks() {
-  console.log("Periyodik g�revler kontrol ediliyor...");
+  console.log("Periyodik görevler kontrol ediliyor...");
   
   fetch('check-periodic-tasks.php')
     .then(response => {
@@ -933,7 +933,7 @@ function checkPeriodicTasks() {
       // Basligi koru
       const warningTitle = warningsContainer.querySelector('h4');
       
-      // Bildirimler i�in yer temizle
+      // Bildirimler için yer temizle
       const existingNotifications = warningsContainer.querySelectorAll('.warning-item.task-notification');
       existingNotifications.forEach(notification => notification.remove());
       
@@ -949,7 +949,7 @@ function checkPeriodicTasks() {
             <div class="warning-text">${notification.message}</div>
           </div>
           <div class="warning-action">
-            <button class="action-btn view-btn" onclick="viewTask('${notification.taskId}')">G�r�nt�le</button>
+            <button class="action-btn view-btn" onclick="viewTask('${notification.taskId}')">Görüntüle</button>
             <button class="action-btn view-btn" onclick="markTaskCompleted('${notification.taskId}')">Tamamlandi</button>
           </div>
         `;
@@ -962,14 +962,14 @@ function checkPeriodicTasks() {
         }
       });
       
-      console.log(`${data.notifications.length} periyodik g�rev bildirimi g�sterildi.`);
+      console.log(`${data.notifications.length} periyodik görev bildirimi gösterildi.`);
     })
     .catch(error => {
-      console.error('Periyodik g�rev kontrol hatasi:', error);
+      console.error('Periyodik görev kontrol hatasi:', error);
     });
 }
 
-// Is istatistikleri i�in g�rsellestirme
+// Is istatistikleri için görsellestirme
 function showTaskStatistics() {
   // Istatistikleri hesapla
   fetch('get-tasks.php')
@@ -980,7 +980,7 @@ function showTaskStatistics() {
       // Periyodik isleri filtrele
       const periodicTasks = tasks.filter(task => task.isRecurring);
       
-      // Is t�r�ne g�re grupla
+      // Is türüne göre grupla
       const tasksByType = {};
       
       periodicTasks.forEach(task => {
@@ -991,7 +991,7 @@ function showTaskStatistics() {
         tasksByType[type].push(task);
       });
       
-      // Istatistikleri g�ster
+      // Istatistikleri göster
       renderTaskStatistics(tasksByType, periodicTasks.length);
     })
     .catch(error => {
@@ -1007,7 +1007,7 @@ function renderTaskStatistics(tasksByType, totalCount) {
   let html = '<div class="statistics-header">Periyodik Is Dagilimi</div>';
   html += '<div class="statistics-content">';
   
-  // Her is t�r� i�in �ubuk olustur
+  // Her is türü için çubuk olustur
   for (const [type, tasks] of Object.entries(tasksByType)) {
     const percentage = Math.round((tasks.length / totalCount) * 100);
     
@@ -1026,11 +1026,11 @@ function renderTaskStatistics(tasksByType, totalCount) {
   statsContainer.innerHTML = html;
 }
 
-// Takvim modunda periyodik islerle �alismak i�in
+// Takvim modunda periyodik islerle çalismak için
 function initCalendarWithPeriodicTasks() {
   console.log("Periyodik isli takvim baslatiliyor...");
   
-  // Takvim i�erigini y�kle
+  // Takvim içerigini yükle
   const calendarDates = document.getElementById('calendar-dates');
   const calendarTitle = document.getElementById('calendar-title');
   
@@ -1039,12 +1039,12 @@ function initCalendarWithPeriodicTasks() {
     return;
   }
   
-  // Takvim i�in varsayilan ayarlar
+  // Takvim için varsayilan ayarlar
   let currentDate = new Date();
   let selectedDate = null;
   let allTasks = [];
   
-  // T�m isleri y�kle (gelecek tekrarlar dahil)
+  // Tüm isleri yükle (gelecek tekrarlar dahil)
   loadAllTasksWithFuture();
   
   // Ay degistirme butonlari
@@ -1058,7 +1058,7 @@ function initCalendarWithPeriodicTasks() {
     renderCalendar();
   });
   
-  // Gelecek tekrarlar da dahil t�m isleri y�kle
+  // Gelecek tekrarlar da dahil tüm isleri yükle
   function loadAllTasksWithFuture() {
     fetch('get-tasks.php?future=true')
       .then(response => response.json())
@@ -1067,14 +1067,14 @@ function initCalendarWithPeriodicTasks() {
         renderCalendar();
       })
       .catch(error => {
-        console.error('Takvim isleri y�klenirken hata:', error);
+        console.error('Takvim isleri yüklenirken hata:', error);
       });
   }
   
-  // Takvimi g�rsellestir
+  // Takvimi görsellestir
   function renderCalendar() {
-    // Mevcut takvim g�rsellestirme kodunuz...
-    // (Periyodik ve gelecek isleri renkli g�sterecek sekilde g�ncellendi)
+    // Mevcut takvim görsellestirme kodunuz...
+    // (Periyodik ve gelecek isleri renkli gösterecek sekilde güncellendi)
   }
 }
 
@@ -1083,29 +1083,29 @@ function setupPeriodicTaskForm() {
   const form = document.getElementById('add-task-form');
   if (!form) return;
   
-  // Is tipi degistiginde periyodik alanlari g�ster/gizle
+  // Is tipi degistiginde periyodik alanlari göster/gizle
   const taskType = document.getElementById('task-type');
   if (taskType) {
     taskType.addEventListener('change', toggleTaskFields);
   }
   
-  // Periyodik se�enek degistiginde detaylari g�ster/gizle
+  // Periyodik seçenek degistiginde detaylari göster/gizle
   const isRecurring = document.getElementById('is-recurring');
   if (isRecurring) {
     isRecurring.addEventListener('change', toggleRecurringOptions);
   }
 }
 
-// Is tipi degistiginde ilgili alanlari g�ster/gizle
+// Is tipi degistiginde ilgili alanlari göster/gizle
 function toggleTaskFields() {
   const taskType = document.getElementById('task-type').value;
   
-  // T�m �zel alanlari gizle
+  // Tüm özel alanlari gizle
   document.getElementById('roadmap-fields').style.display = 'none';
   document.getElementById('cab-fields').style.display = 'none';
   document.getElementById('periodic-options').style.display = 'none';
   
-  // Se�ilen tipe g�re ilgili alanlari g�ster
+  // Seçilen tipe göre ilgili alanlari göster
   if (taskType === 'roadmap') {
     document.getElementById('roadmap-fields').style.display = 'block';
   } else if (taskType === 'cab') {
@@ -1115,7 +1115,7 @@ function toggleTaskFields() {
   }
 }
 
-// Is tamamlama fonksiyonu - periyodik isler i�in sonraki olusturulacak
+// Is tamamlama fonksiyonu - periyodik isler için sonraki olusturulacak
 function markTaskCompleted(id) {
   if (confirm('Bu isi tamamlandi olarak isaretlemek istiyor musunuz? Bir sonraki periyodik tarih otomatik olarak olusturulacaktir.')) {
     fetch('complete-task.php', {
@@ -1133,9 +1133,9 @@ function markTaskCompleted(id) {
     })
     .then(data => {
       if (data.success) {
-        alert('Is basariyla tamamlandi olarak isaretlendi. Bir sonraki periyodik g�rev olusturuldu.');
+        alert('Is basariyla tamamlandi olarak isaretlendi. Bir sonraki periyodik görev olusturuldu.');
         
-        // G�r�n�r sayfalari yenile
+        // Görünür sayfalari yenile
         if (document.getElementById('dashboard-page').style.display !== 'none') {
           loadDashboardTasks();
           checkPeriodicTasks();
@@ -1158,25 +1158,25 @@ function markTaskCompleted(id) {
   }
 }
 
-// Yakin zamanli isler i�in y�kleme fonksiyonu
+// Yakin zamanli isler için yükleme fonksiyonu
 function loadWorkItems() {
     console.log("Loading work items");
     
-    // Is �gesi tablosunu se�
+    // Is öğesi tablosunu seç
     const workItemsTable = document.querySelector('#work-items-table-body');
     if (!workItemsTable) {
         console.error("Work items table not found");
         return;
     }
     
-    // �rnek veriler (ger�ek veri API'si olmadigi i�in)
+    // örnek veriler (gerçek veri API'si olmadigi için)
     const workItems = [
         {
             device: "web01.cyberwebeyeos.com",
             type: "Software Problem",
-            description: "Java g�ncelleme gerekiyor",
+            description: "Java güncelleme gerekiyor",
             maker: "Ahmet Yilmaz",
-            checker: "Mehmet �z",
+            checker: "Mehmet Öz",
             scope: "Lisans Yenileme/PROJE-001",
             record: "DYF-2452",
             date: "14.03.2025"
@@ -1184,7 +1184,7 @@ function loadWorkItems() {
         {
             device: "db02['ornek-musteri-a'].com",
             type: "Zaafiyet",
-            description: "SQL y�ksek CPU kullanimi sorunu",
+            description: "SQL yüksek CPU kullanimi sorunu",
             maker: "Ayse Demir",
             checker: "Can Yildiz",
             scope: "Örnek Müşteri A/PROJE-004",
@@ -1194,7 +1194,7 @@ function loadWorkItems() {
         {
             device: "app01.cyberwebeyeos.com",
             type: "PCI",
-            description: "PCI DSS uyumluluk g�ncellemesi",
+            description: "PCI DSS uyumluluk güncellemesi",
             maker: "Ali Demir",
             checker: "Fatma Yilmaz",
             scope: "Cyberwebeyeos/PROJE-003",
@@ -1215,7 +1215,7 @@ function loadWorkItems() {
                     </div>
                     <div class="detail-content" style="display: none;">
                         <p><strong>Tip:</strong> ${item.type}</p>
-                        <p><strong>A�iklama:</strong> ${item.description}</p>
+                        <p><strong>Açiklama:</strong> ${item.description}</p>
                     </div>
                 </td>
                 <td>${item.maker}</td>

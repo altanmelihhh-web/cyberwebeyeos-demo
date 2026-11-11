@@ -1,0 +1,53 @@
+{
+ "status": "success",
+ "groups": {
+  "network": [
+   {
+    "device": "core-sw-01",
+    "file_count": 5,
+    "last_modified": "2026-09-02 02:10:04",
+    "value": "network/core-sw-01"
+   },
+   {
+    "device": "core-sw-02",
+    "file_count": 5,
+    "last_modified": "2026-09-02 02:10:04",
+    "value": "network/core-sw-02"
+   },
+   {
+    "device": "dist-sw-03",
+    "file_count": 4,
+    "last_modified": "2026-09-02 02:10:04",
+    "value": "network/dist-sw-03"
+   },
+   {
+    "device": "access-sw-04",
+    "file_count": 3,
+    "last_modified": "2026-09-02 02:10:04",
+    "value": "network/access-sw-04"
+   }
+  ],
+  "firewall": [
+   {
+    "device": "edge-fw-01",
+    "file_count": 6,
+    "last_modified": "2026-09-02 02:12:40",
+    "value": "firewall/edge-fw-01"
+   },
+   {
+    "device": "edge-fw-02",
+    "file_count": 6,
+    "last_modified": "2026-09-02 02:12:40",
+    "value": "firewall/edge-fw-02"
+   }
+  ],
+  "loadbalancer": [
+   {
+    "device": "lb-01",
+    "file_count": 4,
+    "last_modified": "2026-09-02 02:15:11",
+    "value": "loadbalancer/lb-01"
+   }
+  ]
+ }
+}

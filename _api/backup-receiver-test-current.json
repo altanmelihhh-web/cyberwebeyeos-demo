@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-09-02 08:00:00",
+  "overall_status": "ok",
+  "backup_summary": {"total_dirs": 3, "successful": 3, "failed": 0},
+  "multi_server": false,
+  "scope_breakdown": {
+    "maslak": {"success": 5, "failed": 0},
+    "spine": {"success": 3, "failed": 0},
+    "ornek-musteri-atest": {"success": 2, "failed": 0}
+  },
+  "problems_count": 0,
+  "message": "Guncel"
+}

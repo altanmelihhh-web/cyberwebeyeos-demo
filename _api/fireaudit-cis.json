@@ -1,0 +1,7 @@
+{"success":true,"cis_checks":[
+{"id":"1.1","title":"Yonetim arayuzu HTTPS zorunlu","status":"pass"},
+{"id":"1.2","title":"Varsayilan admin hesabi devre disi","status":"pass"},
+{"id":"2.1","title":"Loglama tum politikalarda acik","status":"warn","detail":"6 kuralda logging kapali"},
+{"id":"3.1","title":"any/any kural sayisi minimumda","status":"warn","detail":"9 any/any kural mevcut"},
+{"id":"4.1","title":"Firmware guncel","status":"pass"}
+]}

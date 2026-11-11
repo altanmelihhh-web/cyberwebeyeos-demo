@@ -1,0 +1,7 @@
+{"success":true,"nodes":[
+{"name":"node-web-01","address":"198.51.100.40","description":"Örnek Müşteri A Web sunucusu 1","session":"user-enabled","state":"up"},
+{"name":"node-web-02","address":"198.51.100.41","description":"Örnek Müşteri A Web sunucusu 2","session":"user-enabled","state":"up"},
+{"name":"node-core-01","address":"198.51.100.42","description":"Örnek Müşteri A Core sunucusu 1","session":"user-enabled","state":"up"},
+{"name":"node-core-02","address":"198.51.100.43","description":"Örnek Müşteri A Core sunucusu 2","session":"user-enabled","state":"down"},
+{"name":"node-pay-01","address":"198.51.100.44","description":"Cyberwebeyeos uygulama sunucusu","session":"user-enabled","state":"up"}
+]}

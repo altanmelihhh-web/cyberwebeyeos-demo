@@ -1,0 +1,37 @@
+{
+ "success": true,
+ "comparisons": [
+  {
+   "fw_a": "edge-fw",
+   "fw_b": "core-sw",
+   "common_rules": 18,
+   "only_in_a": 116,
+   "only_in_b": 9,
+   "consistency_pct": 13
+  },
+  {
+   "fw_a": "edge-fw",
+   "fw_b": "wan-rtr",
+   "common_rules": 41,
+   "only_in_a": 93,
+   "only_in_b": 12,
+   "consistency_pct": 28
+  },
+  {
+   "fw_a": "core-sw",
+   "fw_b": "wan-rtr",
+   "common_rules": 7,
+   "only_in_a": 20,
+   "only_in_b": 46,
+   "consistency_pct": 10
+  },
+  {
+   "fw_a": "access-sw",
+   "fw_b": "dell-sw",
+   "common_rules": 22,
+   "only_in_a": 4,
+   "only_in_b": 6,
+   "consistency_pct": 69
+  }
+ ]
+}

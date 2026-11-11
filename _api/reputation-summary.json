@@ -1,0 +1,107 @@
+{
+ "success": true,
+ "data": {
+  "totals": {
+   "total_assets": 15,
+   "listed_assets": 7,
+   "listed_findings": 18,
+   "total_findings": 45,
+   "active_providers": 12
+  },
+  "owners": [
+   {
+    "owner": "Örnek Müşteri A",
+    "total_assets": 7,
+    "listed_assets": 4,
+    "listed_findings": 12,
+    "clean_findings": 11
+   },
+   {
+    "owner": "Cyberwebeyeos",
+    "total_assets": 8,
+    "listed_assets": 3,
+    "listed_findings": 6,
+    "clean_findings": 16
+   }
+  ],
+  "providers": [
+   {
+    "display_name": "Shodan InternetDB",
+    "category": "exposure",
+    "listed_count": 6
+   },
+   {
+    "display_name": "Barracuda Reputation Block List",
+    "category": "dnsbl",
+    "listed_count": 2
+   },
+   {
+    "display_name": "SpamCop Blocking List",
+    "category": "dnsbl",
+    "listed_count": 2
+   },
+   {
+    "display_name": "Passive Spam Block List",
+    "category": "dnsbl",
+    "listed_count": 2
+   },
+   {
+    "display_name": "UCEPROTECT Level 1",
+    "category": "dnsbl",
+    "listed_count": 1
+   },
+   {
+    "display_name": "Mailspike Reputation BL",
+    "category": "dnsbl",
+    "listed_count": 1
+   },
+   {
+    "display_name": "Truncate GBUdb",
+    "category": "dnsbl",
+    "listed_count": 1
+   },
+   {
+    "display_name": "VirusTotal v3 API",
+    "category": "abuse",
+    "listed_count": 1
+   },
+   {
+    "display_name": "URLhaus",
+    "category": "abuse",
+    "listed_count": 1
+   },
+   {
+    "display_name": "RIPEstat",
+    "category": "routing",
+    "listed_count": 1
+   },
+   {
+    "display_name": "Cisco Talos Intelligence",
+    "category": "web_cat",
+    "listed_count": 0
+   },
+   {
+    "display_name": "Cloudflare Radar",
+    "category": "routing",
+    "listed_count": 0
+   }
+  ],
+  "last_run": {
+   "id": 60,
+   "started_at": "2026-09-18 06:00:04",
+   "finished_at": "2026-09-18 06:03:44",
+   "assets_checked": 15,
+   "providers_queried": 12,
+   "findings_new": 0,
+   "findings_cleared": 0,
+   "errors": 0,
+   "triggered_by": "cron"
+  },
+  "levels": {
+   "clean": 8,
+   "possible_fp": 0,
+   "caution": 5,
+   "critical": 2
+  }
+ }
+}

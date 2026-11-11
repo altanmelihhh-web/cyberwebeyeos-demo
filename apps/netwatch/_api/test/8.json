@@ -1,0 +1,1 @@
+{"test":{"id":8,"target_id":1,"test_type":"traceroute","source":"local","status":"warn","started_at":1767212700,"duration_ms":730,"summary":{"hopCount":9},"triggered_by":"manual","raw_output":{"target":"192.0.2.1","type":"traceroute","note":"Statik demo: örnek ham çıktı"}}}

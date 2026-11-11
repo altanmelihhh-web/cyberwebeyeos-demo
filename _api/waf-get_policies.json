@@ -1,0 +1,5 @@
+{"success":true,"policies":[
+{"id":"pol-1","name":"waf_web_portal_prod"},
+{"id":"pol-2","name":"waf_api_gateway_prod"},
+{"id":"pol-3","name":"waf_cyberwebeyeos_general_prod"}
+]}

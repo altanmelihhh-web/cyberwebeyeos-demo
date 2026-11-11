@@ -1,0 +1,67 @@
+{
+  "success": true,
+  "data": {
+    "alerts": [
+      {
+        "id": 1,
+        "rule_id": 1,
+        "name": "High CPU utilization",
+        "rule": "High CPU utilization",
+        "hostname": "core-sw-01.example.internal",
+        "device": {
+          "sysName": "core-sw-01",
+          "location": "DC-1",
+          "hardware": "Cisco C9300-48P",
+          "version": "-"
+        },
+        "severity": "warning",
+        "state": 1,
+        "open": 1,
+        "alerted": 1,
+        "timestamp": "2026-09-02 07:40:00",
+        "info": "",
+        "note": ""
+      },
+      {
+        "id": 2,
+        "rule_id": 2,
+        "name": "Interface down: port3",
+        "rule": "Interface down: port3",
+        "hostname": "fw-edge-02.example.internal",
+        "device": {
+          "sysName": "fw-edge-02",
+          "location": "DC-1",
+          "hardware": "FortiGate 200F",
+          "version": "-"
+        },
+        "severity": "critical",
+        "state": 1,
+        "open": 1,
+        "alerted": 1,
+        "timestamp": "2026-09-02 06:15:00",
+        "info": "",
+        "note": ""
+      },
+      {
+        "id": 3,
+        "rule_id": 3,
+        "name": "Disk usage above 80%",
+        "rule": "Disk usage above 80%",
+        "hostname": "db02.example.internal",
+        "device": {
+          "sysName": "db02",
+          "location": "DC-1",
+          "hardware": "Linux x86_64",
+          "version": "-"
+        },
+        "severity": "warning",
+        "state": 1,
+        "open": 1,
+        "alerted": 0,
+        "timestamp": "2026-09-01 22:05:00",
+        "info": "",
+        "note": "Acknowledged"
+      }
+    ]
+  }
+}

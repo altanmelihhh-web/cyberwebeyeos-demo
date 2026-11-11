@@ -1,0 +1,1 @@
+{"success": true, "nat_rules": [{"name": "NAT_Web_Out", "orig_ip": "203.0.113.40", "translated_ip": "192.0.2.105"}]}

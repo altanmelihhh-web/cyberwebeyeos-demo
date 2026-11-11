@@ -1,0 +1,1 @@
+{"success": true, "mergeable_groups": [{"rules": ["Allow_Web_DMZ", "Allow_Web_DMZ_2"], "reason": "Aynı kaynak/hedef, farklı servis"}]}

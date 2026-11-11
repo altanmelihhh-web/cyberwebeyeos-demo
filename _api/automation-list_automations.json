@@ -1,0 +1,61 @@
+{
+ "success": true,
+ "message": "Automations retrieved successfully",
+ "data": {
+  "data": [
+   {
+    "id": 1,
+    "name": "Yedek kontrolü",
+    "type": "backup_check",
+    "description": "Yedek dosyası eksikse uyarı üretir",
+    "enabled": true,
+    "config": "{}",
+    "trigger_pattern": "DEMO-*",
+    "last_run": "2026-09-10 06:00:00",
+    "last_status": "success",
+    "created_at": "2026-07-01 09:00:00",
+    "updated_at": "2026-09-01 09:00:00"
+   },
+   {
+    "id": 2,
+    "name": "DYF takibi",
+    "type": "dyf_tracking",
+    "description": "Jira DYF taleplerini izler",
+    "enabled": true,
+    "config": "{}",
+    "trigger_pattern": "DEMO-*",
+    "last_run": "2026-09-10 06:00:00",
+    "last_status": "success",
+    "created_at": "2026-07-01 09:00:00",
+    "updated_at": "2026-09-01 09:00:00"
+   },
+   {
+    "id": 3,
+    "name": "GL10 kullanıcı kontrolü",
+    "type": "gl10_user_check",
+    "description": "Pasif kullanıcıları denetler",
+    "enabled": false,
+    "config": "{}",
+    "trigger_pattern": "DEMO-*",
+    "last_run": "2026-09-10 06:00:00",
+    "last_status": "success",
+    "created_at": "2026-07-01 09:00:00",
+    "updated_at": "2026-09-01 09:00:00"
+   },
+   {
+    "id": 4,
+    "name": "NetBox IP eşleştirme",
+    "type": "netbox_ip",
+    "description": "NetBox IP kayıtlarını eşler",
+    "enabled": true,
+    "config": "{}",
+    "trigger_pattern": "DEMO-*",
+    "last_run": "2026-09-10 06:00:00",
+    "last_status": "success",
+    "created_at": "2026-07-01 09:00:00",
+    "updated_at": "2026-09-01 09:00:00"
+   }
+  ]
+ },
+ "timestamp": "2026-09-10T08:00:00+03:00"
+}

@@ -1,0 +1,129 @@
+{
+ "success": true,
+ "problems": [
+  {
+   "triggerid": "20100",
+   "name": "High CPU utilization (>85% for 10m)",
+   "severity": 3,
+   "since": 1789738200,
+   "host_name": "edge-fw-01",
+   "hostid": "10103"
+  },
+  {
+   "triggerid": "20101",
+   "name": "Interface Te1/0/24: Link down",
+   "severity": 4,
+   "since": 1789734600,
+   "host_name": "core-sw-01",
+   "hostid": "10101"
+  },
+  {
+   "triggerid": "20102",
+   "name": "Pool member web-pool 192.0.2.10:443 is not available",
+   "severity": 4,
+   "since": 1789732800,
+   "host_name": "lb-01",
+   "hostid": "10105"
+  },
+  {
+   "triggerid": "20103",
+   "name": "Free disk space is less than 15% on volume /var/lib",
+   "severity": 3,
+   "since": 1789726000,
+   "host_name": "db-srv-01.example.internal",
+   "hostid": "10111"
+  },
+  {
+   "triggerid": "20104",
+   "name": "High error rate on Gi0/12 (input errors)",
+   "severity": 2,
+   "since": 1789719000,
+   "host_name": "access-sw-12",
+   "hostid": "10107"
+  },
+  {
+   "triggerid": "20105",
+   "name": "BGP peer 203.0.113.1 (AS64496) is down",
+   "severity": 5,
+   "since": 1789714000,
+   "host_name": "wan-router-01",
+   "hostid": "10106"
+  },
+  {
+   "triggerid": "20106",
+   "name": "Memory utilization is above 90%",
+   "severity": 3,
+   "since": 1789700000,
+   "host_name": "app-srv-01.example.internal",
+   "hostid": "10109"
+  },
+  {
+   "triggerid": "20107",
+   "name": "Fan #2 status: warning",
+   "severity": 2,
+   "since": 1789680000,
+   "host_name": "core-sw-02",
+   "hostid": "10102"
+  },
+  {
+   "triggerid": "20108",
+   "name": "Backup job duration exceeds 4h",
+   "severity": 1,
+   "since": 1789650000,
+   "host_name": "backup-srv-01.example.internal",
+   "hostid": "10112"
+  },
+  {
+   "triggerid": "20109",
+   "name": "HA sync status: out of sync",
+   "severity": 4,
+   "since": 1789630000,
+   "host_name": "edge-fw-02",
+   "hostid": "10104"
+  },
+  {
+   "triggerid": "20110",
+   "name": "Zabbix agent is unreachable for 5m",
+   "severity": 3,
+   "since": 1789590000,
+   "host_name": "app-srv-02.example.internal",
+   "hostid": "10110"
+  },
+  {
+   "triggerid": "20111",
+   "name": "Unavailable by ICMP ping",
+   "severity": 5,
+   "since": 1789540000,
+   "host_name": "access-sw-13",
+   "hostid": "10108"
+  },
+  {
+   "triggerid": "20112",
+   "name": "VPN tunnel to-branch-01 is down",
+   "severity": 4,
+   "since": 1789480000,
+   "host_name": "edge-fw-01",
+   "hostid": "10103"
+  },
+  {
+   "triggerid": "20113",
+   "name": "Device uptime < 10m (restarted)",
+   "severity": 1,
+   "since": 1789410000,
+   "host_name": "core-sw-01",
+   "hostid": "10101"
+  },
+  {
+   "triggerid": "20114",
+   "name": "SSL certificate expires in less than 30 days",
+   "severity": 2,
+   "since": 1789340000,
+   "host_name": "lb-01",
+   "hostid": "10105"
+  }
+ ],
+ "total": 15,
+ "page": 1,
+ "per_page": 100,
+ "total_pages": 1
+}

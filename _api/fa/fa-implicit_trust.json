@@ -1,0 +1,1 @@
+{"success": true, "trust_pairs": [{"zone": "LAN_Zone", "trusted_by": "DMZ_Zone", "reason": "any/any kural"}]}

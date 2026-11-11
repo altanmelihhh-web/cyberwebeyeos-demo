@@ -1,0 +1,1 @@
+{"action_breakdown": {"allow": 222, "deny": 9}, "any_rules": 48, "disabled_rules": 8, "enabled_rules": 223, "fw_slug": "edge-fw", "last_fetch": "2026-09-02 09:30:07", "last_snapshot_at": "2026-09-02 09:30:07", "severity_breakdown": {"CRITICAL": 2, "LOW": 170, "MEDIUM": 59}, "shadow_rules": 3, "snapshot_count": 853, "success": true, "total_rules": 231, "fw_type": "fortigate"}

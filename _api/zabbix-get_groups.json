@@ -1,0 +1,21 @@
+{
+ "success": true,
+ "groups": [
+  {
+   "groupid": "2",
+   "name": "Network Devices"
+  },
+  {
+   "groupid": "4",
+   "name": "Firewalls"
+  },
+  {
+   "groupid": "5",
+   "name": "Servers"
+  },
+  {
+   "groupid": "7",
+   "name": "Load Balancers"
+  }
+ ]
+}

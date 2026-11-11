@@ -1,0 +1,37 @@
+{
+ "success": true,
+ "shadows": [
+  {
+   "shadowed_id": "nat:12",
+   "shadowing_id": "nat:3",
+   "shadowed_comments": "Web yayını (Örnek Müşteri A)",
+   "shadowing_comments": "Genel internet çıkışı",
+   "reason": "nat:3 tüm kaynakları kapsıyor ve sıralamada önce — nat:12 hiç eşleşmez",
+   "severity": "HIGH"
+  },
+  {
+   "shadowed_id": "nat:18",
+   "shadowing_id": "nat:7",
+   "shadowed_comments": "DMZ DNS çıkışı",
+   "shadowing_comments": "LAN genel masquerade",
+   "reason": "Aynı kaynak ve çıkış arayüzü, daha geniş kural önde",
+   "severity": "MEDIUM"
+  },
+  {
+   "shadowed_id": "nat:25",
+   "shadowing_id": "nat:20",
+   "shadowed_comments": "Test ortamı SNAT",
+   "shadowing_comments": "Üretim SNAT havuzu",
+   "reason": "Aynı çeviri havuzu, hedef aralığı örtüşüyor",
+   "severity": "MEDIUM"
+  },
+  {
+   "shadowed_id": "nat:31",
+   "shadowing_id": "nat:29",
+   "shadowed_comments": "Eski VIP",
+   "shadowing_comments": "Yeni VIP",
+   "reason": "Aynı dış IP ve port için iki VIP; eski olan kullanılmıyor",
+   "severity": "LOW"
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "success": true,
+ "total_physical_ifaces": 8,
+ "shutdown_count": 2,
+ "description_missing_count": 3,
+ "access_ports_no_portsec_count": 0,
+ "possibly_unused_count": 2,
+ "possibly_unused": [
+  "Gi0/0/3",
+  "Gi0/0/4"
+ ],
+ "access_ports_no_portsec": [],
+ "description_missing": [
+  "Gi0/0/2",
+  "Gi0/1/1",
+  "Gi0/0/4"
+ ],
+ "issues": [
+  {
+   "category": "interface",
+   "severity": "LOW",
+   "message": "2 fiziksel arayüz kullanılmıyor ancak shutdown değil",
+   "recommendation": "Gi0/0/3 ve Gi0/0/4 için shutdown"
+  },
+  {
+   "category": "hygiene",
+   "severity": "LOW",
+   "message": "3 arayüzde description yok",
+   "recommendation": "Hat/sağlayıcı bilgisini description olarak ekleyin"
+  }
+ ]
+}

@@ -1,0 +1,590 @@
+{
+ "success": true,
+ "stats": {
+  "critical": 2,
+  "warning": 1,
+  "no_responsible": 1,
+  "stale": 0,
+  "on_track": 3,
+  "total_active": 7
+ },
+ "all": [
+  {
+   "id": "c01",
+   "name": "api.example.internal",
+   "domain": "api.example.internal",
+   "days_left": 6,
+   "end_date": "2026-09-08",
+   "responsible": "",
+   "lifecycle": "active",
+   "lc_label": "İzlemede",
+   "lc_color": "#7f8c8d",
+   "lc_order": 0,
+   "issues": [
+    {
+     "type": "no_responsible",
+     "label": "Sorumlu atanmamış",
+     "color": "#e74c3c"
+    },
+    {
+     "type": "critical",
+     "label": "Kritik: 6 gün kaldı, süreç geride",
+     "color": "#e74c3c"
+    }
+   ],
+   "lifecycle_updated_at": "2026-08-25 10:00:00",
+   "steps": {
+    "active": {
+     "label": "İzlemede",
+     "order": 0,
+     "color": "#7f8c8d"
+    },
+    "csr_ready": {
+     "label": "CSR Hazır",
+     "order": 1,
+     "color": "#3498db"
+    },
+    "csr_sent": {
+     "label": "CSR Gönderildi",
+     "order": 2,
+     "color": "#9b59b6"
+    },
+    "renewal_planned": {
+     "label": "Yenileme Planlandı",
+     "order": 3,
+     "color": "#e67e22"
+    },
+    "cert_received": {
+     "label": "Sertifika Alındı",
+     "order": 4,
+     "color": "#16a085"
+    },
+    "chain_verified": {
+     "label": "Zincir Doğrulandı",
+     "order": 5,
+     "color": "#27ae60"
+    },
+    "f5_deployed": {
+     "label": "F5'e Yüklendi",
+     "order": 6,
+     "color": "#27ae60"
+    },
+    "completed": {
+     "label": "Tamamlandı",
+     "order": 7,
+     "color": "#27ae60"
+    }
+   }
+  },
+  {
+   "id": "c02",
+   "name": "vpn.example.internal",
+   "domain": "vpn.example.internal",
+   "days_left": 13,
+   "end_date": "2026-09-15",
+   "responsible": "mehmet.kaya",
+   "lifecycle": "csr_sent",
+   "lc_label": "CSR Gönderildi",
+   "lc_color": "#9b59b6",
+   "lc_order": 2,
+   "issues": [
+    {
+     "type": "critical",
+     "label": "Kritik: 13 gün kaldı, süreç geride",
+     "color": "#e74c3c"
+    }
+   ],
+   "lifecycle_updated_at": "2026-08-25 10:00:00",
+   "steps": {
+    "active": {
+     "label": "İzlemede",
+     "order": 0,
+     "color": "#7f8c8d"
+    },
+    "csr_ready": {
+     "label": "CSR Hazır",
+     "order": 1,
+     "color": "#3498db"
+    },
+    "csr_sent": {
+     "label": "CSR Gönderildi",
+     "order": 2,
+     "color": "#9b59b6"
+    },
+    "renewal_planned": {
+     "label": "Yenileme Planlandı",
+     "order": 3,
+     "color": "#e67e22"
+    },
+    "cert_received": {
+     "label": "Sertifika Alındı",
+     "order": 4,
+     "color": "#16a085"
+    },
+    "chain_verified": {
+     "label": "Zincir Doğrulandı",
+     "order": 5,
+     "color": "#27ae60"
+    },
+    "f5_deployed": {
+     "label": "F5'e Yüklendi",
+     "order": 6,
+     "color": "#27ae60"
+    },
+    "completed": {
+     "label": "Tamamlandı",
+     "order": 7,
+     "color": "#27ae60"
+    }
+   }
+  },
+  {
+   "id": "c03",
+   "name": "portal.example.internal",
+   "domain": "portal.example.internal",
+   "days_left": 24,
+   "end_date": "2026-09-26",
+   "responsible": "ayse.demir",
+   "lifecycle": "csr_ready",
+   "lc_label": "CSR Hazır",
+   "lc_color": "#3498db",
+   "lc_order": 1,
+   "issues": [
+    {
+     "type": "warning",
+     "label": "24 gün kaldı — CSR henüz gönderilmedi",
+     "color": "#e67e22"
+    }
+   ],
+   "lifecycle_updated_at": "2026-08-25 10:00:00",
+   "steps": {
+    "active": {
+     "label": "İzlemede",
+     "order": 0,
+     "color": "#7f8c8d"
+    },
+    "csr_ready": {
+     "label": "CSR Hazır",
+     "order": 1,
+     "color": "#3498db"
+    },
+    "csr_sent": {
+     "label": "CSR Gönderildi",
+     "order": 2,
+     "color": "#9b59b6"
+    },
+    "renewal_planned": {
+     "label": "Yenileme Planlandı",
+     "order": 3,
+     "color": "#e67e22"
+    },
+    "cert_received": {
+     "label": "Sertifika Alındı",
+     "order": 4,
+     "color": "#16a085"
+    },
+    "chain_verified": {
+     "label": "Zincir Doğrulandı",
+     "order": 5,
+     "color": "#27ae60"
+    },
+    "f5_deployed": {
+     "label": "F5'e Yüklendi",
+     "order": 6,
+     "color": "#27ae60"
+    },
+    "completed": {
+     "label": "Tamamlandı",
+     "order": 7,
+     "color": "#27ae60"
+    }
+   }
+  },
+  {
+   "id": "c04",
+   "name": "mail.example.internal",
+   "domain": "mail.example.internal",
+   "days_left": 38,
+   "end_date": "2026-10-10",
+   "responsible": "mehmet.kaya",
+   "lifecycle": "renewal_planned",
+   "lc_label": "Yenileme Planlandı",
+   "lc_color": "#e67e22",
+   "lc_order": 3,
+   "issues": [
+    {
+     "type": "deadline",
+     "label": "38 gün kaldı",
+     "color": "#e67e22"
+    }
+   ],
+   "lifecycle_updated_at": "2026-08-25 10:00:00",
+   "steps": {
+    "active": {
+     "label": "İzlemede",
+     "order": 0,
+     "color": "#7f8c8d"
+    },
+    "csr_ready": {
+     "label": "CSR Hazır",
+     "order": 1,
+     "color": "#3498db"
+    },
+    "csr_sent": {
+     "label": "CSR Gönderildi",
+     "order": 2,
+     "color": "#9b59b6"
+    },
+    "renewal_planned": {
+     "label": "Yenileme Planlandı",
+     "order": 3,
+     "color": "#e67e22"
+    },
+    "cert_received": {
+     "label": "Sertifika Alındı",
+     "order": 4,
+     "color": "#16a085"
+    },
+    "chain_verified": {
+     "label": "Zincir Doğrulandı",
+     "order": 5,
+     "color": "#27ae60"
+    },
+    "f5_deployed": {
+     "label": "F5'e Yüklendi",
+     "order": 6,
+     "color": "#27ae60"
+    },
+    "completed": {
+     "label": "Tamamlandı",
+     "order": 7,
+     "color": "#27ae60"
+    }
+   }
+  },
+  {
+   "id": "c05",
+   "name": "app.example.internal",
+   "domain": "app.example.internal",
+   "days_left": 52,
+   "end_date": "2026-10-24",
+   "responsible": "ayse.demir",
+   "lifecycle": "active",
+   "lc_label": "İzlemede",
+   "lc_color": "#7f8c8d",
+   "lc_order": 0,
+   "issues": [],
+   "lifecycle_updated_at": "2026-08-25 10:00:00",
+   "steps": {
+    "active": {
+     "label": "İzlemede",
+     "order": 0,
+     "color": "#7f8c8d"
+    },
+    "csr_ready": {
+     "label": "CSR Hazır",
+     "order": 1,
+     "color": "#3498db"
+    },
+    "csr_sent": {
+     "label": "CSR Gönderildi",
+     "order": 2,
+     "color": "#9b59b6"
+    },
+    "renewal_planned": {
+     "label": "Yenileme Planlandı",
+     "order": 3,
+     "color": "#e67e22"
+    },
+    "cert_received": {
+     "label": "Sertifika Alındı",
+     "order": 4,
+     "color": "#16a085"
+    },
+    "chain_verified": {
+     "label": "Zincir Doğrulandı",
+     "order": 5,
+     "color": "#27ae60"
+    },
+    "f5_deployed": {
+     "label": "F5'e Yüklendi",
+     "order": 6,
+     "color": "#27ae60"
+    },
+    "completed": {
+     "label": "Tamamlandı",
+     "order": 7,
+     "color": "#27ae60"
+    }
+   }
+  },
+  {
+   "id": "c06",
+   "name": "Cyberwebeyeos Banking SSL",
+   "domain": "cyberwebeyeos.com",
+   "days_left": 118,
+   "end_date": "2026-12-29",
+   "responsible": "mehmet.kaya",
+   "lifecycle": "active",
+   "lc_label": "İzlemede",
+   "lc_color": "#7f8c8d",
+   "lc_order": 0,
+   "issues": [],
+   "lifecycle_updated_at": "2026-08-25 10:00:00",
+   "steps": {
+    "active": {
+     "label": "İzlemede",
+     "order": 0,
+     "color": "#7f8c8d"
+    },
+    "csr_ready": {
+     "label": "CSR Hazır",
+     "order": 1,
+     "color": "#3498db"
+    },
+    "csr_sent": {
+     "label": "CSR Gönderildi",
+     "order": 2,
+     "color": "#9b59b6"
+    },
+    "renewal_planned": {
+     "label": "Yenileme Planlandı",
+     "order": 3,
+     "color": "#e67e22"
+    },
+    "cert_received": {
+     "label": "Sertifika Alındı",
+     "order": 4,
+     "color": "#16a085"
+    },
+    "chain_verified": {
+     "label": "Zincir Doğrulandı",
+     "order": 5,
+     "color": "#27ae60"
+    },
+    "f5_deployed": {
+     "label": "F5'e Yüklendi",
+     "order": 6,
+     "color": "#27ae60"
+    },
+    "completed": {
+     "label": "Tamamlandı",
+     "order": 7,
+     "color": "#27ae60"
+    }
+   }
+  },
+  {
+   "id": "c07",
+   "name": "zabbix.example.internal",
+   "domain": "zabbix.example.internal",
+   "days_left": 171,
+   "end_date": "2027-02-21",
+   "responsible": "ayse.demir",
+   "lifecycle": "active",
+   "lc_label": "İzlemede",
+   "lc_color": "#7f8c8d",
+   "lc_order": 0,
+   "issues": [],
+   "lifecycle_updated_at": "2026-08-25 10:00:00",
+   "steps": {
+    "active": {
+     "label": "İzlemede",
+     "order": 0,
+     "color": "#7f8c8d"
+    },
+    "csr_ready": {
+     "label": "CSR Hazır",
+     "order": 1,
+     "color": "#3498db"
+    },
+    "csr_sent": {
+     "label": "CSR Gönderildi",
+     "order": 2,
+     "color": "#9b59b6"
+    },
+    "renewal_planned": {
+     "label": "Yenileme Planlandı",
+     "order": 3,
+     "color": "#e67e22"
+    },
+    "cert_received": {
+     "label": "Sertifika Alındı",
+     "order": 4,
+     "color": "#16a085"
+    },
+    "chain_verified": {
+     "label": "Zincir Doğrulandı",
+     "order": 5,
+     "color": "#27ae60"
+    },
+    "f5_deployed": {
+     "label": "F5'e Yüklendi",
+     "order": 6,
+     "color": "#27ae60"
+    },
+    "completed": {
+     "label": "Tamamlandı",
+     "order": 7,
+     "color": "#27ae60"
+    }
+   }
+  }
+ ],
+ "completed": [
+  {
+   "id": "c08",
+   "name": "bastion.example.internal",
+   "domain": "bastion.example.internal",
+   "days_left": -1,
+   "end_date": "2026-09-01",
+   "responsible": "mehmet.kaya",
+   "lifecycle": "completed",
+   "lc_label": "Tamamlandı",
+   "lc_color": "#27ae60",
+   "lc_order": 7,
+   "issues": [],
+   "lifecycle_updated_at": "2026-08-25 10:00:00",
+   "steps": {
+    "active": {
+     "label": "İzlemede",
+     "order": 0,
+     "color": "#7f8c8d"
+    },
+    "csr_ready": {
+     "label": "CSR Hazır",
+     "order": 1,
+     "color": "#3498db"
+    },
+    "csr_sent": {
+     "label": "CSR Gönderildi",
+     "order": 2,
+     "color": "#9b59b6"
+    },
+    "renewal_planned": {
+     "label": "Yenileme Planlandı",
+     "order": 3,
+     "color": "#e67e22"
+    },
+    "cert_received": {
+     "label": "Sertifika Alındı",
+     "order": 4,
+     "color": "#16a085"
+    },
+    "chain_verified": {
+     "label": "Zincir Doğrulandı",
+     "order": 5,
+     "color": "#27ae60"
+    },
+    "f5_deployed": {
+     "label": "F5'e Yüklendi",
+     "order": 6,
+     "color": "#27ae60"
+    },
+    "completed": {
+     "label": "Tamamlandı",
+     "order": 7,
+     "color": "#27ae60"
+    }
+   }
+  },
+  {
+   "id": "c09",
+   "name": "rdgw.example.internal",
+   "domain": "rdgw.example.internal",
+   "days_left": 1,
+   "end_date": "2026-09-03",
+   "responsible": "ayse.demir",
+   "lifecycle": "f5_deployed",
+   "lc_label": "F5'e Yüklendi",
+   "lc_color": "#27ae60",
+   "lc_order": 6,
+   "issues": [],
+   "lifecycle_updated_at": "2026-08-25 10:00:00",
+   "steps": {
+    "active": {
+     "label": "İzlemede",
+     "order": 0,
+     "color": "#7f8c8d"
+    },
+    "csr_ready": {
+     "label": "CSR Hazır",
+     "order": 1,
+     "color": "#3498db"
+    },
+    "csr_sent": {
+     "label": "CSR Gönderildi",
+     "order": 2,
+     "color": "#9b59b6"
+    },
+    "renewal_planned": {
+     "label": "Yenileme Planlandı",
+     "order": 3,
+     "color": "#e67e22"
+    },
+    "cert_received": {
+     "label": "Sertifika Alındı",
+     "order": 4,
+     "color": "#16a085"
+    },
+    "chain_verified": {
+     "label": "Zincir Doğrulandı",
+     "order": 5,
+     "color": "#27ae60"
+    },
+    "f5_deployed": {
+     "label": "F5'e Yüklendi",
+     "order": 6,
+     "color": "#27ae60"
+    },
+    "completed": {
+     "label": "Tamamlandı",
+     "order": 7,
+     "color": "#27ae60"
+    }
+   }
+  }
+ ],
+ "steps": {
+  "active": {
+   "label": "İzlemede",
+   "order": 0,
+   "color": "#7f8c8d"
+  },
+  "csr_ready": {
+   "label": "CSR Hazır",
+   "order": 1,
+   "color": "#3498db"
+  },
+  "csr_sent": {
+   "label": "CSR Gönderildi",
+   "order": 2,
+   "color": "#9b59b6"
+  },
+  "renewal_planned": {
+   "label": "Yenileme Planlandı",
+   "order": 3,
+   "color": "#e67e22"
+  },
+  "cert_received": {
+   "label": "Sertifika Alındı",
+   "order": 4,
+   "color": "#16a085"
+  },
+  "chain_verified": {
+   "label": "Zincir Doğrulandı",
+   "order": 5,
+   "color": "#27ae60"
+  },
+  "f5_deployed": {
+   "label": "F5'e Yüklendi",
+   "order": 6,
+   "color": "#27ae60"
+  },
+  "completed": {
+   "label": "Tamamlandı",
+   "order": 7,
+   "color": "#27ae60"
+  }
+ }
+}

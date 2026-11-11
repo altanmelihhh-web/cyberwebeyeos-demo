@@ -1,0 +1,25 @@
+{
+ "success": true,
+ "comments": [
+  {
+   "id": 1,
+   "user_id": 2,
+   "username": "ayse.demir",
+   "comment": "Şema core-sw-02 yedek bağlantısıyla güncellendi, gözden geçirir misiniz?",
+   "created_at": "2026-09-01 09:42:10",
+   "updated_at": null,
+   "can_edit": false,
+   "can_delete": false
+  },
+  {
+   "id": 2,
+   "user_id": 3,
+   "username": "mehmet.kaya",
+   "comment": "Kontrol ettim, edge-fw-01 uplink portu doğru. Onaylıyorum.",
+   "created_at": "2026-09-01 14:05:33",
+   "updated_at": null,
+   "can_edit": false,
+   "can_delete": false
+  }
+ ]
+}

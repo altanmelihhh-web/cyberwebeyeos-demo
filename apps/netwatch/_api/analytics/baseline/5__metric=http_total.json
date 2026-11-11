@@ -1,0 +1,1 @@
+{"targetId":5,"metric":"http_total","baseline":{"n":144,"mean":327.667,"stddev":62.521,"minVal":232.2,"maxVal":807.9,"p50":322.9,"p95":381,"p99":719.5,"computedAt":1767225600000}}

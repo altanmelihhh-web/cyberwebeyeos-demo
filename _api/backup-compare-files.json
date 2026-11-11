@@ -1,0 +1,56 @@
+{
+ "status": "success",
+ "device": "network/core-sw-01",
+ "files": [
+  {
+   "file_id": "demo0001",
+   "name": "core-sw-01_198.51.100.21_20260901.cfg",
+   "path": "/demo/backups/network/core-sw-01/core-sw-01_20260901.cfg",
+   "size": 24576,
+   "size_formatted": "24.0 KB",
+   "extension": "cfg",
+   "modified": "2026-09-01 02:10:04",
+   "modified_formatted": "01.09.2026 02:10"
+  },
+  {
+   "file_id": "demo0002",
+   "name": "core-sw-01_198.51.100.21_20260825.cfg",
+   "path": "/demo/backups/network/core-sw-01/core-sw-01_20260825.cfg",
+   "size": 24366,
+   "size_formatted": "23.8 KB",
+   "extension": "cfg",
+   "modified": "2026-08-25 02:10:04",
+   "modified_formatted": "25.08.2026 02:10"
+  },
+  {
+   "file_id": "demo0003",
+   "name": "core-sw-01_198.51.100.21_20260818.cfg",
+   "path": "/demo/backups/network/core-sw-01/core-sw-01_20260818.cfg",
+   "size": 24156,
+   "size_formatted": "23.6 KB",
+   "extension": "cfg",
+   "modified": "2026-08-18 02:10:04",
+   "modified_formatted": "18.08.2026 02:10"
+  },
+  {
+   "file_id": "demo0004",
+   "name": "core-sw-01_198.51.100.21_20260811.cfg",
+   "path": "/demo/backups/network/core-sw-01/core-sw-01_20260811.cfg",
+   "size": 23946,
+   "size_formatted": "23.4 KB",
+   "extension": "cfg",
+   "modified": "2026-08-11 02:10:04",
+   "modified_formatted": "11.08.2026 02:10"
+  },
+  {
+   "file_id": "demo0005",
+   "name": "core-sw-01_198.51.100.21_20260804.cfg",
+   "path": "/demo/backups/network/core-sw-01/core-sw-01_20260804.cfg",
+   "size": 23736,
+   "size_formatted": "23.2 KB",
+   "extension": "cfg",
+   "modified": "2026-08-04 02:10:04",
+   "modified_formatted": "04.08.2026 02:10"
+  }
+ ]
+}

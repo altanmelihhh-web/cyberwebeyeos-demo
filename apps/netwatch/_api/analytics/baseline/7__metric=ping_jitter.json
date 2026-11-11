@@ -1,0 +1,1 @@
+{"targetId":7,"metric":"ping_jitter","baseline":{"n":144,"mean":0.897,"stddev":0.301,"minVal":0.1,"maxVal":1.6,"p50":0.9,"p95":1.4,"p99":1.6,"computedAt":1767225600000}}

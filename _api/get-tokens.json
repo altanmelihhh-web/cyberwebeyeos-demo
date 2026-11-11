@@ -1,0 +1,85 @@
+{
+ "success": true,
+ "tokens": [
+  {
+   "id": 8,
+   "name": "Itsm entegrasyonu",
+   "type": "bearer",
+   "usage": "Talep açma / kapatma",
+   "base_url": "https://itsm.example.internal",
+   "notes": "",
+   "created_at": "2026-08-22 10:00:00",
+   "masked_value": "Ve2•••••••••••••••"
+  },
+  {
+   "id": 7,
+   "name": "Yedekleme alıcısı",
+   "type": "apikey",
+   "usage": "Yedek push endpoint",
+   "base_url": "https://backup.example.internal",
+   "notes": "",
+   "created_at": "2026-08-19 10:00:00",
+   "masked_value": "Rc7•••••••••••••••"
+  },
+  {
+   "id": 6,
+   "name": "F5 REST servis",
+   "type": "basic",
+   "usage": "F5 operasyonları",
+   "base_url": "https://f5-prod.example.internal",
+   "notes": "",
+   "created_at": "2026-08-16 10:00:00",
+   "masked_value": "Gf1•••••••••••••••"
+  },
+  {
+   "id": 5,
+   "name": "Slack bildirim webhook",
+   "type": "apikey",
+   "usage": "Uyarı bildirimleri",
+   "base_url": "https://hooks.example.internal",
+   "notes": "",
+   "created_at": "2026-08-13 10:00:00",
+   "masked_value": "Hn3•••••••••••••••"
+  },
+  {
+   "id": 4,
+   "name": "Zabbix API",
+   "type": "bearer",
+   "usage": "Zabbix izleme entegrasyonu",
+   "base_url": "https://zabbix.example.internal",
+   "notes": "",
+   "created_at": "2026-08-10 10:00:00",
+   "masked_value": "Yt8•••••••••••••••"
+  },
+  {
+   "id": 3,
+   "name": "LibreNMS API",
+   "type": "token",
+   "usage": "Cihaz sağlık verisi",
+   "base_url": "https://librenms.example.internal",
+   "notes": "",
+   "created_at": "2026-08-07 10:00:00",
+   "masked_value": "Kp4•••••••••••••••"
+  },
+  {
+   "id": 2,
+   "name": "NetBox API",
+   "type": "token",
+   "usage": "IPAM / NetBox sorguları",
+   "base_url": "https://netbox.example.internal",
+   "notes": "",
+   "created_at": "2026-08-04 10:00:00",
+   "masked_value": "Zx9•••••••••••••••"
+  },
+  {
+   "id": 1,
+   "name": "Jira DYF servis hesabı",
+   "type": "basic",
+   "usage": "Jira DYF senkronizasyonu",
+   "base_url": "https://jira.example.com",
+   "notes": "",
+   "created_at": "2026-08-01 10:00:00",
+   "masked_value": "a1b•••••••••••••••"
+  }
+ ]
+}

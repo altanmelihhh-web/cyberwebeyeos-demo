@@ -1,0 +1,130 @@
+{
+ "success": true,
+ "history": [
+  {
+   "id": 100,
+   "env": "prod",
+   "policy_id": "pol-3",
+   "policy_name": "waf_cyberwebeyeos_general_prod",
+   "ip_address": "198.51.100.55",
+   "ip_mask": "255.255.255.255",
+   "action": "annotation_updated",
+   "details": "{\"comment\":\"Partner entegrasyon IP\",\"expire_date\":\"2026-12-31\",\"is_ours\":false}",
+   "changed_by": "mehmet.kaya",
+   "changed_at": "2026-08-28 14:22:00"
+  },
+  {
+   "id": 99,
+   "env": "prod",
+   "policy_id": "pol-3",
+   "policy_name": "waf_cyberwebeyeos_general_prod",
+   "ip_address": "198.51.100.55",
+   "ip_mask": "255.255.255.255",
+   "action": "annotation_restored",
+   "details": "{\"comment\":\"Partner entegrasyon IP\",\"expire_date\":\"2026-09-30\",\"is_ours\":false}",
+   "changed_by": "ayse.demir",
+   "changed_at": "2026-08-20 09:05:00"
+  },
+  {
+   "id": 98,
+   "env": "prod",
+   "policy_id": "pol-3",
+   "policy_name": "waf_cyberwebeyeos_general_prod",
+   "ip_address": "198.51.100.55",
+   "ip_mask": "255.255.255.255",
+   "action": "annotation_deleted",
+   "details": "{\"comment\":\"Geçici erişim\",\"expire_date\":\"2026-08-15\",\"is_ours\":false}",
+   "changed_by": "ayse.demir",
+   "changed_at": "2026-08-16 08:31:00"
+  },
+  {
+   "id": 97,
+   "env": "prod",
+   "policy_id": "pol-3",
+   "policy_name": "waf_cyberwebeyeos_general_prod",
+   "ip_address": "198.51.100.55",
+   "ip_mask": "255.255.255.255",
+   "action": "annotation_updated",
+   "details": "{\"comment\":\"Geçici erişim\",\"expire_date\":\"2026-08-15\",\"is_ours\":false}",
+   "changed_by": "zeynep.aydin",
+   "changed_at": "2026-07-30 16:48:00"
+  },
+  {
+   "id": 96,
+   "env": "prod",
+   "policy_id": "pol-3",
+   "policy_name": "waf_cyberwebeyeos_general_prod",
+   "ip_address": "198.51.100.55",
+   "ip_mask": "255.255.255.255",
+   "action": "removed_from_f5",
+   "details": "{\"comment\":\"Geçici erişim\",\"expire_date\":\"2026-08-15\",\"is_ours\":false}",
+   "changed_by": "system",
+   "changed_at": "2026-07-12 03:00:04"
+  },
+  {
+   "id": 95,
+   "env": "prod",
+   "policy_id": "pol-3",
+   "policy_name": "waf_cyberwebeyeos_general_prod",
+   "ip_address": "198.51.100.55",
+   "ip_mask": "255.255.255.255",
+   "action": "annotation_created",
+   "details": "{\"comment\":\"Geçici erişim\",\"expire_date\":\"2026-07-31\",\"is_ours\":false}",
+   "changed_by": "mehmet.kaya",
+   "changed_at": "2026-06-02 09:14:00"
+  }
+ ],
+ "annotations": [
+  {
+   "id": 1,
+   "env": "prod",
+   "policy_id": "pol-3",
+   "policy_name": "waf_cyberwebeyeos_general_prod",
+   "ip_address": "198.51.100.55",
+   "ip_mask": "255.255.255.255",
+   "comment": "Partner entegrasyon IP",
+   "expire_date": "2026-12-31",
+   "is_ours": false,
+   "created_by": "mehmet.kaya",
+   "created_at": "2026-06-02 09:14:00",
+   "updated_by": "mehmet.kaya",
+   "updated_at": "2026-08-28 14:22:00",
+   "deleted_at": null,
+   "is_deleted": false
+  },
+  {
+   "id": 2,
+   "env": "prod",
+   "policy_id": "pol-1",
+   "policy_name": "waf_web_portal_prod",
+   "ip_address": "198.51.100.55",
+   "ip_mask": "255.255.255.255",
+   "comment": "Partner entegrasyon IP",
+   "expire_date": "2026-12-31",
+   "is_ours": false,
+   "created_by": "mehmet.kaya",
+   "created_at": "2026-06-02 09:20:00",
+   "updated_by": "mehmet.kaya",
+   "updated_at": "2026-08-28 14:25:00",
+   "deleted_at": null,
+   "is_deleted": false
+  },
+  {
+   "id": 3,
+   "env": "prod",
+   "policy_id": "pol-2",
+   "policy_name": "waf_api_gateway_prod",
+   "ip_address": "198.51.100.55",
+   "ip_mask": "255.255.255.255",
+   "comment": "Eski partner kaydı",
+   "expire_date": "2026-08-15",
+   "is_ours": false,
+   "created_by": "ayse.demir",
+   "created_at": "2026-05-20 11:00:00",
+   "updated_by": "ayse.demir",
+   "updated_at": "2026-08-16 08:31:00",
+   "deleted_at": "2026-08-16 08:31:00",
+   "is_deleted": true
+  }
+ ]
+}

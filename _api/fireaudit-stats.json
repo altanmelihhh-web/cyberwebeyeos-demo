@@ -1,0 +1,1 @@
+{"success":true,"fw_slug":"drc-fw","last_fetch":"2026-09-02 08:00:00","last_snapshot_at":"2026-09-02 08:00:00","snapshot_count":42,"enabled_rules":128,"disabled_rules":6,"any_rules":9,"shadow_rules":2,"action_breakdown":{"allow":110,"deny":18},"severity_breakdown":{"CRITICAL":1,"MEDIUM":22,"LOW":105}}

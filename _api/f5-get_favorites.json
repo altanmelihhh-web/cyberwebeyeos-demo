@@ -1,0 +1,75 @@
+{
+ "success": true,
+ "favorites": [
+  {
+   "id": 1,
+   "username": "ayse.demir",
+   "env": "prod",
+   "group_name": "Web katmanı bakım penceresi",
+   "items": [
+    {
+     "type": "node",
+     "value": "node-web-01"
+    },
+    {
+     "type": "node",
+     "value": "node-web-02"
+    },
+    {
+     "type": "member",
+     "value": "node-web-01:80",
+     "pool": "pool_web_portal_prod"
+    }
+   ],
+   "created_at": "2026-08-03 10:00:00",
+   "updated_at": "2026-08-03 10:00:00"
+  },
+  {
+   "id": 2,
+   "username": "ayse.demir",
+   "env": "prod",
+   "group_name": "Core sunucuları",
+   "items": [
+    {
+     "type": "node",
+     "value": "node-core-01"
+    },
+    {
+     "type": "node",
+     "value": "node-core-02"
+    },
+    {
+     "type": "member",
+     "value": "node-core-01:443",
+     "pool": "pool_payment_core_prod"
+    },
+    {
+     "type": "member",
+     "value": "node-core-02:443",
+     "pool": "pool_payment_core_prod"
+    }
+   ],
+   "created_at": "2026-08-12 14:30:00",
+   "updated_at": "2026-08-25 09:10:00"
+  },
+  {
+   "id": 3,
+   "username": "ayse.demir",
+   "env": "prod",
+   "group_name": "Entegrasyon havuzu",
+   "items": [
+    {
+     "type": "node",
+     "value": "node-pay-01"
+    },
+    {
+     "type": "member",
+     "value": "node-pay-01:8443",
+     "pool": "pool_erp_integration_prod"
+    }
+   ],
+   "created_at": "2026-08-19 11:45:00",
+   "updated_at": "2026-08-19 11:45:00"
+  }
+ ]
+}

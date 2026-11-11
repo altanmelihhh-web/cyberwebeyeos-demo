@@ -1,0 +1,302 @@
+{
+ "success": true,
+ "data": {
+  "totals": {
+   "scanned": 9,
+   "clean": 3,
+   "listed": 6,
+   "critical": 2,
+   "warning": 4,
+   "info": 0,
+   "ports_open_total": 6,
+   "vulns_total": 2,
+   "cve_unique_count": 4
+  },
+  "owner_breakdown": {
+   "Örnek Müşteri A": {
+    "scanned": 4,
+    "clean": 1,
+    "listed": 3
+   },
+   "Cyberwebeyeos": {
+    "scanned": 5,
+    "clean": 2,
+    "listed": 3
+   }
+  },
+  "top_ports": {
+   "22": 3,
+   "25": 2,
+   "53": 1,
+   "123": 1,
+   "443": 2,
+   "445": 1,
+   "465": 1,
+   "587": 1,
+   "993": 1,
+   "3389": 1,
+   "6379": 1,
+   "8443": 1
+  },
+  "top_cves": {
+   "CVE-2022-0543": 1,
+   "CVE-2019-0708": 1,
+   "CVE-2020-0796": 1,
+   "CVE-2017-0144": 1
+  },
+  "critical_assets": [
+   {
+    "asset_id": 12,
+    "asset_value": "203.0.113.15",
+    "owner": "Örnek Müşteri A",
+    "severity": "critical",
+    "ports": [
+     25,
+     465,
+     6379
+    ],
+    "vulns": [
+     "CVE-2022-0543"
+    ],
+    "hostnames": [
+     "bulk.example.internal"
+    ],
+    "tags": [],
+    "critical_ports": [
+     6379
+    ],
+    "other_ports": [
+     25,
+     465
+    ],
+    "human_reason": "Redis (6379) internete açık + 1 CVE",
+    "permalink": "https://www.shodan.io/host/203.0.113.15",
+    "last_checked": "2026-09-18 06:09:11",
+    "baseline_accepted": false,
+    "baseline_at": null,
+    "risk": {
+     "score": 62,
+     "severity": "critical",
+     "compliance": [
+      "PCI-DSS 2.2.2",
+      "NIST CM-7",
+      "CIS 4.6"
+     ],
+     "findings": [
+      "Redis (6379) internete açık + 1 CVE"
+     ]
+    }
+   },
+   {
+    "asset_id": 10,
+    "asset_value": "198.51.100.41",
+    "owner": "Örnek Müşteri A",
+    "severity": "critical",
+    "ports": [
+     3389,
+     445,
+     443
+    ],
+    "vulns": [
+     "CVE-2019-0708",
+     "CVE-2020-0796",
+     "CVE-2017-0144"
+    ],
+    "hostnames": [
+     "rdgw.example.internal"
+    ],
+    "tags": [
+     "self-signed"
+    ],
+    "critical_ports": [
+     3389,
+     445
+    ],
+    "other_ports": [
+     443
+    ],
+    "human_reason": "RDP (3389) + SMB (445) internete açık, 3 CVE",
+    "permalink": "https://www.shodan.io/host/198.51.100.41",
+    "last_checked": "2026-09-18 06:07:11",
+    "baseline_accepted": false,
+    "baseline_at": null,
+    "risk": {
+     "score": 95,
+     "severity": "critical",
+     "compliance": [
+      "PCI-DSS 2.2.2",
+      "NIST CM-7",
+      "CIS 4.6"
+     ],
+     "findings": [
+      "RDP (3389) + SMB (445) internete açık, 3 CVE"
+     ]
+    }
+   }
+  ],
+  "warning_assets": [
+   {
+    "asset_id": 11,
+    "asset_value": "198.51.100.42",
+    "owner": "Örnek Müşteri A",
+    "severity": "warning",
+    "ports": [
+     22,
+     8443
+    ],
+    "vulns": [],
+    "hostnames": [
+     "vpn.example.internal"
+    ],
+    "tags": [
+     "vpn"
+    ],
+    "critical_ports": [],
+    "other_ports": [
+     22,
+     8443
+    ],
+    "human_reason": "Yönetim portu 8443 — baseline kabul edildi",
+    "permalink": "https://www.shodan.io/host/198.51.100.42",
+    "last_checked": "2026-09-18 06:08:11",
+    "baseline_accepted": true,
+    "baseline_at": "2026-09-12 10:14:00",
+    "risk": {
+     "score": 18,
+     "severity": "medium",
+     "compliance": [
+      "CIS 4.6"
+     ],
+     "findings": [
+      "Yönetim portu 8443 — baseline kabul edildi"
+     ]
+    }
+   },
+   {
+    "asset_id": 5,
+    "asset_value": "192.0.2.53",
+    "owner": "Cyberwebeyeos",
+    "severity": "warning",
+    "ports": [
+     53,
+     123
+    ],
+    "vulns": [],
+    "hostnames": [
+     "ns1.example.internal"
+    ],
+    "tags": [],
+    "critical_ports": [
+     123
+    ],
+    "other_ports": [
+     53
+    ],
+    "human_reason": "NTP (123) UDP amplification riski",
+    "permalink": "https://www.shodan.io/host/192.0.2.53",
+    "last_checked": "2026-09-18 06:05:11",
+    "baseline_accepted": false,
+    "baseline_at": null,
+    "risk": {
+     "score": 50,
+     "severity": "high",
+     "compliance": [
+      "BCP38",
+      "PCI-DSS 2.2.2"
+     ],
+     "findings": [
+      "NTP (123) UDP amplification riski"
+     ]
+    }
+   },
+   {
+    "asset_id": 4,
+    "asset_value": "192.0.2.25",
+    "owner": "Cyberwebeyeos",
+    "severity": "warning",
+    "ports": [
+     25,
+     587,
+     993,
+     22
+    ],
+    "vulns": [],
+    "hostnames": [
+     "mail.example.internal"
+    ],
+    "tags": [],
+    "critical_ports": [],
+    "other_ports": [
+     25,
+     587,
+     993,
+     22
+    ],
+    "human_reason": "Mail servisleri + SSH (22) açık",
+    "permalink": "https://www.shodan.io/host/192.0.2.25",
+    "last_checked": "2026-09-18 06:04:11",
+    "baseline_accepted": false,
+    "baseline_at": null,
+    "risk": {
+     "score": 25,
+     "severity": "medium",
+     "compliance": [
+      "PCI-DSS 2.2.2",
+      "NIST CM-7"
+     ],
+     "findings": [
+      "Mail servisleri + SSH (22) açık"
+     ]
+    }
+   },
+   {
+    "asset_id": 3,
+    "asset_value": "192.0.2.12",
+    "owner": "Cyberwebeyeos",
+    "severity": "warning",
+    "ports": [
+     22,
+     443
+    ],
+    "vulns": [],
+    "hostnames": [
+     "bastion.example.internal"
+    ],
+    "tags": [],
+    "critical_ports": [],
+    "other_ports": [
+     22,
+     443
+    ],
+    "human_reason": "SSH (22) internete açık — beklenmedik port",
+    "permalink": "https://www.shodan.io/host/192.0.2.12",
+    "last_checked": "2026-09-18 06:03:11",
+    "baseline_accepted": false,
+    "baseline_at": null,
+    "risk": {
+     "score": 20,
+     "severity": "medium",
+     "compliance": [
+      "PCI-DSS 2.2.2",
+      "CIS 4.6"
+     ],
+     "findings": [
+      "SSH (22) internete açık — beklenmedik port"
+     ]
+    }
+   }
+  ],
+  "compliance_counts": {
+   "PCI-DSS 2.2.2": 5,
+   "CIS 4.6": 4,
+   "NIST CM-7": 3,
+   "BCP38": 1
+  },
+  "global_risk": {
+   "level": "non_compliant",
+   "average": 45,
+   "max": 95,
+   "count": 6
+  }
+ }
+}

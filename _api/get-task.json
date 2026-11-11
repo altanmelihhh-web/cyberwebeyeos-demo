@@ -1,0 +1,15 @@
+{
+ "id": "930f2d16b5ce92a039f6d4655b74b0af",
+ "device": "db02.ornek-musteri-a.com",
+ "reason": "Zaafiyet",
+ "description": "SQL yüksek CPU kullanımı sorunu",
+ "maker": "Ayşe Demir",
+ "checker": "Can Yıldız",
+ "scope": "Örnek Müşteri A/PROJE-004",
+ "record": "TM-3242",
+ "date": "2025-03-18",
+ "status": "active",
+ "notes": "Sorgunun optimize edilmesi gerekiyor",
+ "type": "periodic",
+ "dateFormatted": "18.03.2025"
+}

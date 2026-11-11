@@ -1,0 +1,32 @@
+{
+ "success": true,
+ "items": [
+  {
+   "trash_name": "1756800000_eski_sema_v1.pdf",
+   "original_name": "eski_sema_v1.pdf",
+   "original_path": "Ag/eski_sema_v1.pdf",
+   "deleted_at": "2026-08-30 11:20:15",
+   "deleted_by": "ayse.demir",
+   "size": "182.4 KB",
+   "type": "pdf"
+  },
+  {
+   "trash_name": "1756713600_yedek_notlari.docx",
+   "original_name": "yedek_notlari.docx",
+   "original_path": "Yedekler/yedek_notlari.docx",
+   "deleted_at": "2026-08-29 15:02:41",
+   "deleted_by": "mehmet.kaya",
+   "size": "36.0 KB",
+   "type": "docx"
+  },
+  {
+   "trash_name": "1756627200_envanter_2025.xlsx",
+   "original_name": "envanter_2025.xlsx",
+   "original_path": "Envanter/envanter_2025.xlsx",
+   "deleted_at": "2026-08-28 09:48:03",
+   "deleted_by": "ayse.demir",
+   "size": "74.8 KB",
+   "type": "xlsx"
+  }
+ ]
+}

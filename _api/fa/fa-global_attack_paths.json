@@ -1,0 +1,80 @@
+{
+ "success": true,
+ "total": 6,
+ "paths": [
+  {
+   "risk_score": 86,
+   "severity": "CRITICAL",
+   "target_name": "Core Switch",
+   "target": "Core Switch",
+   "hops": 2,
+   "path": [
+    "Internet",
+    "Edge Firewall",
+    "Core Switch"
+   ]
+  },
+  {
+   "risk_score": 78,
+   "severity": "HIGH",
+   "target_name": "Access Switch (Dell)",
+   "target": "Access Switch (Dell)",
+   "hops": 3,
+   "path": [
+    "Internet",
+    "Edge Firewall",
+    "Core Switch",
+    "Access Switch (Dell)"
+   ]
+  },
+  {
+   "risk_score": 74,
+   "severity": "HIGH",
+   "target_name": "Access Switch",
+   "target": "Access Switch",
+   "hops": 3,
+   "path": [
+    "Internet",
+    "Edge Firewall",
+    "Core Switch",
+    "Access Switch"
+   ]
+  },
+  {
+   "risk_score": 61,
+   "severity": "MEDIUM",
+   "target_name": "Edge Firewall",
+   "target": "Edge Firewall",
+   "hops": 2,
+   "path": [
+    "Internet",
+    "WAN Router",
+    "Edge Firewall"
+   ]
+  },
+  {
+   "risk_score": 55,
+   "severity": "MEDIUM",
+   "target_name": "Core Switch",
+   "target": "Core Switch",
+   "hops": 2,
+   "path": [
+    "Internet",
+    "WAN Router",
+    "Core Switch"
+   ]
+  },
+  {
+   "risk_score": 32,
+   "severity": "LOW",
+   "target_name": "Access Switch",
+   "target": "Access Switch",
+   "hops": 2,
+   "path": [
+    "WAN Router",
+    "Core Switch",
+    "Access Switch"
+   ]
+  }
+ ]
+}

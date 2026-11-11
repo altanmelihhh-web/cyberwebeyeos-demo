@@ -1,0 +1,1 @@
+{"success": true, "logging": [{"device": "Edge Firewall", "syslog_configured": true}, {"device": "Core Switch", "syslog_configured": true}, {"device": "Access Switch", "syslog_configured": true}, {"device": "Access Switch (Dell)", "syslog_configured": true}, {"device": "WAN Router", "syslog_configured": true}]}

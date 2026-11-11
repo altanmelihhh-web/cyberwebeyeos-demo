@@ -1,0 +1,1 @@
+{"targetId":7,"fromTs":1767139200,"toTs":1767225600,"outageCount":1,"totalDownSec":3000,"uptimePct":96.528,"outages":[{"startAt":1767171600,"endAt":1767174600,"samples":6,"durationSec":3000}]}

@@ -1,0 +1,242 @@
+{
+ "success": true,
+ "source": "cache",
+ "fetched_at": "2026-09-02 08:10:00",
+ "certs": [
+  {
+   "cn": "api.example.internal",
+   "env": "PROD",
+   "f5_name": "api_example_internal.crt",
+   "match_status": "managed",
+   "days_left": 6,
+   "exp_str": "2026-09-08",
+   "issuer_cn": "Örnek Ara CA",
+   "key_type": "RSA",
+   "key_size": 2048,
+   "san": [
+    "api.example.internal",
+    "www.api.example.internal"
+   ],
+   "is_wildcard": false,
+   "fingerprint": "6e0d65a711290b52294e46e274c74662b8194c4b",
+   "matched_domain": "api.example.internal"
+  },
+  {
+   "cn": "api.example.internal",
+   "env": "DRC",
+   "f5_name": "api_example_internal.crt",
+   "match_status": "managed",
+   "days_left": 6,
+   "exp_str": "2026-09-08",
+   "issuer_cn": "Örnek Ara CA",
+   "key_type": "RSA",
+   "key_size": 2048,
+   "san": [
+    "api.example.internal",
+    "www.api.example.internal"
+   ],
+   "is_wildcard": false,
+   "fingerprint": "0538b86782e93bbc8ad3c1c437943c5cdf6ebde9",
+   "matched_domain": "api.example.internal"
+  },
+  {
+   "cn": "portal.example.internal",
+   "env": "PROD",
+   "f5_name": "portal_example_internal.crt",
+   "match_status": "managed",
+   "days_left": 24,
+   "exp_str": "2026-09-26",
+   "issuer_cn": "Örnek Ara CA",
+   "key_type": "RSA",
+   "key_size": 2048,
+   "san": [
+    "portal.example.internal",
+    "www.portal.example.internal"
+   ],
+   "is_wildcard": false,
+   "fingerprint": "1ff60096affd24f4038bb82fea6a7899f5111d9a",
+   "matched_domain": "portal.example.internal"
+  },
+  {
+   "cn": "portal.example.internal",
+   "env": "DRC",
+   "f5_name": "portal_example_internal.crt",
+   "match_status": "managed",
+   "days_left": 24,
+   "exp_str": "2026-09-26",
+   "issuer_cn": "Örnek Ara CA",
+   "key_type": "RSA",
+   "key_size": 2048,
+   "san": [
+    "portal.example.internal",
+    "www.portal.example.internal"
+   ],
+   "is_wildcard": false,
+   "fingerprint": "a53bfd841ea893f4779695f36b8b6196135d423c",
+   "matched_domain": "portal.example.internal"
+  },
+  {
+   "cn": "vpn.example.internal",
+   "env": "PROD",
+   "f5_name": "vpn_example_internal.crt",
+   "match_status": "managed",
+   "days_left": 13,
+   "exp_str": "2026-09-15",
+   "issuer_cn": "Örnek Ara CA",
+   "key_type": "RSA",
+   "key_size": 2048,
+   "san": [
+    "vpn.example.internal",
+    "www.vpn.example.internal"
+   ],
+   "is_wildcard": false,
+   "fingerprint": "90636626e93f260331e17f974cdd5e8c8b40eb9d",
+   "matched_domain": "vpn.example.internal"
+  },
+  {
+   "cn": "vpn.example.internal",
+   "env": "DRC",
+   "f5_name": "vpn_example_internal.crt",
+   "match_status": "managed",
+   "days_left": 13,
+   "exp_str": "2026-09-15",
+   "issuer_cn": "Örnek Ara CA",
+   "key_type": "RSA",
+   "key_size": 2048,
+   "san": [
+    "vpn.example.internal",
+    "www.vpn.example.internal"
+   ],
+   "is_wildcard": false,
+   "fingerprint": "47970255684156aba6ae6c3b7294fa4e26aaff0f",
+   "matched_domain": "vpn.example.internal"
+  },
+  {
+   "cn": "*.example.internal",
+   "env": "PROD",
+   "f5_name": "wildcard_example_internal.crt",
+   "match_status": "managed",
+   "days_left": 204,
+   "exp_str": "2027-03-26",
+   "issuer_cn": "Örnek Ara CA",
+   "key_type": "RSA",
+   "key_size": 4096,
+   "san": [
+    "*.example.internal",
+    "example.internal"
+   ],
+   "is_wildcard": true,
+   "fingerprint": "00cc67bae9619b68065ae0dedc3d03ff535a9efd",
+   "matched_domain": "wildcard.example.internal"
+  },
+  {
+   "cn": "*.example.internal",
+   "env": "DRC",
+   "f5_name": "wildcard_example_internal.crt",
+   "match_status": "managed",
+   "days_left": 204,
+   "exp_str": "2027-03-26",
+   "issuer_cn": "Örnek Ara CA",
+   "key_type": "RSA",
+   "key_size": 4096,
+   "san": [
+    "*.example.internal",
+    "example.internal"
+   ],
+   "is_wildcard": true,
+   "fingerprint": "1aafce6607539330ba11c7405bc4d004b699bb08",
+   "matched_domain": "wildcard.example.internal"
+  },
+  {
+   "cn": "lb-test.example.internal",
+   "env": "PROD",
+   "f5_name": "lb-test_example_internal.crt",
+   "match_status": "new",
+   "days_left": 47,
+   "exp_str": "2026-10-19",
+   "issuer_cn": "Örnek Ara CA",
+   "key_type": "RSA",
+   "key_size": 2048,
+   "san": [
+    "lb-test.example.internal",
+    "www.lb-test.example.internal"
+   ],
+   "is_wildcard": false,
+   "fingerprint": "d921ed4c53e795af108256d2ac79b1d5a43961ff",
+   "matched_domain": null
+  },
+  {
+   "cn": "lb-test.example.internal",
+   "env": "DRC",
+   "f5_name": "lb-test_example_internal.crt",
+   "match_status": "new",
+   "days_left": 47,
+   "exp_str": "2026-10-19",
+   "issuer_cn": "Örnek Ara CA",
+   "key_type": "RSA",
+   "key_size": 2048,
+   "san": [
+    "lb-test.example.internal",
+    "www.lb-test.example.internal"
+   ],
+   "is_wildcard": false,
+   "fingerprint": "cc36d4f17f0301d719459a6f51b00dcfbd6f24dd",
+   "matched_domain": null
+  },
+  {
+   "cn": "test-app.example.internal",
+   "env": "TEST",
+   "f5_name": "test-app_example_internal.crt",
+   "match_status": "new",
+   "days_left": 91,
+   "exp_str": "2026-12-02",
+   "issuer_cn": "Örnek Test CA",
+   "key_type": "ECDSA",
+   "key_size": 256,
+   "san": [
+    "test-app.example.internal"
+   ],
+   "is_wildcard": false,
+   "fingerprint": "99bdad932580ece8d0493bd151a8d740aede3530",
+   "matched_domain": null
+  },
+  {
+   "cn": "mail.example.internal",
+   "env": "PROD",
+   "f5_name": "mail_example_internal.crt",
+   "match_status": "new",
+   "days_left": 38,
+   "exp_str": "2026-10-10",
+   "issuer_cn": "Örnek Ara CA",
+   "key_type": "RSA",
+   "key_size": 1024,
+   "san": [
+    "mail.example.internal"
+   ],
+   "is_wildcard": false,
+   "fingerprint": "2093e3b0265f7d82737b9bd3e117ccaacdae1d5a",
+   "matched_domain": null
+  }
+ ],
+ "env_status": {
+  "PROD": {
+   "ok": true,
+   "count": 7,
+   "error": ""
+  },
+  "DRC": {
+   "ok": true,
+   "count": 5,
+   "error": ""
+  },
+  "TEST": {
+   "ok": true,
+   "count": 1,
+   "error": ""
+  }
+ },
+ "counts": {
+  "new": 4,
+  "managed": 8
+ }
+}

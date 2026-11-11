@@ -1,0 +1,64 @@
+{
+ "success": true,
+ "message": "APIs retrieved successfully",
+ "data": {
+  "data": [
+   {
+    "id": 1,
+    "name": "Jira (DYF)",
+    "base_url": "https://jira.example.com/rest/api/2",
+    "auth_type": "basic",
+    "enabled": true,
+    "last_test": "2026-09-09 07:30:00",
+    "last_status": "success",
+    "created_at": "2026-07-01 09:00:00",
+    "updated_at": "2026-08-20 12:00:00"
+   },
+   {
+    "id": 2,
+    "name": "NetBox",
+    "base_url": "https://netbox.example.internal/api",
+    "auth_type": "bearer",
+    "enabled": true,
+    "last_test": "2026-09-09 07:30:05",
+    "last_status": "success",
+    "created_at": "2026-07-01 09:00:00",
+    "updated_at": "2026-08-20 12:00:00"
+   },
+   {
+    "id": 3,
+    "name": "LibreNMS",
+    "base_url": "https://librenms.example.internal/api/v0",
+    "auth_type": "apikey",
+    "enabled": true,
+    "last_test": "2026-09-09 07:30:09",
+    "last_status": "success",
+    "created_at": "2026-07-01 09:00:00",
+    "updated_at": "2026-08-20 12:00:00"
+   },
+   {
+    "id": 4,
+    "name": "Zabbix",
+    "base_url": "https://zabbix.example.internal/api_jsonrpc.php",
+    "auth_type": "bearer",
+    "enabled": true,
+    "last_test": "2026-09-08 22:00:00",
+    "last_status": "success",
+    "created_at": "2026-07-01 09:00:00",
+    "updated_at": "2026-08-20 12:00:00"
+   },
+   {
+    "id": 5,
+    "name": "Slack bildirim",
+    "base_url": "https://hooks.example.internal/services",
+    "auth_type": "none",
+    "enabled": false,
+    "last_test": null,
+    "last_status": null,
+    "created_at": "2026-07-01 09:00:00",
+    "updated_at": "2026-08-20 12:00:00"
+   }
+  ]
+ },
+ "timestamp": "2026-09-10T08:00:00+03:00"
+}

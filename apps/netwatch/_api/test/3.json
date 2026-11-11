@@ -1,0 +1,1 @@
+{"test":{"id":3,"target_id":3,"test_type":"dns","source":"local","status":"ok","started_at":1767221700,"duration_ms":3566,"summary":{"ips":["198.51.100.80"],"ttl":30,"resolver":"192.0.2.53"},"triggered_by":"manual","raw_output":{"target":"198.51.100.53","type":"dns","note":"Statik demo: örnek ham çıktı"}}}

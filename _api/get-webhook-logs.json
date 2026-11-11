@@ -1,0 +1,390 @@
+{
+ "success": true,
+ "logs": [
+  {
+   "id": 200,
+   "event_type": "jira:issue_created",
+   "issue_key": "DEMO-1001",
+   "summary": "Örnek DYF talebi DEMO-1001",
+   "payload": {
+    "webhookEvent": "jira:issue_created",
+    "issue": {
+     "key": "DEMO-1001",
+     "fields": {
+      "summary": "Örnek DYF talebi DEMO-1001",
+      "status": {
+       "name": "Açık"
+      },
+      "assignee": {
+       "displayName": "Ayse Demir"
+      }
+     }
+    }
+   },
+   "created_at": "2026-09-09 17:20:00",
+   "ip_address": "192.0.2.20",
+   "user_agent": "Atlassian-HttpClient/1.0"
+  },
+  {
+   "id": 199,
+   "event_type": "jira:issue_updated",
+   "issue_key": "DEMO-1002",
+   "summary": "Örnek DYF talebi DEMO-1002",
+   "payload": {
+    "webhookEvent": "jira:issue_updated",
+    "issue": {
+     "key": "DEMO-1002",
+     "fields": {
+      "summary": "Örnek DYF talebi DEMO-1002",
+      "status": {
+       "name": "Devam Ediyor"
+      },
+      "assignee": {
+       "displayName": "Mehmet Kaya"
+      }
+     }
+    }
+   },
+   "created_at": "2026-09-09 12:20:00",
+   "ip_address": "192.0.2.21",
+   "user_agent": "Atlassian-HttpClient/1.0"
+  },
+  {
+   "id": 198,
+   "event_type": "jira:issue_updated",
+   "issue_key": "DEMO-1003",
+   "summary": "Örnek DYF talebi DEMO-1003",
+   "payload": {
+    "webhookEvent": "jira:issue_updated",
+    "issue": {
+     "key": "DEMO-1003",
+     "fields": {
+      "summary": "Örnek DYF talebi DEMO-1003",
+      "status": {
+       "name": "Onay Bekliyor"
+      },
+      "assignee": {
+       "displayName": "Ayse Demir"
+      }
+     }
+    }
+   },
+   "created_at": "2026-09-09 07:20:00",
+   "ip_address": "192.0.2.22",
+   "user_agent": "Atlassian-HttpClient/1.0"
+  },
+  {
+   "id": 197,
+   "event_type": "jira:issue_assigned",
+   "issue_key": "DEMO-1004",
+   "summary": "Örnek DYF talebi DEMO-1004",
+   "payload": {
+    "webhookEvent": "jira:issue_assigned",
+    "issue": {
+     "key": "DEMO-1004",
+     "fields": {
+      "summary": "Örnek DYF talebi DEMO-1004",
+      "status": {
+       "name": "Açık"
+      },
+      "assignee": {
+       "displayName": "Mehmet Kaya"
+      }
+     }
+    }
+   },
+   "created_at": "2026-09-09 02:20:00",
+   "ip_address": "192.0.2.20",
+   "user_agent": "Atlassian-HttpClient/1.0"
+  },
+  {
+   "id": 196,
+   "event_type": "jira:issue_created",
+   "issue_key": "DEMO-1005",
+   "summary": "Örnek DYF talebi DEMO-1005",
+   "payload": {
+    "webhookEvent": "jira:issue_created",
+    "issue": {
+     "key": "DEMO-1005",
+     "fields": {
+      "summary": "Örnek DYF talebi DEMO-1005",
+      "status": {
+       "name": "Devam Ediyor"
+      },
+      "assignee": {
+       "displayName": "Ayse Demir"
+      }
+     }
+    }
+   },
+   "created_at": "2026-09-08 21:20:00",
+   "ip_address": "192.0.2.21",
+   "user_agent": "Atlassian-HttpClient/1.0"
+  },
+  {
+   "id": 195,
+   "event_type": "jira:issue_updated",
+   "issue_key": "DEMO-1006",
+   "summary": "Örnek DYF talebi DEMO-1006",
+   "payload": {
+    "webhookEvent": "jira:issue_updated",
+    "issue": {
+     "key": "DEMO-1006",
+     "fields": {
+      "summary": "Örnek DYF talebi DEMO-1006",
+      "status": {
+       "name": "Onay Bekliyor"
+      },
+      "assignee": {
+       "displayName": "Mehmet Kaya"
+      }
+     }
+    }
+   },
+   "created_at": "2026-09-08 16:20:00",
+   "ip_address": "192.0.2.22",
+   "user_agent": "Atlassian-HttpClient/1.0"
+  },
+  {
+   "id": 194,
+   "event_type": "jira:issue_updated",
+   "issue_key": "DEMO-1007",
+   "summary": "Örnek DYF talebi DEMO-1007",
+   "payload": {
+    "webhookEvent": "jira:issue_updated",
+    "issue": {
+     "key": "DEMO-1007",
+     "fields": {
+      "summary": "Örnek DYF talebi DEMO-1007",
+      "status": {
+       "name": "Açık"
+      },
+      "assignee": {
+       "displayName": "Ayse Demir"
+      }
+     }
+    }
+   },
+   "created_at": "2026-09-08 11:20:00",
+   "ip_address": "192.0.2.20",
+   "user_agent": "Atlassian-HttpClient/1.0"
+  },
+  {
+   "id": 193,
+   "event_type": "jira:issue_assigned",
+   "issue_key": "DEMO-1008",
+   "summary": "Örnek DYF talebi DEMO-1008",
+   "payload": {
+    "webhookEvent": "jira:issue_assigned",
+    "issue": {
+     "key": "DEMO-1008",
+     "fields": {
+      "summary": "Örnek DYF talebi DEMO-1008",
+      "status": {
+       "name": "Devam Ediyor"
+      },
+      "assignee": {
+       "displayName": "Mehmet Kaya"
+      }
+     }
+    }
+   },
+   "created_at": "2026-09-08 06:20:00",
+   "ip_address": "192.0.2.21",
+   "user_agent": "Atlassian-HttpClient/1.0"
+  },
+  {
+   "id": 192,
+   "event_type": "jira:issue_created",
+   "issue_key": "DEMO-1009",
+   "summary": "Örnek DYF talebi DEMO-1009",
+   "payload": {
+    "webhookEvent": "jira:issue_created",
+    "issue": {
+     "key": "DEMO-1009",
+     "fields": {
+      "summary": "Örnek DYF talebi DEMO-1009",
+      "status": {
+       "name": "Onay Bekliyor"
+      },
+      "assignee": {
+       "displayName": "Ayse Demir"
+      }
+     }
+    }
+   },
+   "created_at": "2026-09-08 01:20:00",
+   "ip_address": "192.0.2.22",
+   "user_agent": "Atlassian-HttpClient/1.0"
+  },
+  {
+   "id": 191,
+   "event_type": "jira:issue_updated",
+   "issue_key": "DEMO-1010",
+   "summary": "Örnek DYF talebi DEMO-1010",
+   "payload": {
+    "webhookEvent": "jira:issue_updated",
+    "issue": {
+     "key": "DEMO-1010",
+     "fields": {
+      "summary": "Örnek DYF talebi DEMO-1010",
+      "status": {
+       "name": "Açık"
+      },
+      "assignee": {
+       "displayName": "Mehmet Kaya"
+      }
+     }
+    }
+   },
+   "created_at": "2026-09-07 20:20:00",
+   "ip_address": "192.0.2.20",
+   "user_agent": "Atlassian-HttpClient/1.0"
+  },
+  {
+   "id": 190,
+   "event_type": "jira:issue_updated",
+   "issue_key": "DEMO-1001",
+   "summary": "Örnek DYF talebi DEMO-1001",
+   "payload": {
+    "webhookEvent": "jira:issue_updated",
+    "issue": {
+     "key": "DEMO-1001",
+     "fields": {
+      "summary": "Örnek DYF talebi DEMO-1001",
+      "status": {
+       "name": "Devam Ediyor"
+      },
+      "assignee": {
+       "displayName": "Ayse Demir"
+      }
+     }
+    }
+   },
+   "created_at": "2026-09-07 15:20:00",
+   "ip_address": "192.0.2.21",
+   "user_agent": "Atlassian-HttpClient/1.0"
+  },
+  {
+   "id": 189,
+   "event_type": "jira:issue_assigned",
+   "issue_key": "DEMO-1002",
+   "summary": "Örnek DYF talebi DEMO-1002",
+   "payload": {
+    "webhookEvent": "jira:issue_assigned",
+    "issue": {
+     "key": "DEMO-1002",
+     "fields": {
+      "summary": "Örnek DYF talebi DEMO-1002",
+      "status": {
+       "name": "Onay Bekliyor"
+      },
+      "assignee": {
+       "displayName": "Mehmet Kaya"
+      }
+     }
+    }
+   },
+   "created_at": "2026-09-07 10:20:00",
+   "ip_address": "192.0.2.22",
+   "user_agent": "Atlassian-HttpClient/1.0"
+  },
+  {
+   "id": 188,
+   "event_type": "jira:issue_created",
+   "issue_key": "DEMO-1003",
+   "summary": "Örnek DYF talebi DEMO-1003",
+   "payload": {
+    "webhookEvent": "jira:issue_created",
+    "issue": {
+     "key": "DEMO-1003",
+     "fields": {
+      "summary": "Örnek DYF talebi DEMO-1003",
+      "status": {
+       "name": "Açık"
+      },
+      "assignee": {
+       "displayName": "Ayse Demir"
+      }
+     }
+    }
+   },
+   "created_at": "2026-09-07 05:20:00",
+   "ip_address": "192.0.2.20",
+   "user_agent": "Atlassian-HttpClient/1.0"
+  },
+  {
+   "id": 187,
+   "event_type": "jira:issue_updated",
+   "issue_key": "DEMO-1004",
+   "summary": "Örnek DYF talebi DEMO-1004",
+   "payload": {
+    "webhookEvent": "jira:issue_updated",
+    "issue": {
+     "key": "DEMO-1004",
+     "fields": {
+      "summary": "Örnek DYF talebi DEMO-1004",
+      "status": {
+       "name": "Devam Ediyor"
+      },
+      "assignee": {
+       "displayName": "Mehmet Kaya"
+      }
+     }
+    }
+   },
+   "created_at": "2026-09-07 00:20:00",
+   "ip_address": "192.0.2.21",
+   "user_agent": "Atlassian-HttpClient/1.0"
+  },
+  {
+   "id": 186,
+   "event_type": "jira:issue_updated",
+   "issue_key": "DEMO-1005",
+   "summary": "Örnek DYF talebi DEMO-1005",
+   "payload": {
+    "webhookEvent": "jira:issue_updated",
+    "issue": {
+     "key": "DEMO-1005",
+     "fields": {
+      "summary": "Örnek DYF talebi DEMO-1005",
+      "status": {
+       "name": "Onay Bekliyor"
+      },
+      "assignee": {
+       "displayName": "Ayse Demir"
+      }
+     }
+    }
+   },
+   "created_at": "2026-09-06 19:20:00",
+   "ip_address": "192.0.2.22",
+   "user_agent": "Atlassian-HttpClient/1.0"
+  },
+  {
+   "id": 185,
+   "event_type": "jira:issue_assigned",
+   "issue_key": "DEMO-1006",
+   "summary": "Örnek DYF talebi DEMO-1006",
+   "payload": {
+    "webhookEvent": "jira:issue_assigned",
+    "issue": {
+     "key": "DEMO-1006",
+     "fields": {
+      "summary": "Örnek DYF talebi DEMO-1006",
+      "status": {
+       "name": "Açık"
+      },
+      "assignee": {
+       "displayName": "Mehmet Kaya"
+      }
+     }
+    }
+   },
+   "created_at": "2026-09-06 14:20:00",
+   "ip_address": "192.0.2.20",
+   "user_agent": "Atlassian-HttpClient/1.0"
+  }
+ ],
+ "count": 16
+}

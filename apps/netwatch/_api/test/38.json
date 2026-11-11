@@ -1,0 +1,1 @@
+{"test":{"id":38,"target_id":3,"test_type":"tls","source":"local","status":"ok","started_at":1767158700,"duration_ms":3482,"summary":{"ttl":null,"daysLeft":61},"triggered_by":"manual","raw_output":{"target":"198.51.100.53","type":"tls","note":"Statik demo: örnek ham çıktı"}}}

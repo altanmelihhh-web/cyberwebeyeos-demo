@@ -1,0 +1,33 @@
+{
+ "success": true,
+ "members": [
+  {
+   "name": "node-web-01:80",
+   "ratio": 3,
+   "session": "user-enabled",
+   "state": "up",
+   "monitor": "/Common/tcp"
+  },
+  {
+   "name": "node-web-02:80",
+   "ratio": 3,
+   "session": "user-enabled",
+   "state": "up",
+   "monitor": "/Common/tcp"
+  },
+  {
+   "name": "node-core-01:80",
+   "ratio": 1,
+   "session": "user-enabled",
+   "state": "up",
+   "monitor": "/Common/tcp"
+  },
+  {
+   "name": "node-core-02:80",
+   "ratio": 1,
+   "session": "user-enabled",
+   "state": "down",
+   "monitor": "/Common/tcp"
+  }
+ ]
+}

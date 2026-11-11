@@ -1,0 +1,1 @@
+{"test":{"id":37,"target_id":2,"test_type":"mtr","source":"local","status":"ok","started_at":1767160500,"duration_ms":2043,"summary":{"hopCount":7,"mode":"icmp"},"triggered_by":"manual","raw_output":{"target":"192.0.2.53","type":"mtr","note":"Statik demo: örnek ham çıktı"}}}

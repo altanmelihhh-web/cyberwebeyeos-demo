@@ -1,0 +1,1 @@
+{"success": true, "zones": [{"zone": "LAN_Zone", "trust": "high"}, {"zone": "DMZ_Zone", "trust": "medium"}, {"zone": "Wan_Zone", "trust": "low"}]}

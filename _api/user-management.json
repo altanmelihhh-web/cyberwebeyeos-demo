@@ -1,0 +1,44 @@
+{
+ "admin.demo": {
+  "username": "admin.demo",
+  "name": "Demo Yönetici",
+  "email": "admin.demo@example.internal",
+  "role": "admin",
+  "password_changed": true
+ },
+ "ayse.demir": {
+  "username": "ayse.demir",
+  "name": "Ayşe Demir",
+  "email": "ayse.demir@example.internal",
+  "role": "admin",
+  "password_changed": true
+ },
+ "mehmet.kaya": {
+  "username": "mehmet.kaya",
+  "name": "Mehmet Kaya",
+  "email": "mehmet.kaya@example.internal",
+  "role": "readonly",
+  "password_changed": true
+ },
+ "zeynep.aydin": {
+  "username": "zeynep.aydin",
+  "name": "Zeynep Aydın",
+  "email": "zeynep.aydin@example.internal",
+  "role": "readonly",
+  "password_changed": true
+ },
+ "burak.sahin": {
+  "username": "burak.sahin",
+  "name": "Burak Şahin",
+  "email": "burak.sahin@example.internal",
+  "role": "readonly",
+  "password_changed": false
+ },
+ "selin.arslan": {
+  "username": "selin.arslan",
+  "name": "Selin Arslan",
+  "email": "selin.arslan@example.internal",
+  "role": "admin",
+  "password_changed": true
+ }
+}

@@ -1,0 +1,1 @@
+{"test":{"id":19,"target_id":5,"test_type":"dns","source":"local","status":"warn","started_at":1767192900,"duration_ms":2479,"summary":{"ips":["198.51.100.80"],"ttl":30,"resolver":"192.0.2.53"},"triggered_by":"manual","raw_output":{"target":"erp.example.internal","type":"dns","note":"Statik demo: örnek ham çıktı"}}}

@@ -1,0 +1,59 @@
+{
+ "success": true,
+ "last_24h": 7,
+ "last_7d": 19,
+ "by_category": [
+  {
+   "category": "auth",
+   "cnt": 5
+  },
+  {
+   "category": "user",
+   "cnt": 2
+  },
+  {
+   "category": "document",
+   "cnt": 2
+  },
+  {
+   "category": "certificate",
+   "cnt": 2
+  },
+  {
+   "category": "blacklist",
+   "cnt": 2
+  },
+  {
+   "category": "ipam",
+   "cnt": 1
+  },
+  {
+   "category": "task",
+   "cnt": 2
+  },
+  {
+   "category": "settings",
+   "cnt": 2
+  },
+  {
+   "category": "device",
+   "cnt": 2
+  },
+  {
+   "category": "backup",
+   "cnt": 2
+  },
+  {
+   "category": "f5",
+   "cnt": 1
+  },
+  {
+   "category": "system",
+   "cnt": 1
+  },
+  {
+   "category": "reputation",
+   "cnt": 1
+  }
+ ]
+}

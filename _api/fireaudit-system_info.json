@@ -1,0 +1,1 @@
+{"success":true,"system":{"hostname":"demo-fw","vendor":"FortiGate","model":"FortiGate-100F (demo)","firmware":"v7.4.x (demo)","ha_mode":"a-p","uptime_days":142,"interfaces":[{"name":"port1","zone":"Wan_Zone","ip":"198.51.100.1/24"},{"name":"port2","zone":"LAN_Zone","ip":"198.51.100.65/26"},{"name":"port3","zone":"DMZ_Zone","ip":"198.51.100.129/27"}]}}

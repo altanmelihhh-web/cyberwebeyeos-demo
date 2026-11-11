@@ -1,0 +1,35 @@
+{
+ "success": true,
+ "data": {
+  "path": "/var/log/portal-reputation-check.log",
+  "exists": true,
+  "size": 1580,
+  "lines": [
+   "[2026-09-16 06:00:01] === Reputation check run başlıyor (cron) ===",
+   "[2026-09-16 06:00:02] 15 aktif varlık, 11 aktif sağlayıcı",
+   "[2026-09-16 06:00:09] dnsbl: 24 sorgu tamamlandı (3 listed)",
+   "[2026-09-16 06:01:12] abuse: virustotal 4 sorgu, urlhaus 2 sorgu",
+   "[2026-09-16 06:01:48] exposure: shodan_db 8 IP tarandı (5 listed)",
+   "[2026-09-16 06:02:30] routing: ripestat 3 prefix, RPKI: 2 valid, 1 unknown",
+   "[2026-09-16 06:03:03] web_cat: talos 3 alan adı",
+   "[2026-09-16 06:03:04] Run tamamlandı: 0 yeni, 0 temizlenen, 0 hata",
+   "[2026-09-17 06:00:01] === Reputation check run başlıyor (cron) ===",
+   "[2026-09-17 06:00:02] 15 aktif varlık, 11 aktif sağlayıcı",
+   "[2026-09-17 06:00:09] dnsbl: 24 sorgu tamamlandı (3 listed)",
+   "[2026-09-17 06:01:12] abuse: virustotal 4 sorgu, urlhaus 2 sorgu",
+   "[2026-09-17 06:01:48] exposure: shodan_db 8 IP tarandı (5 listed)",
+   "[2026-09-17 06:02:30] routing: ripestat 3 prefix, RPKI: 2 valid, 1 unknown",
+   "[2026-09-17 06:03:03] web_cat: talos 3 alan adı",
+   "[2026-09-17 06:03:04] Run tamamlandı: 0 yeni, 1 temizlenen, 0 hata",
+   "[2026-09-18 06:00:01] === Reputation check run başlıyor (cron) ===",
+   "[2026-09-18 06:00:02] 15 aktif varlık, 11 aktif sağlayıcı",
+   "[2026-09-18 06:00:09] dnsbl: 24 sorgu tamamlandı (3 listed)",
+   "[2026-09-18 06:01:12] abuse: virustotal 4 sorgu, urlhaus 2 sorgu",
+   "[2026-09-18 06:01:48] exposure: shodan_db 8 IP tarandı (5 listed)",
+   "[2026-09-18 06:02:30] routing: ripestat 3 prefix, RPKI: 2 valid, 1 unknown",
+   "[2026-09-18 06:03:03] web_cat: talos 3 alan adı",
+   "[2026-09-18 06:03:04] Run tamamlandı: 0 yeni, 0 temizlenen, 0 hata",
+   "[2026-09-18 06:03:41] alert: yeni bulgu yok, mail gönderilmedi"
+  ]
+ }
+}

@@ -1,0 +1,63 @@
+{
+ "success": true,
+ "total_physical_ifaces": 52,
+ "shutdown_count": 6,
+ "description_missing_count": 10,
+ "access_ports_no_portsec_count": 13,
+ "possibly_unused_count": 6,
+ "possibly_unused": [
+  "Gi1/0/7",
+  "Gi1/0/8",
+  "Gi1/0/19",
+  "Gi1/0/20",
+  "Gi1/0/33",
+  "Gi1/0/34"
+ ],
+ "access_ports_no_portsec": [
+  "Gi1/0/2",
+  "Gi1/0/3",
+  "Gi1/0/4",
+  "Gi1/0/5",
+  "Gi1/0/6",
+  "Gi1/0/7",
+  "Gi1/0/8",
+  "Gi1/0/9",
+  "Gi1/0/10",
+  "Gi1/0/11",
+  "Gi1/0/12",
+  "Gi1/0/13",
+  "Gi1/0/14"
+ ],
+ "description_missing": [
+  "Gi1/0/3",
+  "Gi1/0/4",
+  "Gi1/0/9",
+  "Gi1/0/10",
+  "Gi1/0/11",
+  "Gi1/0/21",
+  "Gi1/0/22",
+  "Gi1/0/35",
+  "Gi1/0/36",
+  "Gi1/0/41"
+ ],
+ "issues": [
+  {
+   "category": "interface",
+   "severity": "MEDIUM",
+   "message": "13 access portta port-security yok",
+   "recommendation": "switchport port-security maximum 2; switchport port-security violation restrict"
+  },
+  {
+   "category": "interface",
+   "severity": "LOW",
+   "message": "6 port uzun süredir kullanılmıyor",
+   "recommendation": "shutdown ve VLAN 999 (blackhole) atayın"
+  },
+  {
+   "category": "hygiene",
+   "severity": "LOW",
+   "message": "10 portta description yok",
+   "recommendation": "Her porta cihaz/lokasyon açıklaması ekleyin"
+  }
+ ]
+}

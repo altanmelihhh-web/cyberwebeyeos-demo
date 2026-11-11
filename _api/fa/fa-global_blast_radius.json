@@ -1,0 +1,66 @@
+{
+ "success": true,
+ "devices": [
+  {
+   "name": "Edge Firewall",
+   "device": "Edge Firewall",
+   "vendor": "Fortinet",
+   "category": "firewall",
+   "blast_score": 82,
+   "severity": "CRITICAL",
+   "reachable_devices": [
+    "Core Switch",
+    "Access Switch",
+    "Access Switch (Dell)",
+    "WAN Router"
+   ]
+  },
+  {
+   "name": "Core Switch",
+   "device": "Core Switch",
+   "vendor": "Cisco",
+   "category": "network",
+   "blast_score": 71,
+   "severity": "HIGH",
+   "reachable_devices": [
+    "Access Switch",
+    "Access Switch (Dell)",
+    "WAN Router"
+   ]
+  },
+  {
+   "name": "WAN Router",
+   "device": "WAN Router",
+   "vendor": "Cisco",
+   "category": "network",
+   "blast_score": 58,
+   "severity": "MEDIUM",
+   "reachable_devices": [
+    "Edge Firewall",
+    "Core Switch"
+   ]
+  },
+  {
+   "name": "Access Switch",
+   "device": "Access Switch",
+   "vendor": "Huawei",
+   "category": "network",
+   "blast_score": 34,
+   "severity": "MEDIUM",
+   "reachable_devices": [
+    "Core Switch"
+   ]
+  },
+  {
+   "name": "Access Switch (Dell)",
+   "device": "Access Switch (Dell)",
+   "vendor": "Dell",
+   "category": "network",
+   "blast_score": 22,
+   "severity": "LOW",
+   "reachable_devices": [
+    "Core Switch"
+   ]
+  }
+ ]
+}

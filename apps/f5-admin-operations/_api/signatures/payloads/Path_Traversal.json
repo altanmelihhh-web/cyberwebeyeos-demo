@@ -1,0 +1,1 @@
+[{"payload":"../../../etc/passwd","expectBlocked":true,"desc":"Unix path traversal"},{"payload":"..\\..\\windows\\system32","expectBlocked":true,"desc":"Windows path traversal"},{"payload":"....//....//etc/passwd","expectBlocked":true,"desc":"Double encoding bypass"},{"payload":"/images/photo.jpg","expectBlocked":false,"desc":"Normal path"}]

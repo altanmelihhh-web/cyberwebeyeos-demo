@@ -1,0 +1,84 @@
+{
+ "success": true,
+ "vlan_count": 7,
+ "trunk_count": 3,
+ "default_vlan_used": true,
+ "vlans": [
+  {
+   "id": 1,
+   "name": "default",
+   "status": "active"
+  },
+  {
+   "id": 10,
+   "name": "MGMT",
+   "status": "active"
+  },
+  {
+   "id": 20,
+   "name": "SERVERS",
+   "status": "active"
+  },
+  {
+   "id": 30,
+   "name": "USERS-A",
+   "status": "active"
+  },
+  {
+   "id": 40,
+   "name": "VOICE",
+   "status": "active"
+  },
+  {
+   "id": 51,
+   "name": "WIFI-GUEST",
+   "status": "active"
+  },
+  {
+   "id": 99,
+   "name": "NATIVE-DEDICATED",
+   "status": "active"
+  }
+ ],
+ "trunks": [
+  {
+   "port": "Gi1/0/48",
+   "mode": "on",
+   "encapsulation": "802.1q",
+   "native_vlan": "1",
+   "status": "active"
+  },
+  {
+   "port": "Te1/1/1",
+   "mode": "on",
+   "encapsulation": "802.1q",
+   "native_vlan": "1",
+   "status": "active"
+  },
+  {
+   "port": "Te1/1/2",
+   "mode": "on",
+   "encapsulation": "802.1q",
+   "native_vlan": "99",
+   "status": "active"
+  }
+ ],
+ "issues": [
+  {
+   "category": "vlan",
+   "severity": "MEDIUM",
+   "message": "Default VLAN 1 aktif kullanımda — yönetim trafiği izole değil",
+   "recommendation": "Dedicated yönetim VLAN'ı kullanın; portları VLAN 1 dışına taşıyın"
+  },
+  {
+   "category": "trunk",
+   "severity": "HIGH",
+   "message": "2 trunk'ta native VLAN=1 (VLAN hopping riski)",
+   "ports": [
+    "Gi1/0/48",
+    "Te1/1/1"
+   ],
+   "recommendation": "switchport trunk native vlan 99"
+  }
+ ]
+}

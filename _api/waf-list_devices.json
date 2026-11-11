@@ -1,0 +1,47 @@
+{
+ "success": true,
+ "devices": [
+  {
+   "env": "test",
+   "name": "F5 Test",
+   "host": "f5-test.example.internal",
+   "username": "portal.apiuser",
+   "is_active": true,
+   "cron_expression": "0 7 * * 1-5",
+   "cron_enabled": true,
+   "last_test_status": "ok",
+   "last_test_at": "2026-09-09 08:15:00",
+   "last_test_message": "Bağlantı başarılı (HTTP 200)",
+   "updated_by": "ayse.demir",
+   "updated_at": "2026-08-10 17:02:39"
+  },
+  {
+   "env": "prod",
+   "name": "F5 Prod",
+   "host": "f5-prod.example.internal",
+   "username": "portal.apiuser",
+   "is_active": true,
+   "cron_expression": "30 6 * * *",
+   "cron_enabled": true,
+   "last_test_status": "ok",
+   "last_test_at": "2026-09-09 08:15:00",
+   "last_test_message": "Bağlantı başarılı (HTTP 200)",
+   "updated_by": "ayse.demir",
+   "updated_at": "2026-08-10 17:02:39"
+  },
+  {
+   "env": "drc",
+   "name": "F5 DRC",
+   "host": "f5-drc.example.internal",
+   "username": "portal.apiuser",
+   "is_active": true,
+   "cron_expression": "",
+   "cron_enabled": false,
+   "last_test_status": "ok",
+   "last_test_at": "2026-09-09 08:15:00",
+   "last_test_message": "Bağlantı başarılı (HTTP 200)",
+   "updated_by": "ayse.demir",
+   "updated_at": "2026-08-10 17:02:39"
+  }
+ ]
+}

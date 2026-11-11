@@ -1,0 +1,59 @@
+{
+ "success": true,
+ "zones": [
+  {
+   "zone": "Zone-01",
+   "trust": 10,
+   "lateral_score": 78,
+   "severity": "HIGH",
+   "lateral_targets": [
+    "Demo-166",
+    "Demo-168",
+    "Demo-169",
+    "Demo-170"
+   ],
+   "any_rule_paths": 3
+  },
+  {
+   "zone": "Demo-166",
+   "trust": 40,
+   "lateral_score": 62,
+   "severity": "HIGH",
+   "lateral_targets": [
+    "Demo-168",
+    "Demo-170",
+    "Demo-169"
+   ],
+   "any_rule_paths": 2
+  },
+  {
+   "zone": "Demo-168",
+   "trust": 60,
+   "lateral_score": 41,
+   "severity": "MEDIUM",
+   "lateral_targets": [
+    "Demo-169",
+    "Demo-170"
+   ],
+   "any_rule_paths": 1
+  },
+  {
+   "zone": "Demo-169",
+   "trust": 80,
+   "lateral_score": 28,
+   "severity": "LOW",
+   "lateral_targets": [
+    "Demo-170"
+   ],
+   "any_rule_paths": 0
+  },
+  {
+   "zone": "Demo-170",
+   "trust": 95,
+   "lateral_score": 12,
+   "severity": "LOW",
+   "lateral_targets": [],
+   "any_rule_paths": 0
+  }
+ ]
+}

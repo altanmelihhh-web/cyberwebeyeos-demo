@@ -1,0 +1,29 @@
+{
+ "success": true,
+ "servers": [
+  {
+   "id": "zbx-main",
+   "name": "Zabbix Ana Sunucu",
+   "url": "https://zabbix.example.internal",
+   "username": "api.readonly",
+   "groups": [
+    "Network Devices",
+    "Firewalls",
+    "Servers"
+   ],
+   "enabled": true,
+   "created_at": "2026-06-02"
+  },
+  {
+   "id": "zbx-dr",
+   "name": "Zabbix DR Sunucu",
+   "url": "https://zabbix-dr.example.internal",
+   "username": "api.readonly",
+   "groups": [
+    "Network Devices"
+   ],
+   "enabled": false,
+   "created_at": "2026-07-15"
+  }
+ ]
+}

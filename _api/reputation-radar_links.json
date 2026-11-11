@@ -1,0 +1,19 @@
+{
+ "success": true,
+ "data": [
+  {
+   "asn": 64500,
+   "holder": "Cyberwebeyeos Network",
+   "radar_url": "https://radar.cloudflare.com/as/64500",
+   "ripe_url": "https://stat.ripe.net/AS64500",
+   "bgpview_url": "https://bgp.tools/as/64500"
+  },
+  {
+   "asn": 64501,
+   "holder": "Ornek Musteri A Network",
+   "radar_url": "https://radar.cloudflare.com/as/64501",
+   "ripe_url": "https://stat.ripe.net/AS64501",
+   "bgpview_url": "https://bgp.tools/as/64501"
+  }
+ ]
+}

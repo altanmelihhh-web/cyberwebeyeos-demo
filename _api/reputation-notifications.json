@@ -1,0 +1,208 @@
+{
+ "success": true,
+ "data": {
+  "recipient": "noc@example.internal",
+  "audit_log": [
+   {
+    "created_at": "2026-09-18 06:03:41",
+    "action": "reputation_scan_completed",
+    "details": "Run #60 tamamlandı: 15 varlık, 11 sağlayıcı, 0 yeni bulgu",
+    "username": "system"
+   },
+   {
+    "created_at": "2026-09-16 11:05:12",
+    "action": "reputation_finding_ack_accepted",
+    "details": "1 finding(s) marked as accepted by ayse.demir: Mail relay — bilinen geçici kayıt, 48 saat izleniyor",
+    "username": "ayse.demir"
+   },
+   {
+    "created_at": "2026-09-15 07:31:20",
+    "action": "reputation_listing_new",
+    "details": "Yeni listeleme: ip 198.51.100.41 — Shodan InternetDB (critical)",
+    "username": "system"
+   },
+   {
+    "created_at": "2026-09-15 07:30:02",
+    "action": "reputation_alert_mail_sent",
+    "details": "Alarm maili gönderildi: noc@example.internal (3 bulgu)",
+    "username": "system"
+   },
+   {
+    "created_at": "2026-09-14 14:25:44",
+    "action": "reputation_scan_completed",
+    "details": "Run #53 (manual:ayse.demir) tamamlandı: 15 varlık, 0 yeni bulgu",
+    "username": "ayse.demir"
+   },
+   {
+    "created_at": "2026-09-12 10:14:09",
+    "action": "reputation_baseline_single_accept",
+    "details": "Baseline accepted for asset_id=11: ports=22,8443",
+    "username": "mehmet.kaya"
+   },
+   {
+    "created_at": "2026-09-10 06:03:18",
+    "action": "reputation_listing_new",
+    "details": "Yeni listeleme: ip 203.0.113.15 — Barracuda Reputation Block List (critical)",
+    "username": "system"
+   },
+   {
+    "created_at": "2026-09-10 06:02:51",
+    "action": "reputation_listing_new",
+    "details": "Yeni listeleme: ip 203.0.113.15 — SpamCop Blocking List (critical)",
+    "username": "system"
+   },
+   {
+    "created_at": "2026-09-08 09:40:00",
+    "action": "reputation_asset_upsert",
+    "details": "Varlık güncellendi: 192.0.2.53 (Cyberwebeyeos)",
+    "username": "mehmet.kaya"
+   },
+   {
+    "created_at": "2026-09-05 06:03:02",
+    "action": "reputation_listing_cleared",
+    "details": "Listeleme kalktı: ip 192.0.2.10 — UCEPROTECT Level 1",
+    "username": "system"
+   },
+   {
+    "created_at": "2026-09-03 08:12:30",
+    "action": "reputation_bulk_cidr_import",
+    "details": "Imported 6 IPs from 192.0.2.8/29 owner=Cyberwebeyeos",
+    "username": "ayse.demir"
+   }
+  ],
+  "alerts_sent": [
+   {
+    "id": 132,
+    "alert_sent_at": "2026-09-15 07:31:00",
+    "first_seen": "2026-09-03 06:01:00",
+    "severity": "critical",
+    "asset_type": "ip",
+    "asset_value": "203.0.113.15",
+    "owner": "Örnek Müşteri A",
+    "provider_name": "Shodan InternetDB",
+    "provider_key": "shodan_db",
+    "category": "exposure"
+   },
+   {
+    "id": 130,
+    "alert_sent_at": "2026-09-15 07:31:00",
+    "first_seen": "2026-09-07 06:01:00",
+    "severity": "critical",
+    "asset_type": "ip",
+    "asset_value": "198.51.100.41",
+    "owner": "Örnek Müşteri A",
+    "provider_name": "Shodan InternetDB",
+    "provider_key": "shodan_db",
+    "category": "exposure"
+   },
+   {
+    "id": 115,
+    "alert_sent_at": "2026-09-13 07:30:00",
+    "first_seen": "2026-09-04 06:01:00",
+    "severity": "warning",
+    "asset_type": "ip",
+    "asset_value": "198.51.100.41",
+    "owner": "Örnek Müşteri A",
+    "provider_name": "UCEPROTECT Level 1",
+    "provider_key": "uceprotect_l1",
+    "category": "dnsbl"
+   },
+   {
+    "id": 123,
+    "alert_sent_at": "2026-09-12 07:30:00",
+    "first_seen": "2026-09-06 06:01:00",
+    "severity": "critical",
+    "asset_type": "ip",
+    "asset_value": "203.0.113.15",
+    "owner": "Örnek Müşteri A",
+    "provider_name": "Truncate GBUdb",
+    "provider_key": "truncate",
+    "category": "dnsbl"
+   },
+   {
+    "id": 122,
+    "alert_sent_at": "2026-09-12 07:30:00",
+    "first_seen": "2026-09-05 06:01:00",
+    "severity": "critical",
+    "asset_type": "ip",
+    "asset_value": "203.0.113.15",
+    "owner": "Örnek Müşteri A",
+    "provider_name": "Mailspike Reputation BL",
+    "provider_key": "mailspike_bl",
+    "category": "dnsbl"
+   },
+   {
+    "id": 120,
+    "alert_sent_at": "2026-09-12 07:30:00",
+    "first_seen": "2026-09-03 06:01:00",
+    "severity": "critical",
+    "asset_type": "ip",
+    "asset_value": "203.0.113.15",
+    "owner": "Örnek Müşteri A",
+    "provider_name": "Passive Spam Block List",
+    "provider_key": "psbl",
+    "category": "dnsbl"
+   },
+   {
+    "id": 119,
+    "alert_sent_at": "2026-09-12 07:30:00",
+    "first_seen": "2026-09-02 06:01:00",
+    "severity": "critical",
+    "asset_type": "ip",
+    "asset_value": "203.0.113.15",
+    "owner": "Örnek Müşteri A",
+    "provider_name": "SpamCop Blocking List",
+    "provider_key": "spamcop",
+    "category": "dnsbl"
+   },
+   {
+    "id": 118,
+    "alert_sent_at": "2026-09-12 07:30:00",
+    "first_seen": "2026-09-07 06:01:00",
+    "severity": "critical",
+    "asset_type": "ip",
+    "asset_value": "203.0.113.15",
+    "owner": "Örnek Müşteri A",
+    "provider_name": "Barracuda Reputation Block List",
+    "provider_key": "barracuda",
+    "category": "dnsbl"
+   },
+   {
+    "id": 106,
+    "alert_sent_at": "2026-09-10 07:30:00",
+    "first_seen": "2026-09-07 06:01:00",
+    "severity": "warning",
+    "asset_type": "ip",
+    "asset_value": "192.0.2.25",
+    "owner": "Cyberwebeyeos",
+    "provider_name": "Barracuda Reputation Block List",
+    "provider_key": "barracuda",
+    "category": "dnsbl"
+   },
+   {
+    "id": 108,
+    "alert_sent_at": "2026-09-10 07:30:00",
+    "first_seen": "2026-09-03 06:01:00",
+    "severity": "warning",
+    "asset_type": "ip",
+    "asset_value": "192.0.2.25",
+    "owner": "Cyberwebeyeos",
+    "provider_name": "Passive Spam Block List",
+    "provider_key": "psbl",
+    "category": "dnsbl"
+   },
+   {
+    "id": 107,
+    "alert_sent_at": "2026-09-10 07:30:00",
+    "first_seen": "2026-09-02 06:01:00",
+    "severity": "warning",
+    "asset_type": "ip",
+    "asset_value": "192.0.2.25",
+    "owner": "Cyberwebeyeos",
+    "provider_name": "SpamCop Blocking List",
+    "provider_key": "spamcop",
+    "category": "dnsbl"
+   }
+  ]
+ }
+}

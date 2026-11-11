@@ -1,0 +1,56 @@
+{
+ "success": true,
+ "count": 10,
+ "logs": [
+  {
+   "date": "Sep  9 00:02:10",
+   "level": "notice",
+   "message": "Pool /Common/pool_web_portal_prod member 10.64.10.11:443 monitor status up"
+  },
+  {
+   "date": "Sep  9 01:12:10",
+   "level": "info",
+   "message": "Virtual server /Common/vs_web_portal_443 availability changed to available"
+  },
+  {
+   "date": "Sep  9 02:22:10",
+   "level": "warning",
+   "message": "Pool member 10.64.10.12:443 monitor status down"
+  },
+  {
+   "date": "Sep  9 03:32:10",
+   "level": "err",
+   "message": "SSL handshake failed from 203.0.113.45"
+  },
+  {
+   "date": "Sep  9 04:42:10",
+   "level": "notice",
+   "message": "Node /Common/node-web-01 monitor status up"
+  },
+  {
+   "date": "Sep  8 05:52:10",
+   "level": "info",
+   "message": "Config sync completed with peer"
+  },
+  {
+   "date": "Sep  8 06:62:10",
+   "level": "notice",
+   "message": "HA state transition: standby to active"
+  },
+  {
+   "date": "Sep  8 07:72:10",
+   "level": "warning",
+   "message": "Pool /Common/pool_web_portal_prod has no active members"
+  },
+  {
+   "date": "Sep  8 08:82:10",
+   "level": "info",
+   "message": "Clock synchronized with ntp.example.internal"
+  },
+  {
+   "date": "Sep  8 00:92:10",
+   "level": "notice",
+   "message": "Rule /Common/redirect_http executed"
+  }
+ ]
+}

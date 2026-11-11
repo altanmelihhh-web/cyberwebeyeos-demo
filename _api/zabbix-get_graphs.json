@@ -1,0 +1,36 @@
+{
+ "success": true,
+ "graphs": [
+  {
+   "graphid": "3001",
+   "name": "Interface Te1/0/1: Network traffic",
+   "width": "900",
+   "height": "200"
+  },
+  {
+   "graphid": "3002",
+   "name": "Interface Te1/0/24: Network traffic",
+   "width": "900",
+   "height": "200"
+  },
+  {
+   "graphid": "3003",
+   "name": "CPU utilization",
+   "width": "900",
+   "height": "200"
+  },
+  {
+   "graphid": "3004",
+   "name": "Memory utilization",
+   "width": "900",
+   "height": "200"
+  },
+  {
+   "graphid": "3005",
+   "name": "ICMP ping response time",
+   "width": "900",
+   "height": "200"
+  }
+ ],
+ "count": 5
+}

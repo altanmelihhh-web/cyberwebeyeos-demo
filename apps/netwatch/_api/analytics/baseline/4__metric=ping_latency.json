@@ -1,0 +1,1 @@
+{"targetId":4,"metric":"ping_latency","baseline":{"n":144,"mean":24.318,"stddev":10.633,"minVal":17.4,"maxVal":76.9,"p50":22.1,"p95":26.8,"p99":76.5,"computedAt":1767225600000}}

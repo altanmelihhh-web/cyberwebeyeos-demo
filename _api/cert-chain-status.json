@@ -1,0 +1,273 @@
+{
+ "success": true,
+ "certs": [
+  {
+   "id": "c04",
+   "name": "mail.example.internal",
+   "domain": "mail.example.internal",
+   "chain_status": "error",
+   "chain_checked_at": "2026-09-02 08:20:14",
+   "chain_scan_ignore": false,
+   "days_left": 38,
+   "end_date": "2026-10-10",
+   "warnings": [],
+   "errors": [
+    "Ara sertifika eksik: sunucu zinciri tamamlamıyor"
+   ],
+   "chain_depth": 1,
+   "certs": [
+    {
+     "subject_cn": "mail.example.internal",
+     "issuer_cn": "Örnek Ara CA",
+     "days_remaining": 38,
+     "is_expired": false,
+     "is_root": false
+    },
+    {
+     "subject_cn": "Örnek Ara CA",
+     "issuer_cn": "Örnek Kök CA",
+     "days_remaining": 900,
+     "is_expired": false,
+     "is_root": false
+    },
+    {
+     "subject_cn": "Örnek Kök CA",
+     "issuer_cn": "Örnek Kök CA",
+     "days_remaining": 2400,
+     "is_expired": false,
+     "is_root": true
+    }
+   ]
+  },
+  {
+   "id": "c02",
+   "name": "vpn.example.internal",
+   "domain": "vpn.example.internal",
+   "chain_status": "warning",
+   "chain_checked_at": "2026-09-02 08:20:14",
+   "chain_scan_ignore": false,
+   "days_left": 13,
+   "end_date": "2026-09-15",
+   "warnings": [
+    "Sertifika 14 gün içinde sona eriyor"
+   ],
+   "errors": [],
+   "chain_depth": 3,
+   "certs": [
+    {
+     "subject_cn": "vpn.example.internal",
+     "issuer_cn": "Örnek Ara CA",
+     "days_remaining": 13,
+     "is_expired": false,
+     "is_root": false
+    },
+    {
+     "subject_cn": "Örnek Ara CA",
+     "issuer_cn": "Örnek Kök CA",
+     "days_remaining": 900,
+     "is_expired": false,
+     "is_root": false
+    },
+    {
+     "subject_cn": "Örnek Kök CA",
+     "issuer_cn": "Örnek Kök CA",
+     "days_remaining": 2400,
+     "is_expired": false,
+     "is_root": true
+    }
+   ]
+  },
+  {
+   "id": "c06",
+   "name": "Cyberwebeyeos Banking SSL",
+   "domain": "cyberwebeyeos.com",
+   "chain_status": "ok",
+   "chain_checked_at": "2026-09-02 08:20:14",
+   "chain_scan_ignore": false,
+   "days_left": 118,
+   "end_date": "2026-12-29",
+   "warnings": [],
+   "errors": [],
+   "chain_depth": 3,
+   "certs": [
+    {
+     "subject_cn": "cyberwebeyeos.com",
+     "issuer_cn": "Örnek Ara CA",
+     "days_remaining": 118,
+     "is_expired": false,
+     "is_root": false
+    },
+    {
+     "subject_cn": "Örnek Ara CA",
+     "issuer_cn": "Örnek Kök CA",
+     "days_remaining": 900,
+     "is_expired": false,
+     "is_root": false
+    },
+    {
+     "subject_cn": "Örnek Kök CA",
+     "issuer_cn": "Örnek Kök CA",
+     "days_remaining": 2400,
+     "is_expired": false,
+     "is_root": true
+    }
+   ]
+  },
+  {
+   "id": "c03",
+   "name": "portal.example.internal",
+   "domain": "portal.example.internal",
+   "chain_status": "ok",
+   "chain_checked_at": "2026-09-02 08:20:14",
+   "chain_scan_ignore": false,
+   "days_left": 24,
+   "end_date": "2026-09-26",
+   "warnings": [],
+   "errors": [],
+   "chain_depth": 3,
+   "certs": [
+    {
+     "subject_cn": "portal.example.internal",
+     "issuer_cn": "Örnek Ara CA",
+     "days_remaining": 24,
+     "is_expired": false,
+     "is_root": false
+    },
+    {
+     "subject_cn": "Örnek Ara CA",
+     "issuer_cn": "Örnek Kök CA",
+     "days_remaining": 900,
+     "is_expired": false,
+     "is_root": false
+    },
+    {
+     "subject_cn": "Örnek Kök CA",
+     "issuer_cn": "Örnek Kök CA",
+     "days_remaining": 2400,
+     "is_expired": false,
+     "is_root": true
+    }
+   ]
+  },
+  {
+   "id": "c01",
+   "name": "api.example.internal",
+   "domain": "api.example.internal",
+   "chain_status": "f5_ok",
+   "chain_checked_at": "2026-09-02 08:20:14",
+   "chain_scan_ignore": false,
+   "days_left": 6,
+   "end_date": "2026-09-08",
+   "warnings": [],
+   "errors": [],
+   "chain_depth": 3,
+   "certs": []
+  },
+  {
+   "id": "c05",
+   "name": "app.example.internal",
+   "domain": "app.example.internal",
+   "chain_status": "ok",
+   "chain_checked_at": "2026-09-02 08:20:14",
+   "chain_scan_ignore": false,
+   "days_left": 52,
+   "end_date": "2026-10-24",
+   "warnings": [],
+   "errors": [],
+   "chain_depth": 3,
+   "certs": [
+    {
+     "subject_cn": "app.example.internal",
+     "issuer_cn": "Örnek Ara CA",
+     "days_remaining": 52,
+     "is_expired": false,
+     "is_root": false
+    },
+    {
+     "subject_cn": "Örnek Ara CA",
+     "issuer_cn": "Örnek Kök CA",
+     "days_remaining": 900,
+     "is_expired": false,
+     "is_root": false
+    },
+    {
+     "subject_cn": "Örnek Kök CA",
+     "issuer_cn": "Örnek Kök CA",
+     "days_remaining": 2400,
+     "is_expired": false,
+     "is_root": true
+    }
+   ]
+  },
+  {
+   "id": "c07",
+   "name": "zabbix.example.internal",
+   "domain": "zabbix.example.internal",
+   "chain_status": "unreachable",
+   "chain_checked_at": "2026-09-02 08:20:14",
+   "chain_scan_ignore": false,
+   "days_left": 171,
+   "end_date": "2027-02-21",
+   "warnings": [
+    "Dahili adres — dışarıdan erişilemiyor"
+   ],
+   "errors": [],
+   "chain_depth": 0,
+   "certs": []
+  },
+  {
+   "id": "c10",
+   "name": "*.example.internal",
+   "domain": "wildcard.example.internal",
+   "chain_status": "skipped",
+   "chain_checked_at": "2026-09-02 08:20:14",
+   "chain_scan_ignore": false,
+   "days_left": 204,
+   "end_date": "2027-03-26",
+   "warnings": [
+    "Wildcard — zincir taraması atlandı"
+   ],
+   "errors": [],
+   "chain_depth": 0,
+   "certs": []
+  },
+  {
+   "id": "c11",
+   "name": "eski-test.example.internal",
+   "domain": "eski-test.example.internal",
+   "chain_status": "warning",
+   "chain_checked_at": "2026-09-02 08:20:14",
+   "chain_scan_ignore": true,
+   "days_left": 20,
+   "end_date": "2026-09-22",
+   "warnings": [
+    "SHA-1 imzalı ara sertifika"
+   ],
+   "errors": [],
+   "chain_depth": 3,
+   "certs": [
+    {
+     "subject_cn": "eski-test.example.internal",
+     "issuer_cn": "Örnek Ara CA",
+     "days_remaining": 20,
+     "is_expired": false,
+     "is_root": false
+    },
+    {
+     "subject_cn": "Örnek Ara CA",
+     "issuer_cn": "Örnek Kök CA",
+     "days_remaining": 900,
+     "is_expired": false,
+     "is_root": false
+    },
+    {
+     "subject_cn": "Örnek Kök CA",
+     "issuer_cn": "Örnek Kök CA",
+     "days_remaining": 2400,
+     "is_expired": false,
+     "is_root": true
+    }
+   ]
+  }
+ ]
+}

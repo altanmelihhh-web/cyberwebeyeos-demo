@@ -1,0 +1,33 @@
+{
+ "status": "success",
+ "left": {
+  "file_id": "demo0002",
+  "name": "core-sw-01_198.51.100.21_20260825.cfg",
+  "path": "/demo/backups/network/core-sw-01/core-sw-01_20260825.cfg",
+  "size": 24366,
+  "size_formatted": "23.8 KB",
+  "extension": "cfg",
+  "modified": "2026-08-25 02:10:04",
+  "modified_formatted": "25.08.2026 02:10",
+  "device": "core-sw-01",
+  "category": "network",
+  "available": true,
+  "truncated": false,
+  "content": "!\n! Last configuration change at 01:55:12 UTC Tue Aug 25 2026\nversion 17.9\nservice timestamps log datetime msec\nservice password-encryption\n!\nhostname core-sw-01\n!\nvlan 10\n name MGMT\nvlan 20\n name SERVERS\nvlan 30\n name USERS-A\n!\ninterface Vlan10\n ip address 10.64.10.21 255.255.255.0\n!\ninterface GigabitEthernet1/0/1\n description uplink-edge-fw-01\n switchport mode trunk\n switchport trunk allowed vlan 10,20,30\n!\nntp server 192.0.2.10\nlogging host 192.0.2.50\nsnmp-server community demo-ro RO\nline vty 0 4\n transport input ssh\n!\nend\n"
+ },
+ "right": {
+  "file_id": "demo0001",
+  "name": "core-sw-01_198.51.100.21_20260901.cfg",
+  "path": "/demo/backups/network/core-sw-01/core-sw-01_20260901.cfg",
+  "size": 24576,
+  "size_formatted": "24.0 KB",
+  "extension": "cfg",
+  "modified": "2026-09-01 02:10:04",
+  "modified_formatted": "01.09.2026 02:10",
+  "device": "core-sw-01",
+  "category": "network",
+  "available": true,
+  "truncated": false,
+  "content": "!\n! Last configuration change at 01:58:40 UTC Tue Sep  1 2026\nversion 17.9\nservice timestamps log datetime msec\nservice password-encryption\n!\nhostname core-sw-01\n!\nvlan 10\n name MGMT\nvlan 20\n name SERVERS\nvlan 30\n name USERS-A\nvlan 40\n name VOICE\n!\ninterface Vlan10\n ip address 10.64.10.21 255.255.255.0\n!\ninterface GigabitEthernet1/0/1\n description uplink-edge-fw-01\n switchport mode trunk\n switchport trunk allowed vlan 10,20,30,40\n!\nntp server 192.0.2.10\nlogging host 192.0.2.50\nlogging host 192.0.2.51\nline vty 0 4\n transport input ssh\n!\nend\n"
+ }
+}

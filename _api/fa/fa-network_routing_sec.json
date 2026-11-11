@@ -1,0 +1,137 @@
+{
+ "success": true,
+ "ospf_auth": false,
+ "bgp_auth": true,
+ "eigrp_auth": false,
+ "urpf": false,
+ "ip_redirects_disabled": false,
+ "source_route": true,
+ "bgp": {
+  "local_as": "64512",
+  "router_id": "203.0.113.1",
+  "neighbor_count": 2,
+  "neighbors": [
+   {
+    "neighbor": "198.51.100.1",
+    "remote_as": "64496",
+    "description": "ISP-A",
+    "has_password": true,
+    "session_state": "Established",
+    "session_up": true,
+    "up_down": "12w3d"
+   },
+   {
+    "neighbor": "192.0.2.1",
+    "remote_as": "64497",
+    "description": "ISP-B",
+    "has_password": false,
+    "session_state": "Active",
+    "session_up": false,
+    "up_down": "never"
+   }
+  ]
+ },
+ "eigrp": {
+  "processes": [
+   {
+    "tag_or_asn": "100",
+    "networks": [
+     "10.64.0.0",
+     "10.128.0.0"
+    ],
+    "auth_enabled": false
+   }
+  ],
+  "live_neighbors": [
+   {
+    "ip": "10.64.0.2",
+    "as": "100",
+    "interface": "Gi0/1",
+    "uptime": "5w2d",
+    "hold": "13"
+   }
+  ]
+ },
+ "mpls": {
+  "enabled": false,
+  "interfaces": []
+ },
+ "gre_tunnels": [
+  {
+   "name": "Tunnel10",
+   "source": "203.0.113.1",
+   "destination": "198.51.100.20",
+   "ip_address": "172.24.10.1",
+   "protected": false
+  }
+ ],
+ "eem_applets": [
+  {
+   "name": "BACKUP-CONFIG",
+   "event": "event timer cron name BKP cron-entry \"0 2 * * *\"",
+   "action_count": 2,
+   "actions_sample": [
+    "action 1.0 cli command \"enable\"",
+    "action 2.0 cli command \"copy running-config tftp://192.0.2.50/core.cfg\""
+   ]
+  }
+ ],
+ "prefix_lists": [
+  {
+   "name": "PL-OUT-ISP",
+   "entries": [
+    {
+     "seq": "5",
+     "action": "permit",
+     "network": "203.0.113.0",
+     "netmask": "24",
+     "le": "",
+     "ge": ""
+    },
+    {
+     "seq": "10",
+     "action": "deny",
+     "network": "0.0.0.0",
+     "netmask": "0",
+     "le": "32",
+     "ge": "8"
+    }
+   ]
+  }
+ ],
+ "route_summary": {
+  "total_routes": 214,
+  "by_protocol": {
+   "connected": 9,
+   "static": 4,
+   "bgp": 120,
+   "eigrp": 81
+  }
+ },
+ "issues": [
+  {
+   "category": "ospf",
+   "severity": "HIGH",
+   "message": "OSPF/EIGRP süreçlerinde kimlik doğrulama yok",
+   "recommendation": "ip ospf message-digest-key ile MD5 ekleyin"
+  },
+  {
+   "category": "bgp",
+   "severity": "MEDIUM",
+   "message": "BGP komşu 192.0.2.1 için MD5 parola yok",
+   "recommendation": "neighbor 192.0.2.1 password <secret>"
+  },
+  {
+   "category": "urpf",
+   "severity": "MEDIUM",
+   "message": "uRPF WAN arayüzünde aktif değil — IP spoofing riski",
+   "recommendation": "ip verify unicast source reachable-via rx"
+  },
+  {
+   "category": "icmp",
+   "severity": "LOW",
+   "message": "ip redirects kapatılmamış",
+   "recommendation": "no ip redirects"
+  }
+ ]
+}

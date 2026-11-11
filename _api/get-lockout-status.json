@@ -1,0 +1,1 @@
+{"success":true,"data":{"locked_ips":[],"locked_users":[],"settings":{"user":{"time_window":10,"max_attempts":5,"duration":15},"ip":{"time_window":15,"max_attempts":10,"duration":30}},"timestamp":"2026-09-02 11:17:02"}}

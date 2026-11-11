@@ -1,0 +1,5 @@
+{"success":true,"findings":[
+{"id":9001,"finding_type":"shadow_rule","created_at":"2026-08-25 03:00:00","ack_state":null,"details":{"rule_id":"104","rule_name":"Shadow_Old_VPN_Rule","reason":"Kural hicbir zaman eslesmedi, ust siradaki genis kural tarafindan golgeleniyor"}},
+{"id":9002,"finding_type":"overly_permissive","created_at":"2026-08-27 03:00:00","ack_state":null,"details":{"rule_id":"106","rule_name":"Deny_Any_Any_Cleanup","reason":"any/any servis tanimi - daraltilmasi onerilir"}},
+{"id":9003,"finding_type":"unused_rule","created_at":"2026-08-30 03:00:00","ack_state":"acknowledged","details":{"rule_id":"104","rule_name":"Shadow_Old_VPN_Rule","reason":"90 gundur hic hit almadi"}}
+]}

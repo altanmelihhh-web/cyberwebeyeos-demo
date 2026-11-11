@@ -1,0 +1,1 @@
+{"test":{"id":4,"target_id":4,"test_type":"tcp","source":"local","status":"ok","started_at":1767219900,"duration_ms":2101,"summary":{"connectMs":12.4},"triggered_by":"manual","raw_output":{"target":"portal.example.internal","type":"tcp","note":"Statik demo: örnek ham çıktı"}}}

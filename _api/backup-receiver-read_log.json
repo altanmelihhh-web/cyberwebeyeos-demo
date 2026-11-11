@@ -1,0 +1,7 @@
+{
+ "filename": "backup_prod_20260902.log",
+ "size": 48210,
+ "lines_shown": 12,
+ "modified": "2026-09-02 08:00:12",
+ "content": "[2026/09/02 08:00:01] [INFO] Yedekleme alicisi basladi (tenant=prod)\n[2026/09/02 08:00:02] [INFO] Dizin taraniyor: /demo/backups/cyberwebeyeos_prod\n[2026/09/02 08:00:03] [INFO] core-sw-01 198.51.100.21 SUCCESS /demo/backups/core-sw-01.cfg (24576 bayt)\n[2026/09/02 08:00:04] [INFO] core-sw-02 198.51.100.22 SUCCESS /demo/backups/core-sw-02.cfg (23890 bayt)\n[2026/09/02 08:00:06] [INFO] edge-fw-01 198.51.100.23 SUCCESS /demo/backups/edge-fw-01.cfg (51200 bayt)\n[2026/09/02 08:00:08] [INFO] edge-fw-02 198.51.100.24 SUCCESS /demo/backups/edge-fw-02.cfg (50944 bayt)\n[2026/09/02 08:00:11] [INFO] lb-01 198.51.100.30 SUCCESS /demo/backups/lb-01.ucs (1048576 bayt)\n[2026/09/02 08:00:14] [WARNING] dist-sw-03 198.51.100.27 yanit gecikmesi 12 sn, yeniden deneniyor\n[2026/09/02 08:00:27] [ERROR] dist-sw-03 198.51.100.27 FAILED baglanti zaman asimi (SSH)\n[2026/09/02 08:00:28] [INFO] Hash dogrulamasi tamamlandi: 30 dosya\n[2026/09/02 08:00:29] [INFO] Ozet: toplam=31 basarili=30 basarisiz=1\n[2026/09/02 08:00:30] [INFO] Yedekleme alicisi tamamlandi\n"
+}

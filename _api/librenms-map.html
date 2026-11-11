@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LibreNMS Custom Map (statik demo)</title>
+<style>
+html,body{margin:0;height:100%;background:#f7f9fb;font-family:system-ui,Segoe UI,Arial,sans-serif;color:#2c3e50}
+#bar{padding:8px 14px;background:#fff;border-bottom:1px solid #dde3ea;font-size:13px;display:flex;justify-content:space-between}
+svg{width:100%;height:calc(100% - 38px)}
+.n text{font-size:12px;text-anchor:middle;fill:#2c3e50}.n .ip{font-size:10px;fill:#7f8c8d}
+.l{stroke-width:2.5}.up{stroke:#27ae60}.down{stroke:#e74c3c;stroke-dasharray:6 4}
+.lbl{font-size:10px;fill:#7f8c8d;text-anchor:middle}
+</style></head><body>
+<div id="bar"><b id="t"></b><span>Statik demo haritası &middot; veri örnektir</span></div>
+<svg id="s" viewBox="0 0 800 460" preserveAspectRatio="xMidYMid meet"></svg>
+<script>
+var M={
+1:{t:'Cyberwebeyeos Test',n:{w:['wan-router-01','198.51.100.25',400,50,'r'],f:['edge-fw-01','198.51.100.23',400,140,'f'],c1:['core-sw-01','198.51.100.21',280,250,'s'],c2:['core-sw-02','198.51.100.22',520,250,'s'],lb:['lb-01','198.51.100.24',150,140,'l'],a:['access-sw-12','198.51.100.26',400,380,'s',1]},
+ e:[['w','f','Te0/0/1'],['f','c1','Gi1/0/1'],['f','c2','Gi1/0/2'],['c1','c2','Po1'],['lb','c1','Gi1/0/5'],['c1','a','Gi1/0/24'],['c2','a','Gi1/0/24']]},
+4:{t:'Örnek Müşteri A Test',n:{f:['fw-edge-02','203.0.113.2',400,50,'f'],lb:['vip-web','203.0.113.12',400,150,'l'],w1:['web-01','203.0.113.10',260,260,'h'],w2:['web-02','203.0.113.11',540,260,'h'],db:['db-01','192.0.2.12',400,380,'h']},
+ e:[['f','lb','DMZ'],['lb','w1','VLAN 100'],['lb','w2','VLAN 100'],['w1','db','VLAN 110'],['w2','db','VLAN 110']]},
+5:{t:'TestSite2',n:{r:['wan-router-01','198.51.100.25',250,90,'r'],s:['access-sw-12','198.51.100.26',550,90,'s',1],c:['core-sw-02','198.51.100.22',400,250,'s'],h:['nas-01','192.0.2.140',400,380,'h']},
+ e:[['r','c','Gi0/0/1'],['s','c','Gi1/0/48'],['c','h','Gi1/0/12']]}
+};
+var q=new URLSearchParams(location.search).get('map'),m=M[q]||M[1],ns='http://www.w3.org/2000/svg',s=document.getElementById('s'),h='';
+document.getElementById('t').textContent=m.t;
+m.e.forEach(function(e){var a=m.n[e[0]],b=m.n[e[1]],d=a[5]||b[5];h+='<line class="l '+(d?'down':'up')+'" x1="'+a[2]+'" y1="'+a[3]+'" x2="'+b[2]+'" y2="'+b[3]+'"/><text class="lbl" x="'+((a[2]+b[2])/2)+'" y="'+((a[3]+b[3])/2-4)+'">'+e[2]+'</text>';});
+var ic={r:'M-18 6h36v-8l-18-12-18 12z',f:'M-18-14h36v28h-36z',s:'M-22-8h44v16h-44z',l:'M-20-10h40v20h-40z',h:'M-14-16h28v32h-28z'};
+Object.keys(m.n).forEach(function(k){var n=m.n[k],c=n[5]?'#e74c3c':'#27ae60';h+='<g class="n" transform="translate('+n[2]+','+n[3]+')"><path d="'+ic[n[4]]+'" fill="#fff" stroke="'+c+'" stroke-width="3"/><text y="32">'+n[0]+'</text><text class="ip" y="45">'+n[1]+'</text></g>';});
+s.innerHTML=h;
+</script></body></html>

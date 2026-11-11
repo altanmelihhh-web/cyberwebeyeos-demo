@@ -1,0 +1,9 @@
+{
+ "success": true,
+ "score": 72,
+ "issues": [
+  "DMZ ile LAN arasında 2 geniş kural var"
+ ],
+ "grade": "C",
+ "trust_violations": 4
+}

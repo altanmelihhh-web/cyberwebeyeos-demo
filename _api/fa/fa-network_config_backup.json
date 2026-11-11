@@ -1,0 +1,1 @@
+{"success": true, "backups": [{"device": "Edge Firewall", "taken_at": "2026-09-01 02:00:00"}, {"device": "Core Switch", "taken_at": "2026-09-01 02:00:00"}, {"device": "Access Switch", "taken_at": "2026-09-01 02:00:00"}, {"device": "Access Switch (Dell)", "taken_at": "2026-09-01 02:00:00"}, {"device": "WAN Router", "taken_at": "2026-09-01 02:00:00"}]}

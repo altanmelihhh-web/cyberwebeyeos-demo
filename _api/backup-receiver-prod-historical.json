@@ -1,0 +1,72 @@
+[
+ {
+  "date": "2026-09-02",
+  "tenant": "prod",
+  "backup_summary": {
+   "total_dirs": 31,
+   "successful": 30,
+   "failed": 1
+  },
+  "problems_count": 1
+ },
+ {
+  "date": "2026-09-01",
+  "tenant": "prod",
+  "backup_summary": {
+   "total_dirs": 31,
+   "successful": 31,
+   "failed": 0
+  },
+  "problems_count": 0
+ },
+ {
+  "date": "2026-08-31",
+  "tenant": "prod",
+  "backup_summary": {
+   "total_dirs": 31,
+   "successful": 31,
+   "failed": 0
+  },
+  "problems_count": 0
+ },
+ {
+  "date": "2026-08-30",
+  "tenant": "prod",
+  "backup_summary": {
+   "total_dirs": 30,
+   "successful": 29,
+   "failed": 1
+  },
+  "problems_count": 1
+ },
+ {
+  "date": "2026-08-29",
+  "tenant": "prod",
+  "backup_summary": {
+   "total_dirs": 31,
+   "successful": 31,
+   "failed": 0
+  },
+  "problems_count": 0
+ },
+ {
+  "date": "2026-08-28",
+  "tenant": "prod",
+  "backup_summary": {
+   "total_dirs": 31,
+   "successful": 30,
+   "failed": 1
+  },
+  "problems_count": 1
+ },
+ {
+  "date": "2026-08-27",
+  "tenant": "prod",
+  "backup_summary": {
+   "total_dirs": 29,
+   "successful": 29,
+   "failed": 0
+  },
+  "problems_count": 0
+ }
+]

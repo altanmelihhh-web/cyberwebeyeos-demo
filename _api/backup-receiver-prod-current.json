@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-09-02 08:00:00",
+  "overall_status": "ok",
+  "backup_summary": {"total_dirs": 4, "successful": 4, "failed": 0},
+  "multi_server": true,
+  "scope_breakdown": {
+    "cyberwebeyeos_prod": {"success": 12, "failed": 0},
+    "cyberwebeyeos_drc": {"success": 8, "failed": 0},
+    "ornek-musteri-a_prod": {"success": 6, "failed": 1},
+    "ornek-musteri-a_drc": {"success": 4, "failed": 0}
+  },
+  "server_breakdown": {
+    "cyberwebeyeos_vb": {"ansible": 12, "coremgmt": 12},
+    "ornek-musteri-a_vb": {"ansible": 6, "coremgmt": 5}
+  },
+  "whitelist_status": {
+    "cyberwebeyeos": {"ansible": 40, "coremgmt": 40},
+    "ornek-musteri-a": {"ansible": 15, "coremgmt": 14}
+  },
+  "a10_loading_status": {"cyberwebeyeos": "ok", "ornek-musteri-a": "ok"},
+  "a10_loading_details": {"cyberwebeyeos": "", "ornek-musteri-a": ""},
+  "problems_count": 1,
+  "message": "Guncel"
+}

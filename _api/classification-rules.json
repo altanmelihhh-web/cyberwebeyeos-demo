@@ -1,0 +1,45 @@
+{
+ "success": true,
+ "rules": [
+  {
+   "id": 1,
+   "name": "PDF belgeleri",
+   "match_type": "extension",
+   "match_value": "pdf",
+   "action_type": "move_folder",
+   "action_value": "Dokumanlar",
+   "priority": 10,
+   "is_active": true
+  },
+  {
+   "id": 2,
+   "name": "Ağ şemaları",
+   "match_type": "name_contains",
+   "match_value": "sema",
+   "action_type": "add_tag",
+   "action_value": "Ağ Şeması",
+   "priority": 20,
+   "is_active": true
+  },
+  {
+   "id": 3,
+   "name": "Konfigürasyon yedekleri",
+   "match_type": "extension",
+   "match_value": "cfg",
+   "action_type": "move_folder",
+   "action_value": "Yedekler",
+   "priority": 30,
+   "is_active": true
+  },
+  {
+   "id": 4,
+   "name": "Büyük dosyalar",
+   "match_type": "size_gt",
+   "match_value": "10485760",
+   "action_type": "add_tag",
+   "action_value": "Gizli",
+   "priority": 50,
+   "is_active": false
+  }
+ ]
+}

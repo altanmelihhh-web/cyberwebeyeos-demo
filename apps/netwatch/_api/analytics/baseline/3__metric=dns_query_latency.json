@@ -1,0 +1,1 @@
+{"targetId":3,"metric":"dns_query_latency","baseline":{"n":144,"mean":18.122,"stddev":2.38,"minVal":10.6,"maxVal":23.8,"p50":18.2,"p95":22.2,"p99":23.8,"computedAt":1767225600000}}

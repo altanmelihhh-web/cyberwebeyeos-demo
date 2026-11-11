@@ -1,0 +1,2 @@
+/* masaüstü odaklı 3 panelli arayüz: dar ekranda sayfa değil #root yatay kayar */
+@media (max-width: 700px) { html, body { overflow-x: hidden; } #root { max-width: 100vw; overflow-x: auto; } }

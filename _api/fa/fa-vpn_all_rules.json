@@ -1,0 +1,242 @@
+{
+ "success": true,
+ "total": 10,
+ "tunnel_count": 6,
+ "local_nets": [
+  "10.64.0.0/16",
+  "10.128.0.0/16"
+ ],
+ "tunnel_info": {
+  "VPN-PartnerA": {
+   "remote_gw": "192.0.2.1",
+   "status": "up"
+  },
+  "VPN-Branch-IST": {
+   "remote_gw": "198.51.100.1",
+   "status": "up"
+  },
+  "VPN-Branch-ANK": {
+   "remote_gw": "203.0.113.129",
+   "status": "up"
+  },
+  "VPN-DR": {
+   "remote_gw": "203.0.113.140",
+   "status": "up"
+  },
+  "VPN-Legacy": {
+   "remote_gw": "198.51.100.200",
+   "status": "down"
+  },
+  "VPN-Contractor": {
+   "remote_gw": "192.0.2.129",
+   "status": "up"
+  }
+ },
+ "rules": [
+  {
+   "rule_id": "233",
+   "name": "vpn-partner-a-in",
+   "src": [
+    "192.0.2.0/24"
+   ],
+   "dst": [
+    "10.64.10.0/24"
+   ],
+   "services": [
+    "HTTPS",
+    "SSH"
+   ],
+   "action": "allow",
+   "hit_count": 18420,
+   "tunnels": [
+    "VPN-PartnerA"
+   ],
+   "enabled": true,
+   "comments": "Örnek Müşteri A erişimi"
+  },
+  {
+   "rule_id": "234",
+   "name": "vpn-partner-a-out",
+   "src": [
+    "10.64.10.0/24"
+   ],
+   "dst": [
+    "192.0.2.0/24"
+   ],
+   "services": [
+    "any"
+   ],
+   "action": "allow",
+   "hit_count": 9120,
+   "tunnels": [
+    "VPN-PartnerA"
+   ],
+   "enabled": true,
+   "comments": ""
+  },
+  {
+   "rule_id": "240",
+   "name": "vpn-branch-ist",
+   "src": [
+    "198.51.100.0/24"
+   ],
+   "dst": [
+    "10.64.0.0/16"
+   ],
+   "services": [
+    "any"
+   ],
+   "action": "allow",
+   "hit_count": 254310,
+   "tunnels": [
+    "VPN-Branch-IST"
+   ],
+   "enabled": true,
+   "comments": "Şube tüneli"
+  },
+  {
+   "rule_id": "241",
+   "name": "vpn-branch-ist-out",
+   "src": [
+    "10.64.0.0/16"
+   ],
+   "dst": [
+    "198.51.100.0/24"
+   ],
+   "services": [
+    "any"
+   ],
+   "action": "allow",
+   "hit_count": 198004,
+   "tunnels": [
+    "VPN-Branch-IST"
+   ],
+   "enabled": true,
+   "comments": ""
+  },
+  {
+   "rule_id": "250",
+   "name": "vpn-branch-ank",
+   "src": [
+    "203.0.113.128/25"
+   ],
+   "dst": [
+    "10.64.0.0/16"
+   ],
+   "services": [
+    "HTTPS",
+    "RDP"
+   ],
+   "action": "allow",
+   "hit_count": 5230,
+   "tunnels": [
+    "VPN-Branch-ANK"
+   ],
+   "enabled": true,
+   "comments": ""
+  },
+  {
+   "rule_id": "251",
+   "name": "vpn-branch-ank-deny",
+   "src": [
+    "203.0.113.128/25"
+   ],
+   "dst": [
+    "10.128.0.0/16"
+   ],
+   "services": [
+    "any"
+   ],
+   "action": "deny",
+   "hit_count": 0,
+   "tunnels": [
+    "VPN-Branch-ANK"
+   ],
+   "enabled": true,
+   "comments": "Yönetim ağına kapalı"
+  },
+  {
+   "rule_id": "260",
+   "name": "vpn-dr-sync",
+   "src": [
+    "10.64.20.0/24"
+   ],
+   "dst": [
+    "10.128.20.0/24"
+   ],
+   "services": [
+    "TCP-3306",
+    "TCP-873"
+   ],
+   "action": "allow",
+   "hit_count": 84,
+   "tunnels": [
+    "VPN-DR"
+   ],
+   "enabled": true,
+   "comments": ""
+  },
+  {
+   "rule_id": "261",
+   "name": "vpn-dr-mgmt",
+   "src": [
+    "192.0.2.50/32"
+   ],
+   "dst": [
+    "10.128.0.0/24"
+   ],
+   "services": [
+    "SSH",
+    "PING"
+   ],
+   "action": "allow",
+   "hit_count": 1340,
+   "tunnels": [
+    "VPN-DR",
+    "VPN-PartnerA"
+   ],
+   "enabled": true,
+   "comments": ""
+  },
+  {
+   "rule_id": "270",
+   "name": "vpn-legacy-site",
+   "src": [
+    "198.51.100.200/32"
+   ],
+   "dst": [
+    "10.64.30.0/24"
+   ],
+   "services": [
+    "any"
+   ],
+   "action": "allow",
+   "hit_count": 0,
+   "tunnels": [
+    "VPN-Legacy"
+   ],
+   "enabled": true,
+   "comments": "Kullanılmıyor, silinmesi önerilir"
+  },
+  {
+   "rule_id": "271",
+   "name": "vpn-contractor",
+   "src": [
+    "192.0.2.128/25"
+   ],
+   "dst": [
+    "10.64.40.0/24"
+   ],
+   "services": [
+    "RDP"
+   ],
+   "action": "allow",
+   "hit_count": 712,
+   "tunnels": [
+    "VPN-Contractor"
+   ],
+   "enabled": false,
+   "comments": ""
+  }
+ ]
+}

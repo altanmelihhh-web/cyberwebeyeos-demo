@@ -1,0 +1,1 @@
+{"target":{"id":7,"name":"Mail Relay","host":"mail.example.internal","port":25,"type":"host","profile":"normal","tags":"[\"mail\"]","enabled":1,"created_at":1764374400,"notes":"SMTP röle"}}

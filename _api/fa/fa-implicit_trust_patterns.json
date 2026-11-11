@@ -1,0 +1,61 @@
+{
+ "success": true,
+ "builtin": [
+  {
+   "pattern_name": "dmz_to_internal",
+   "reason": "DMZ bölgesinden iç ağa doğrudan erişim — DMZ ele geçirilirse iç ağ açılır",
+   "src_regex": "(?i)dmz",
+   "dst_regex": "(?i)(lan|internal|db)",
+   "severity": "HIGH"
+  },
+  {
+   "pattern_name": "guest_to_internal",
+   "reason": "Misafir ağından kurumsal ağa geçiş",
+   "src_regex": "(?i)guest",
+   "dst_regex": "(?i)(lan|corp|internal)",
+   "severity": "CRITICAL"
+  },
+  {
+   "pattern_name": "untrust_to_db",
+   "reason": "Güvensiz bölgeden doğrudan veritabanı bölgesine kural",
+   "src_regex": "(?i)(wan|untrust|internet)",
+   "dst_regex": "(?i)(db|database)",
+   "severity": "CRITICAL"
+  },
+  {
+   "pattern_name": "mgmt_from_user",
+   "reason": "Kullanıcı bölgesinden yönetim ağına erişim",
+   "src_regex": "(?i)(user|lan)",
+   "dst_regex": "(?i)(mgmt|management)",
+   "severity": "MEDIUM"
+  },
+  {
+   "pattern_name": "vpn_to_any_internal",
+   "reason": "VPN bölgesinden tüm iç bölgelere geniş erişim",
+   "src_regex": "(?i)vpn",
+   "dst_regex": "(?i)(lan|internal|db)",
+   "severity": "MEDIUM"
+  }
+ ],
+ "custom": [
+  {
+   "pattern_name": "musteri-a-izolasyon",
+   "reason": "Örnek Müşteri A segmenti diğer müşteri segmentlerine erişemez",
+   "src_regex": "(?i)musteri-?a",
+   "dst_regex": "(?i)musteri-?(b|c)",
+   "severity": "HIGH",
+   "effect": "forbid",
+   "service_regex": ".*"
+  },
+  {
+   "pattern_name": "backup-allow",
+   "reason": "Yedekleme sunucusundan yalnız SSH izinli",
+   "src_regex": "(?i)backup",
+   "dst_regex": "(?i)lan",
+   "severity": "LOW",
+   "effect": "allow",
+   "service_regex": "SSH",
+   "src_addr_regex": "^192\\.0\\.2\\."
+  }
+ ]
+}

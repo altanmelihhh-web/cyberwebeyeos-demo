@@ -1,0 +1,261 @@
+{
+ "success": true,
+ "events": [
+  {
+   "eventid": "51000",
+   "name": "High CPU utilization (>85% for 10m)",
+   "severity": 3,
+   "clock": 1789738200,
+   "value": 1,
+   "host_name": "edge-fw-01",
+   "hostid": "10103"
+  },
+  {
+   "eventid": "51002",
+   "name": "Interface Te1/0/24: Link down",
+   "severity": 4,
+   "clock": 1789734600,
+   "value": 1,
+   "host_name": "core-sw-01",
+   "hostid": "10101"
+  },
+  {
+   "eventid": "51004",
+   "name": "Pool member web-pool 192.0.2.10:443 is not available",
+   "severity": 4,
+   "clock": 1789732800,
+   "value": 1,
+   "host_name": "lb-01",
+   "hostid": "10105"
+  },
+  {
+   "eventid": "51006",
+   "name": "Free disk space is less than 15% on volume /var/lib",
+   "severity": 3,
+   "clock": 1789726000,
+   "value": 1,
+   "host_name": "db-srv-01.example.internal",
+   "hostid": "10111"
+  },
+  {
+   "eventid": "51008",
+   "name": "High error rate on Gi0/12 (input errors)",
+   "severity": 2,
+   "clock": 1789719000,
+   "value": 1,
+   "host_name": "access-sw-12",
+   "hostid": "10107"
+  },
+  {
+   "eventid": "51010",
+   "name": "BGP peer 203.0.113.1 (AS64496) is down",
+   "severity": 5,
+   "clock": 1789714000,
+   "value": 1,
+   "host_name": "wan-router-01",
+   "hostid": "10106"
+  },
+  {
+   "eventid": "51012",
+   "name": "Memory utilization is above 90%",
+   "severity": 3,
+   "clock": 1789700000,
+   "value": 1,
+   "host_name": "app-srv-01.example.internal",
+   "hostid": "10109"
+  },
+  {
+   "eventid": "51014",
+   "name": "Fan #2 status: warning",
+   "severity": 2,
+   "clock": 1789680000,
+   "value": 1,
+   "host_name": "core-sw-02",
+   "hostid": "10102"
+  },
+  {
+   "eventid": "51001",
+   "name": "High CPU utilization (>85% for 10m)",
+   "severity": 3,
+   "clock": 1789653600,
+   "value": 0,
+   "host_name": "edge-fw-01",
+   "hostid": "10103"
+  },
+  {
+   "eventid": "51016",
+   "name": "Backup job duration exceeds 4h",
+   "severity": 1,
+   "clock": 1789650000,
+   "value": 1,
+   "host_name": "backup-srv-01.example.internal",
+   "hostid": "10112"
+  },
+  {
+   "eventid": "51005",
+   "name": "Pool member web-pool 192.0.2.10:443 is not available",
+   "severity": 4,
+   "clock": 1789648200,
+   "value": 0,
+   "host_name": "lb-01",
+   "hostid": "10105"
+  },
+  {
+   "eventid": "51009",
+   "name": "High error rate on Gi0/12 (input errors)",
+   "severity": 2,
+   "clock": 1789634400,
+   "value": 0,
+   "host_name": "access-sw-12",
+   "hostid": "10107"
+  },
+  {
+   "eventid": "51018",
+   "name": "HA sync status: out of sync",
+   "severity": 4,
+   "clock": 1789630000,
+   "value": 1,
+   "host_name": "edge-fw-02",
+   "hostid": "10104"
+  },
+  {
+   "eventid": "51013",
+   "name": "Memory utilization is above 90%",
+   "severity": 3,
+   "clock": 1789615400,
+   "value": 0,
+   "host_name": "app-srv-01.example.internal",
+   "hostid": "10109"
+  },
+  {
+   "eventid": "51020",
+   "name": "Zabbix agent is unreachable for 5m",
+   "severity": 3,
+   "clock": 1789590000,
+   "value": 1,
+   "host_name": "app-srv-02.example.internal",
+   "hostid": "10110"
+  },
+  {
+   "eventid": "52001",
+   "name": "High CPU utilization (>85% for 10m)",
+   "severity": 3,
+   "clock": 1789565400,
+   "value": 1,
+   "host_name": "edge-fw-01",
+   "hostid": "10103"
+  },
+  {
+   "eventid": "51017",
+   "name": "Backup job duration exceeds 4h",
+   "severity": 1,
+   "clock": 1789565400,
+   "value": 0,
+   "host_name": "backup-srv-01.example.internal",
+   "hostid": "10112"
+  },
+  {
+   "eventid": "52007",
+   "name": "Free disk space is less than 15% on volume /var/lib",
+   "severity": 3,
+   "clock": 1789553200,
+   "value": 1,
+   "host_name": "db-srv-01.example.internal",
+   "hostid": "10111"
+  },
+  {
+   "eventid": "51022",
+   "name": "Unavailable by ICMP ping",
+   "severity": 5,
+   "clock": 1789540000,
+   "value": 1,
+   "host_name": "access-sw-13",
+   "hostid": "10108"
+  },
+  {
+   "eventid": "52013",
+   "name": "Memory utilization is above 90%",
+   "severity": 3,
+   "clock": 1789527200,
+   "value": 1,
+   "host_name": "app-srv-01.example.internal",
+   "hostid": "10109"
+  },
+  {
+   "eventid": "51021",
+   "name": "Zabbix agent is unreachable for 5m",
+   "severity": 3,
+   "clock": 1789505400,
+   "value": 0,
+   "host_name": "app-srv-02.example.internal",
+   "hostid": "10110"
+  },
+  {
+   "eventid": "51024",
+   "name": "VPN tunnel to-branch-01 is down",
+   "severity": 4,
+   "clock": 1789480000,
+   "value": 1,
+   "host_name": "edge-fw-01",
+   "hostid": "10103"
+  },
+  {
+   "eventid": "52019",
+   "name": "HA sync status: out of sync",
+   "severity": 4,
+   "clock": 1789457200,
+   "value": 1,
+   "host_name": "edge-fw-02",
+   "hostid": "10104"
+  },
+  {
+   "eventid": "51026",
+   "name": "Device uptime < 10m (restarted)",
+   "severity": 1,
+   "clock": 1789410000,
+   "value": 1,
+   "host_name": "core-sw-01",
+   "hostid": "10101"
+  },
+  {
+   "eventid": "51025",
+   "name": "VPN tunnel to-branch-01 is down",
+   "severity": 4,
+   "clock": 1789395400,
+   "value": 0,
+   "host_name": "edge-fw-01",
+   "hostid": "10103"
+  },
+  {
+   "eventid": "51028",
+   "name": "SSL certificate expires in less than 30 days",
+   "severity": 2,
+   "clock": 1789340000,
+   "value": 1,
+   "host_name": "lb-01",
+   "hostid": "10105"
+  },
+  {
+   "eventid": "52025",
+   "name": "VPN tunnel to-branch-01 is down",
+   "severity": 4,
+   "clock": 1789307200,
+   "value": 1,
+   "host_name": "edge-fw-01",
+   "hostid": "10103"
+  },
+  {
+   "eventid": "51029",
+   "name": "SSL certificate expires in less than 30 days",
+   "severity": 2,
+   "clock": 1789255400,
+   "value": 0,
+   "host_name": "lb-01",
+   "hostid": "10105"
+  }
+ ],
+ "total": 28,
+ "page": 1,
+ "per_page": 50,
+ "total_pages": 1
+}

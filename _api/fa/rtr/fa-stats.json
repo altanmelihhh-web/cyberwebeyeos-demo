@@ -1,0 +1,1 @@
+{"action_breakdown": {"allow": 125, "deny": 14}, "any_rules": 137, "disabled_rules": 0, "enabled_rules": 139, "fw_slug": "Demo-851", "last_fetch": "2026-09-02 09:30:49", "last_snapshot_at": "2026-09-02 09:30:49", "severity_breakdown": {"LOW": 132, "MEDIUM": 5}, "shadow_rules": 0, "snapshot_count": 147, "success": true, "total_rules": 139}

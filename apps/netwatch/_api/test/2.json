@@ -1,0 +1,1 @@
+{"test":{"id":2,"target_id":2,"test_type":"http","source":"local","status":"ok","started_at":1767223500,"duration_ms":3717,"summary":{"httpStatus":200,"totalMs":182},"triggered_by":"manual","raw_output":{"target":"192.0.2.53","type":"http","note":"Statik demo: örnek ham çıktı"}}}

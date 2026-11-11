@@ -1,0 +1,50 @@
+{
+ "success": true,
+ "tags": [
+  {
+   "id": 1,
+   "name": "Ağ Şeması",
+   "color": "#3498db",
+   "usage_count": 1
+  },
+  {
+   "id": 2,
+   "name": "Politika",
+   "color": "#9b59b6",
+   "usage_count": 1
+  },
+  {
+   "id": 3,
+   "name": "Prosedür",
+   "color": "#27ae60",
+   "usage_count": 1
+  },
+  {
+   "id": 4,
+   "name": "Gizli",
+   "color": "#e74c3c",
+   "usage_count": 0
+  }
+ ],
+ "doc_map": {
+  "64c178c1cb85cf8863bff630abd8364a": [
+   {
+    "id": 1,
+    "name": "Ağ Şeması",
+    "color": "#3498db"
+   }
+  ],
+  "8203da3f5ed964f0b45f9a51919cbc67": [
+   {
+    "id": 2,
+    "name": "Politika",
+    "color": "#9b59b6"
+   },
+   {
+    "id": 3,
+    "name": "Prosedür",
+    "color": "#27ae60"
+   }
+  ]
+ }
+}

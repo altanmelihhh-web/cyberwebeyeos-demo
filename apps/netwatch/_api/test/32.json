@@ -1,0 +1,1 @@
+{"test":{"id":32,"target_id":4,"test_type":"traceroute","source":"globalping","status":"ok","started_at":1767169500,"duration_ms":3568,"summary":{"hopCount":9},"triggered_by":"manual","raw_output":{"target":"portal.example.internal","type":"traceroute","note":"Statik demo: örnek ham çıktı"}}}

@@ -1,0 +1,1 @@
+{"targetId":4,"metric":"ping_loss","baseline":{"n":144,"mean":0.463,"stddev":4.597,"minVal":0,"maxVal":55,"p50":0,"p95":0,"p99":4.8,"computedAt":1767225600000}}

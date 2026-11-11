@@ -1,0 +1,65 @@
+{
+ "success": true,
+ "rows": [
+  {
+   "id": 6,
+   "certificate_id": "cert06",
+   "cert_name": "app.example.internal",
+   "field_changed": "notes",
+   "old_value": "İlk kayıt",
+   "new_value": "Yenileme için CSR hazırlandı",
+   "changed_by": "ayse.demir",
+   "changed_at": "2026-08-31 13:25:09"
+  },
+  {
+   "id": 5,
+   "certificate_id": "cert05",
+   "cert_name": "mail.example.internal",
+   "field_changed": "lifecycle",
+   "old_value": "cert_received",
+   "new_value": "chain_verified",
+   "changed_by": "mehmet.kaya",
+   "changed_at": "2026-08-29 11:48:02"
+  },
+  {
+   "id": 4,
+   "certificate_id": "cert04",
+   "cert_name": "vpn.example.internal",
+   "field_changed": "end_date",
+   "old_value": "2026-09-15",
+   "new_value": "2026-12-15",
+   "changed_by": "mehmet.kaya",
+   "changed_at": "2026-08-27 16:33:20"
+  },
+  {
+   "id": 3,
+   "certificate_id": "cert03",
+   "cert_name": "portal.example.internal",
+   "field_changed": "lifecycle",
+   "old_value": "csr_sent",
+   "new_value": "renewal_planned",
+   "changed_by": "ayse.demir",
+   "changed_at": "2026-08-24 09:11:47"
+  },
+  {
+   "id": 2,
+   "certificate_id": "cert02",
+   "cert_name": "api.example.internal",
+   "field_changed": "responsible",
+   "old_value": "",
+   "new_value": "ayse.demir",
+   "changed_by": "ayse.demir",
+   "changed_at": "2026-08-20 14:05:12"
+  },
+  {
+   "id": 1,
+   "certificate_id": "cert01",
+   "cert_name": "Cyberwebeyeos Banking SSL",
+   "field_changed": "lifecycle",
+   "old_value": "active",
+   "new_value": "csr_ready",
+   "changed_by": "mehmet.kaya",
+   "changed_at": "2026-08-18 10:20:00"
+  }
+ ]
+}

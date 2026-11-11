@@ -1,0 +1,1 @@
+{"success": true, "config": "config firewall policy\n    edit 101\n        set name \"Allow_Web_DMZ\"\n        set srcintf \"dmz\"\n        set dstintf \"wan1\"\n        set action accept\n    next\nend"}

@@ -1,0 +1,78 @@
+{
+ "success": true,
+ "total": 9,
+ "admins": [
+  {
+   "name": "ayse.demir",
+   "auth_method": "local",
+   "accprofile": "super_admin",
+   "expiration_date": "2027-03-31",
+   "two_factor": "yes",
+   "comments": "Güvenlik yöneticisi"
+  },
+  {
+   "name": "mehmet.kaya",
+   "auth_method": "local",
+   "accprofile": "super_admin",
+   "expiration_date": "2027-01-15",
+   "two_factor": "yes",
+   "comments": "Ağ operasyon"
+  },
+  {
+   "name": "zeynep.arslan",
+   "auth_method": "ldap",
+   "accprofile": "prof_admin",
+   "expiration_date": "2026-12-01",
+   "two_factor": "yes",
+   "comments": "SOC vardiya sorumlusu"
+  },
+  {
+   "name": "can.yildiz",
+   "auth_method": "ldap",
+   "accprofile": "prof_admin",
+   "expiration_date": "2026-10-20",
+   "two_factor": "no",
+   "comments": "Proje hesabı, süresi dolmak üzere"
+  },
+  {
+   "name": "burak.ozkan",
+   "auth_method": "radius",
+   "accprofile": "read_only",
+   "expiration_date": "2026-09-10",
+   "two_factor": "no",
+   "comments": "Denetim - salt okunur"
+  },
+  {
+   "name": "selin.aydin",
+   "auth_method": "local",
+   "accprofile": "read_only",
+   "expiration_date": "-",
+   "two_factor": "yes",
+   "comments": "Yedekleme izleme"
+  },
+  {
+   "name": "demo_readonly",
+   "auth_method": "local",
+   "accprofile": "read_only",
+   "expiration_date": "-",
+   "two_factor": "no",
+   "comments": "FireScope API hesabı"
+  },
+  {
+   "name": "eski.stajyer",
+   "auth_method": "unix",
+   "accprofile": "read_only",
+   "expiration_date": "2026-06-30",
+   "two_factor": "no",
+   "comments": "Pasif hesap, kapatılması gerekir"
+  },
+  {
+   "name": "svc-backup",
+   "auth_method": "md5",
+   "accprofile": "prof_admin",
+   "expiration_date": "-",
+   "two_factor": "no",
+   "comments": "Servis hesabı, zayıf kimlik doğrulama"
+  }
+ ]
+}

@@ -1,0 +1,1 @@
+{"test":{"id":23,"target_id":2,"test_type":"ping","source":"globalping","status":"ok","started_at":1767185700,"duration_ms":2797,"summary":{"avg":86.3,"min":74,"max":121,"loss":10,"sent":10,"received":9},"triggered_by":"manual","raw_output":{"target":"192.0.2.53","type":"ping","note":"Statik demo: örnek ham çıktı"}}}

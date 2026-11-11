@@ -1,0 +1,434 @@
+{
+ "success": true,
+ "data": [
+  {
+   "provider_key": "urlhaus",
+   "display_name": "URLhaus",
+   "category": "abuse",
+   "check_method": "api",
+   "endpoint": "https://urlhaus-api.abuse.ch/v1/host/",
+   "requires_key": false,
+   "is_enabled": true,
+   "listed_count": 1,
+   "catalog": {
+    "title": "URLhaus (abuse.ch)",
+    "summary": "Malware dağıtım URL/host blacklist — yüksek kesinlik, düşük false positive",
+    "how": [
+     "POST urlhaus-api.abuse.ch/v1/host/ endpoint'e host bilgisi",
+     "2023'ten itibaren API key (ücretsiz abuse.ch hesabı) zorunlu",
+     "Bir host URLhaus'ta varsa malware dağıtımı ile ilişkilendirilmiştir"
+    ],
+    "criteria": "Herhangi bir kayıt → critical (çünkü sadece gerçek malware host'ları listelenir)",
+    "urls": [
+     {
+      "label": "URLhaus browse",
+      "url": "https://urlhaus.abuse.ch/browse/"
+     },
+     {
+      "label": "abuse.ch kayıt",
+      "url": "https://auth.abuse.ch/user/signup"
+     },
+     {
+      "label": "API docs",
+      "url": "https://urlhaus-api.abuse.ch/"
+     }
+    ]
+   }
+  },
+  {
+   "provider_key": "virustotal",
+   "display_name": "VirusTotal v3 API",
+   "category": "abuse",
+   "check_method": "api",
+   "endpoint": "https://www.virustotal.com/api/v3",
+   "requires_key": true,
+   "is_enabled": true,
+   "listed_count": 1,
+   "catalog": {
+    "title": "VirusTotal v3 API",
+    "summary": "90+ antivirüs/threat-intel vendor'u tek sorguda cross-check + reputation skor + kategori",
+    "how": [
+     "IP/domain için VT API'yi sorgula",
+     "last_analysis_stats: malicious/suspicious/harmless/undetected sayıları",
+     "last_analysis_results: her vendor'un kararı (Fortinet, Sophos, Kaspersky...)",
+     "reputation skor (-100 ile +100)",
+     "Enterprise firewall vendor'larını özel işaretliyoruz (Fortinet/Sophos/Bitdefender...)"
+    ],
+    "criteria": "2+ vendor malicious → critical; 1 vendor veya suspicious → warning; 0 → clean",
+    "urls": [
+     {
+      "label": "Web",
+      "url": "https://www.virustotal.com/"
+     },
+     {
+      "label": "API v3 docs",
+      "url": "https://docs.virustotal.com/reference/overview"
+     },
+     {
+      "label": "Ücretsiz key",
+      "url": "https://www.virustotal.com/gui/my-apikey"
+     }
+    ]
+   }
+  },
+  {
+   "provider_key": "barracuda",
+   "display_name": "Barracuda Reputation Block List",
+   "category": "dnsbl",
+   "check_method": "dns",
+   "endpoint": "b.barracudacentral.org",
+   "requires_key": false,
+   "is_enabled": true,
+   "listed_count": 2,
+   "catalog": {
+    "title": "Barracuda Reputation Block List (BRBL)",
+    "summary": "Mail spam kaynaklarını listeleyen ticari DNSBL. Barracuda Networks'ün kendi spamtrap verisinden beslenir.",
+    "how": [
+     "IP ters çevrilip zone (\"b.barracudacentral.org\") ile birleştirilir",
+     "A kaydı sorgulanır — cevap 127.0.0.2 ise \"poor\" listelemesi var",
+     "TXT kaydında Barracuda portal linki döner",
+     "Portal canlı scraping ile sayfadan tam \"poor/fair/good\" durumunu da çeker"
+    ],
+    "criteria": "Manuel doğrulanmış spam gönderen IP'ler. Çıkış için removal request lazım.",
+    "urls": [
+     {
+      "label": "Resmi lookup",
+      "url": "https://www.barracudacentral.org/lookups/lookup-reputation"
+     },
+     {
+      "label": "Removal request",
+      "url": "https://www.barracudacentral.org/rbl/removal-request"
+     },
+     {
+      "label": "Dökümantasyon",
+      "url": "https://www.barracudacentral.org/rbl"
+     }
+    ]
+   }
+  },
+  {
+   "provider_key": "mailspike_bl",
+   "display_name": "Mailspike Reputation BL",
+   "category": "dnsbl",
+   "check_method": "dns",
+   "endpoint": "bl.mailspike.net",
+   "requires_key": false,
+   "is_enabled": true,
+   "listed_count": 1,
+   "catalog": {
+    "title": "Mailspike Reputation BL",
+    "summary": "Reputation-based DNSBL, 5 seviyeli spam güven derecesi",
+    "how": [
+     "127.0.0.2 = L5 (en yüksek spam güveni)",
+     "127.0.0.10-13 = L1-L4 (kademeli azalan)",
+     "Davranışsal analizden beslenir"
+    ],
+    "criteria": "Level ayrımı yapmadan listed olarak değerlendiriyoruz",
+    "urls": [
+     {
+      "label": "Reputation check",
+      "url": "https://mailspike.org/iprep.html"
+     },
+     {
+      "label": "Dökümantasyon",
+      "url": "https://mailspike.org/anubis.html"
+     }
+    ]
+   }
+  },
+  {
+   "provider_key": "psbl",
+   "display_name": "Passive Spam Block List",
+   "category": "dnsbl",
+   "check_method": "dns",
+   "endpoint": "psbl.surriel.com",
+   "requires_key": false,
+   "is_enabled": true,
+   "listed_count": 2,
+   "catalog": {
+    "title": "Passive Spam Block List",
+    "summary": "Passive spamtraps (honeypot mail kutuları) üzerinden spam gönderen IP'leri tespit eder",
+    "how": [
+     "Pasif honeypot mail adresleri (spam almak üzere kurulmuş, hiç kimseye verilmemiş)",
+     "Bu adreslere mail gönderen IP'ler otomatik listelenir",
+     "Kendi kendini temizleyen — 48 saat aktivite yoksa liste dışı"
+    ],
+    "criteria": "Düşük false positive (honeypot paradigma), ama küçük kapsam",
+    "urls": [
+     {
+      "label": "Resmi site",
+      "url": "https://psbl.org/"
+     },
+     {
+      "label": "Lookup",
+      "url": "https://psbl.org/listing"
+     }
+    ]
+   }
+  },
+  {
+   "provider_key": "spamcop",
+   "display_name": "SpamCop Blocking List",
+   "category": "dnsbl",
+   "check_method": "dns",
+   "endpoint": "bl.spamcop.net",
+   "requires_key": false,
+   "is_enabled": true,
+   "listed_count": 2,
+   "catalog": {
+    "title": "SpamCop Blocking List (SCBL)",
+    "summary": "Topluluk kaynaklı spam rapor sistemi. Kullanıcıların rapor ettiği spam mesajların kaynağı otomatik listeye girer.",
+    "how": [
+     "Kullanıcı SpamCop'a spam mail rapor eder",
+     "SpamCop kaynağı çözer ve SCBL'e geçici ekler",
+     "Rapor sayısı belirli eşiği geçerse kalıcı olur",
+     "Sorgu bizim gibi: A kaydı 127.0.0.2 → listed"
+    ],
+    "criteria": "Otomatik ve topluluk bazlı; false positive oranı Barracuda'dan yüksek olabilir",
+    "urls": [
+     {
+      "label": "Web lookup",
+      "url": "https://www.spamcop.net/bl.shtml"
+     },
+     {
+      "label": "Dökümantasyon",
+      "url": "https://www.spamcop.net/fom-serve/cache/379.html"
+     }
+    ]
+   }
+  },
+  {
+   "provider_key": "spamhaus_zen",
+   "display_name": "Spamhaus ZEN",
+   "category": "dnsbl",
+   "check_method": "dns",
+   "endpoint": "zen.dq.spamhaus.net",
+   "requires_key": true,
+   "is_enabled": false,
+   "listed_count": 0,
+   "catalog": {
+    "title": "Spamhaus ZEN (SBL+XBL+PBL birleşik)",
+    "summary": "Endüstri altın standardı — ama public resolver'lardan sorgu reject edilir, DQS API key gerekli",
+    "how": [
+     "SBL: Spamhaus Block List (onaylı spam kaynakları)",
+     "XBL: Exploits Block List (botnet/proxy)",
+     "PBL: Policy Block List (direkt mail göndermemesi gereken IP'ler)",
+     "Return code kodu belirler: 127.0.0.2=SBL, 127.0.0.4-7=XBL, 127.0.0.10-11=PBL",
+     "127.255.255.254 = query reject (bloklu resolver)"
+    ],
+    "criteria": "Şu an devre dışı — DQS (Data Query Service) ücretsiz tier key alınınca aktifleşir",
+    "urls": [
+     {
+      "label": "DQS ücretsiz kayıt",
+      "url": "https://www.spamhaus.com/free-trial/sign-up-for-a-free-data-query-service-account/"
+     },
+     {
+      "label": "Return codes",
+      "url": "https://www.spamhaus.org/faq/section/DNSBL%20Usage#202"
+     },
+     {
+      "label": "Web lookup",
+      "url": "https://check.spamhaus.org/"
+     }
+    ]
+   }
+  },
+  {
+   "provider_key": "truncate",
+   "display_name": "Truncate GBUdb",
+   "category": "dnsbl",
+   "check_method": "dns",
+   "endpoint": "truncate.gbudb.net",
+   "requires_key": false,
+   "is_enabled": true,
+   "listed_count": 1,
+   "catalog": {
+    "title": "Truncate GBUdb",
+    "summary": "Istatistiksel SpamAssassin eklentisi — düşük false positive ile tanınmış",
+    "how": [
+     "GBUdb = Good/Bad/Ugly database",
+     "Message Sniffer projesinin parçası",
+     "Her IP için spam/ham oran istatistiği",
+     "Truncate = eşik üstü olanlar"
+    ],
+    "criteria": "Istatistiksel — tek spamdan dolayı listelemeyen algoritma",
+    "urls": [
+     {
+      "label": "Proje",
+      "url": "http://gbudb.com/truncate/"
+     },
+     {
+      "label": "GBUdb anlam",
+      "url": "http://www.armresearch.com/Support/GBUdb.jsp"
+     }
+    ]
+   }
+  },
+  {
+   "provider_key": "uceprotect_l1",
+   "display_name": "UCEPROTECT Level 1",
+   "category": "dnsbl",
+   "check_method": "dns",
+   "endpoint": "dnsbl-1.uceprotect.net",
+   "requires_key": false,
+   "is_enabled": true,
+   "listed_count": 1,
+   "catalog": {
+    "title": "UCEPROTECT Level 1",
+    "summary": "Direkt spam gönderen tekil IP'ler (en dar kapsam, en güvenilir)",
+    "how": [
+     "UCEPROTECT kendi spamtrap ağından besleniyor",
+     "L1 = spam gönderen bireysel IP",
+     "L2 = aynı /24 içinde tekrarlayan spam (spam comşusu)",
+     "L3 = komple hijacked ASN"
+    ],
+    "criteria": "Sadece Level 1 kullanılır (L2/L3 fazla agresif, false positive riski)",
+    "urls": [
+     {
+      "label": "RBL check",
+      "url": "https://www.uceprotect.net/en/rblcheck.php"
+     },
+     {
+      "label": "Nasıl çalışır",
+      "url": "https://www.uceprotect.net/en/index.php?m=6"
+     }
+    ]
+   }
+  },
+  {
+   "provider_key": "shodan_db",
+   "display_name": "Shodan InternetDB",
+   "category": "exposure",
+   "check_method": "api",
+   "endpoint": "https://internetdb.shodan.io",
+   "requires_key": false,
+   "is_enabled": true,
+   "listed_count": 6,
+   "catalog": {
+    "title": "Shodan InternetDB",
+    "summary": "Shodan'ın ücretsiz lite API'si — IP için açık port/servis/CVE listesi",
+    "how": [
+     "GET https://internetdb.shodan.io/{ip}",
+     "Response: ports, cpes, vulns, hostnames, tags",
+     "Baseline diff: asset'in expected_ports listesine karşı kontrol",
+     "Critical portlar (SSH/RDP/SMB/DB) baseline'da olsa bile alarm kalır (safety net)"
+    ],
+    "criteria": "CVE → critical; hassas port → critical; yeni port → warning; baseline eşleşiyor → clean",
+    "urls": [
+     {
+      "label": "Shodan",
+      "url": "https://www.shodan.io/"
+     },
+     {
+      "label": "InternetDB API",
+      "url": "https://internetdb.shodan.io/"
+     },
+     {
+      "label": "Arama dili",
+      "url": "https://help.shodan.io/the-basics/search-query-fundamentals"
+     }
+    ]
+   }
+  },
+  {
+   "provider_key": "cloudflare_radar",
+   "display_name": "Cloudflare Radar",
+   "category": "routing",
+   "check_method": "link",
+   "endpoint": "https://radar.cloudflare.com",
+   "requires_key": false,
+   "is_enabled": true,
+   "listed_count": 0,
+   "catalog": {
+    "title": "Cloudflare Radar",
+    "summary": "Global internet health + BGP hijack/leak olayları — UI widget olarak link sunuluyor",
+    "how": [
+     "API doğrudan sorgulanmaz (CloudFlare bot koruması)",
+     "Her origin ASN için permalink widget'ı ile manuel canlı takip",
+     "Cloudflare Radar BGP events, ASN comparison, traffic trends gösterir"
+    ],
+    "criteria": "Pasif — alarm üretmez, manuel doğrulama için link",
+    "urls": [
+     {
+      "label": "Radar ana",
+      "url": "https://radar.cloudflare.com/"
+     },
+     {
+      "label": "BGP events",
+      "url": "https://radar.cloudflare.com/routing/"
+     },
+     {
+      "label": "API dokümantasyon",
+      "url": "https://developers.cloudflare.com/radar/"
+     }
+    ]
+   }
+  },
+  {
+   "provider_key": "ripestat",
+   "display_name": "RIPEstat",
+   "category": "routing",
+   "check_method": "api",
+   "endpoint": "https://stat.ripe.net/data",
+   "requires_key": false,
+   "is_enabled": true,
+   "listed_count": 1,
+   "catalog": {
+    "title": "RIPEstat (BGP + RPKI)",
+    "summary": "RIPE NCC'nin ücretsiz routing intel API'si — prefix için BGP origin ASN ve RPKI ROA durumu",
+    "how": [
+     "prefix-overview endpoint'inden origin ASN(ler) ve holder adı",
+     "rpki-validation endpoint'inden ROA durumu (valid/invalid/unknown)",
+     "Holder adında CYBERWEBEYEOS/ORNEK_MUSTERI_A/ORNEK_HOLDING geçenler \"bizim\" — ROA sorumluluğu bizde",
+     "Diğerleri ISP-assigned — ROA sorumluluğu ISP'de, gözlemsel"
+    ],
+    "criteria": "Bizim prefix + RPKI invalid → critical; bizim + unknown → warning; ISP-assigned → clean note",
+    "urls": [
+     {
+      "label": "RIPEstat ana",
+      "url": "https://stat.ripe.net/"
+     },
+     {
+      "label": "Data API docs",
+      "url": "https://stat.ripe.net/docs/02.data-api/"
+     },
+     {
+      "label": "RPKI Validator",
+      "url": "https://rpki-validator.ripe.net/"
+     }
+    ]
+   }
+  },
+  {
+   "provider_key": "talos",
+   "display_name": "Cisco Talos Intelligence",
+   "category": "web_cat",
+   "check_method": "scrape",
+   "endpoint": "https://talosintelligence.com/reputation_center",
+   "requires_key": false,
+   "is_enabled": true,
+   "listed_count": 0,
+   "catalog": {
+    "title": "Cisco Talos Intelligence",
+    "summary": "Cisco firewall/web filter kategori ve reputation — şu an devre dışı (CloudFlare bot koruması)",
+    "how": [
+     "Endpoint: talosintelligence.com/sb_api/query_lookup",
+     "Web kategori: Malware Sites, Phishing, Business/Economy...",
+     "Email/Web/Network skor: Good/Neutral/Poor/Untrusted",
+     "Threat level: Blacklist/Whitelist/Unknown"
+    ],
+    "criteria": "CloudFlare bot koruması arkasında, API anahtarı olmadan erişilemez — UI üzerinden manuel doğrulama linki sunuluyor",
+    "urls": [
+     {
+      "label": "Reputation Center",
+      "url": "https://talosintelligence.com/reputation_center"
+     },
+     {
+      "label": "Blog",
+      "url": "https://blog.talosintelligence.com/"
+     }
+    ]
+   }
+  }
+ ]
+}

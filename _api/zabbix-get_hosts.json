@@ -1,0 +1,126 @@
+{
+ "success": true,
+ "hosts": [
+  {
+   "hostid": "10101",
+   "host": "core-sw-01",
+   "name": "core-sw-01",
+   "status": "0",
+   "main_ip": "198.51.100.21",
+   "group_names": [
+    "Network Devices"
+   ]
+  },
+  {
+   "hostid": "10102",
+   "host": "core-sw-02",
+   "name": "core-sw-02",
+   "status": "0",
+   "main_ip": "198.51.100.22",
+   "group_names": [
+    "Network Devices"
+   ]
+  },
+  {
+   "hostid": "10103",
+   "host": "edge-fw-01",
+   "name": "edge-fw-01",
+   "status": "0",
+   "main_ip": "198.51.100.23",
+   "group_names": [
+    "Firewalls"
+   ]
+  },
+  {
+   "hostid": "10104",
+   "host": "edge-fw-02",
+   "name": "edge-fw-02",
+   "status": "0",
+   "main_ip": "198.51.100.27",
+   "group_names": [
+    "Firewalls"
+   ]
+  },
+  {
+   "hostid": "10105",
+   "host": "lb-01",
+   "name": "lb-01",
+   "status": "0",
+   "main_ip": "198.51.100.24",
+   "group_names": [
+    "Load Balancers"
+   ]
+  },
+  {
+   "hostid": "10106",
+   "host": "wan-router-01",
+   "name": "wan-router-01",
+   "status": "0",
+   "main_ip": "198.51.100.25",
+   "group_names": [
+    "Network Devices"
+   ]
+  },
+  {
+   "hostid": "10107",
+   "host": "access-sw-12",
+   "name": "access-sw-12",
+   "status": "0",
+   "main_ip": "198.51.100.26",
+   "group_names": [
+    "Network Devices"
+   ]
+  },
+  {
+   "hostid": "10108",
+   "host": "access-sw-13",
+   "name": "access-sw-13",
+   "status": "1",
+   "main_ip": "198.51.100.28",
+   "group_names": [
+    "Network Devices"
+   ]
+  },
+  {
+   "hostid": "10109",
+   "host": "app-srv-01.example.internal",
+   "name": "app-srv-01.example.internal",
+   "status": "0",
+   "main_ip": "203.0.113.21",
+   "group_names": [
+    "Servers"
+   ]
+  },
+  {
+   "hostid": "10110",
+   "host": "app-srv-02.example.internal",
+   "name": "app-srv-02.example.internal",
+   "status": "0",
+   "main_ip": "203.0.113.22",
+   "group_names": [
+    "Servers"
+   ]
+  },
+  {
+   "hostid": "10111",
+   "host": "db-srv-01.example.internal",
+   "name": "db-srv-01.example.internal",
+   "status": "0",
+   "main_ip": "203.0.113.31",
+   "group_names": [
+    "Servers"
+   ]
+  },
+  {
+   "hostid": "10112",
+   "host": "backup-srv-01.example.internal",
+   "name": "backup-srv-01.example.internal",
+   "status": "0",
+   "main_ip": "203.0.113.41",
+   "group_names": [
+    "Servers"
+   ]
+  }
+ ],
+ "count": 12
+}

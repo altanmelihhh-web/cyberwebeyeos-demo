@@ -1,0 +1,1 @@
+{"target":{"id":4,"name":"Portal Web (GSLB)","host":"portal.example.internal","port":443,"type":"http","profile":"gslb","tags":"[\"web\",\"gslb\"]","enabled":1,"created_at":1764115200,"notes":"İki veri merkezi arasında GSLB"}}

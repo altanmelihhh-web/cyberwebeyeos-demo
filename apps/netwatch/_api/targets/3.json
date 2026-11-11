@@ -1,0 +1,1 @@
+{"target":{"id":3,"name":"Core DNS Secondary","host":"198.51.100.53","port":53,"type":"dns","profile":"dns_server","tags":"[\"dns\",\"core\"]","enabled":1,"created_at":1764028800,"notes":"İkincil çözümleyici"}}

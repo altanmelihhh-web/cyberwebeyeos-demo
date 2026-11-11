@@ -1,0 +1,6 @@
+{
+ "success": true,
+ "fw_slug": "edge-fw",
+ "cmd": "system_status",
+ "output": "Version: FortiGate-VM64 v7.4.4,build2662,240429 (GA.M)\nVirus-DB: 92.07890(2026-09-02 05:38)\nExtended DB: 92.07890(2026-09-02 05:38)\nIPS-DB: 7.01025(2026-08-30 12:11)\nHostname: fw-edge-02.example.internal\nOperation Mode: NAT\nCurrent virtual domain: root\nSystem time: Wed Sep  2 09:14:22 2026\nUptime: 41 days, 6 hours, 12 minutes\nHA mode: a-p\nHA member: fw-edge-02 (primary), fw-edge-03 (secondary)\n"
+}

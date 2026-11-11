@@ -1,0 +1,10 @@
+{
+ "success": true,
+ "user": {
+  "username": "mehmet.kaya",
+  "name": "Mehmet Kaya",
+  "email": "mehmet.kaya@example.internal",
+  "role": "readonly",
+  "password_changed": true
+ }
+}

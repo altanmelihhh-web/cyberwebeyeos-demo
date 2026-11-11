@@ -1,0 +1,1 @@
+{"test":{"id":44,"target_id":2,"test_type":"tcp","source":"local","status":"ok","started_at":1767147900,"duration_ms":3809,"summary":{"connectMs":12.4},"triggered_by":"manual","raw_output":{"target":"192.0.2.53","type":"tcp","note":"Statik demo: örnek ham çıktı"}}}

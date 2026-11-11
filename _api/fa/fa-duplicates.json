@@ -1,0 +1,135 @@
+{
+ "success": true,
+ "total": 6,
+ "groups": [
+  {
+   "signature": "dup_a1",
+   "details": {
+    "action": "allow",
+    "src": [
+     "grp-lan"
+    ],
+    "dst": [
+     "grp-dmz-web"
+    ],
+    "svc": [
+     "HTTPS"
+    ]
+   },
+   "rule_count": 2,
+   "rule_ids": [
+    "233",
+    "364"
+   ],
+   "ack_state": null
+  },
+  {
+   "signature": "dup_a2",
+   "details": {
+    "action": "allow",
+    "src": [
+     "grp-lan"
+    ],
+    "dst": [
+     "all"
+    ],
+    "svc": [
+     "DNS",
+     "NTP"
+    ]
+   },
+   "rule_count": 3,
+   "rule_ids": [
+    "173",
+    "452",
+    "498"
+   ],
+   "ack_state": null
+  },
+  {
+   "signature": "dup_a3",
+   "details": {
+    "action": "deny",
+    "src": [
+     "grp-guest"
+    ],
+    "dst": [
+     "grp-lan"
+    ],
+    "svc": [
+     "any"
+    ]
+   },
+   "rule_count": 2,
+   "rule_ids": [
+    "275",
+    "239"
+   ],
+   "ack_state": null
+  },
+  {
+   "signature": "dup_a4",
+   "details": {
+    "action": "allow",
+    "src": [
+     "192.0.2.0/24"
+    ],
+    "dst": [
+     "198.51.100.10/32"
+    ],
+    "svc": [
+     "SSH"
+    ]
+   },
+   "rule_count": 2,
+   "rule_ids": [
+    "224",
+    "6"
+   ],
+   "ack_state": null
+  },
+  {
+   "signature": "dup_a5",
+   "details": {
+    "action": "allow",
+    "src": [
+     "grp-dmz-web"
+    ],
+    "dst": [
+     "grp-db"
+    ],
+    "svc": [
+     "MYSQL"
+    ]
+   },
+   "rule_count": 2,
+   "rule_ids": [
+    "13",
+    "255"
+   ],
+   "ack_state": null
+  },
+  {
+   "signature": "dup_a6",
+   "details": {
+    "action": "allow",
+    "src": [
+     "grp-monitoring"
+    ],
+    "dst": [
+     "all"
+    ],
+    "svc": [
+     "PING",
+     "SNMP"
+    ]
+   },
+   "rule_count": 2,
+   "rule_ids": [
+    "301",
+    "302"
+   ],
+   "ack_state": null
+  }
+ ]
+}

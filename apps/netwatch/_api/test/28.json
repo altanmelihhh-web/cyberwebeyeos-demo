@@ -1,0 +1,1 @@
+{"test":{"id":28,"target_id":7,"test_type":"tcp","source":"local","status":"ok","started_at":1767176700,"duration_ms":1265,"summary":{"connectMs":12.4},"triggered_by":"manual","raw_output":{"target":"mail.example.internal","type":"tcp","note":"Statik demo: örnek ham çıktı"}}}

@@ -1,0 +1,57 @@
+{
+ "success": true,
+ "primary_fw": "edge-fw",
+ "secondary_fw": "edge-fw",
+ "summary": {
+  "CRITICAL": 1,
+  "HIGH": 2,
+  "MEDIUM": 2,
+  "LOW": 1
+ },
+ "gaps": {
+  "CRITICAL": [
+   {
+    "gap_type": "missing_in_secondary",
+    "rule_name": "allow-vpn-partner-a",
+    "rule_id_primary": "233",
+    "reason": "Birincil cihazdaki VPN kuralı DR cihazında tanımlı değil; failover sonrası Örnek Müşteri A erişimi kesilir."
+   }
+  ],
+  "HIGH": [
+   {
+    "gap_type": "action_mismatch",
+    "rule_name": "deny-guest-to-lan",
+    "rule_id_primary": "275",
+    "reason": "Birincilde deny, DR'de allow — DR devreye girerse misafir ağı LAN'a erişir."
+   },
+   {
+    "gap_type": "missing_in_secondary",
+    "rule_name": "allow-dmz-web",
+    "rule_id_primary": "239",
+    "reason": "DMZ web yayını DR tarafında yok."
+   }
+  ],
+  "MEDIUM": [
+   {
+    "gap_type": "service_mismatch",
+    "rule_name": "allow-lan-internet",
+    "rule_id_primary": "173",
+    "reason": "Servis listesi farklı: birincilde 14 servis, DR'de 11 servis."
+   },
+   {
+    "gap_type": "logging_mismatch",
+    "rule_name": "allow-db-app",
+    "rule_id_primary": "224",
+    "reason": "Birincilde log açık, DR'de kapalı."
+   }
+  ],
+  "LOW": [
+   {
+    "gap_type": "comment_mismatch",
+    "rule_name": "allow-ntp",
+    "rule_id_primary": "6",
+    "reason": "Yalnızca açıklama alanı farklı."
+   }
+  ]
+ }
+}

@@ -1,0 +1,140 @@
+{
+ "success": true,
+ "logs": [
+  {
+   "id": 15,
+   "created_at": "2026-09-09 16:40:00",
+   "username": "ayse.demir",
+   "environment": "prod",
+   "action": "disable",
+   "target": "node-web-02",
+   "pool": null
+  },
+  {
+   "id": 14,
+   "created_at": "2026-09-09 08:40:00",
+   "username": "mehmet.kaya",
+   "environment": "test",
+   "action": "enable",
+   "target": "node-web-02",
+   "pool": null
+  },
+  {
+   "id": 13,
+   "created_at": "2026-09-09 00:40:00",
+   "username": "zeynep.aydin",
+   "environment": "prod",
+   "action": "force-offline",
+   "target": "node-core-02",
+   "pool": "pool_payment_core_prod"
+  },
+  {
+   "id": 12,
+   "created_at": "2026-09-08 19:40:00",
+   "username": "ayse.demir",
+   "environment": "drc",
+   "action": "disable",
+   "target": "pool_web_portal_prod:80",
+   "pool": "pool_web_portal_prod"
+  },
+  {
+   "id": 11,
+   "created_at": "2026-09-08 11:40:00",
+   "username": "mehmet.kaya",
+   "environment": "prod",
+   "action": "enable",
+   "target": "pool_web_portal_prod:80",
+   "pool": "pool_web_portal_prod"
+  },
+  {
+   "id": 10,
+   "created_at": "2026-09-08 03:40:00",
+   "username": "zeynep.aydin",
+   "environment": "test",
+   "action": "disable",
+   "target": "node-pay-01",
+   "pool": null
+  },
+  {
+   "id": 9,
+   "created_at": "2026-09-07 22:40:00",
+   "username": "ayse.demir",
+   "environment": "prod",
+   "action": "enable",
+   "target": "node-pay-01",
+   "pool": null
+  },
+  {
+   "id": 8,
+   "created_at": "2026-09-07 14:40:00",
+   "username": "mehmet.kaya",
+   "environment": "drc",
+   "action": "force-offline",
+   "target": "node-core-01",
+   "pool": "pool_payment_core_prod"
+  },
+  {
+   "id": 7,
+   "created_at": "2026-09-07 06:40:00",
+   "username": "zeynep.aydin",
+   "environment": "prod",
+   "action": "enable",
+   "target": "node-core-01",
+   "pool": "pool_payment_core_prod"
+  },
+  {
+   "id": 6,
+   "created_at": "2026-09-07 01:40:00",
+   "username": "ayse.demir",
+   "environment": "test",
+   "action": "disable",
+   "target": "node-web-01",
+   "pool": null
+  },
+  {
+   "id": 5,
+   "created_at": "2026-09-06 17:40:00",
+   "username": "mehmet.kaya",
+   "environment": "prod",
+   "action": "enable",
+   "target": "node-web-01",
+   "pool": null
+  },
+  {
+   "id": 4,
+   "created_at": "2026-09-06 09:40:00",
+   "username": "zeynep.aydin",
+   "environment": "drc",
+   "action": "disable",
+   "target": "node-core-02",
+   "pool": null
+  },
+  {
+   "id": 3,
+   "created_at": "2026-09-06 04:40:00",
+   "username": "ayse.demir",
+   "environment": "prod",
+   "action": "force-offline",
+   "target": "pool_pay_core_prod:443",
+   "pool": "pool_pay_core_prod"
+  },
+  {
+   "id": 2,
+   "created_at": "2026-09-05 20:40:00",
+   "username": "mehmet.kaya",
+   "environment": "test",
+   "action": "enable",
+   "target": "pool_pay_core_prod:443",
+   "pool": "pool_pay_core_prod"
+  },
+  {
+   "id": 1,
+   "created_at": "2026-09-05 12:40:00",
+   "username": "zeynep.aydin",
+   "environment": "prod",
+   "action": "disable",
+   "target": "node-web-02",
+   "pool": null
+  }
+ ]
+}

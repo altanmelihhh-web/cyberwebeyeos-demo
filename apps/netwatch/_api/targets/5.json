@@ -1,0 +1,1 @@
+{"target":{"id":5,"name":"ERP Application","host":"erp.example.internal","port":443,"type":"http","profile":"normal","tags":"[\"app\",\"erp\"]","enabled":1,"created_at":1764201600,"notes":"Kurumsal ERP arayüzü"}}

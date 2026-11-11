@@ -1,0 +1,23 @@
+{
+ "success": true,
+ "firewalls": [
+  {
+   "slug": "edge-fw",
+   "name": "Edge Firewall",
+   "is_active": true,
+   "has_key": true
+  },
+  {
+   "slug": "edge-fw-02",
+   "name": "Edge Firewall 02",
+   "is_active": true,
+   "has_key": true
+  },
+  {
+   "slug": "dmz-fw",
+   "name": "DMZ Firewall",
+   "is_active": true,
+   "has_key": true
+  }
+ ]
+}

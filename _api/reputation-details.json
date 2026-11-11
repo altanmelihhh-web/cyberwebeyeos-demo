@@ -1,0 +1,1494 @@
+{
+ "success": true,
+ "data": [
+  {
+   "finding_id": 106,
+   "asset_id": 4,
+   "asset_type": "ip",
+   "asset_value": "192.0.2.25",
+   "owner": "Cyberwebeyeos",
+   "notes": "Giden mail relay",
+   "provider_key": "barracuda",
+   "provider_name": "Barracuda Reputation Block List",
+   "provider_category": "dnsbl",
+   "status": "listed",
+   "severity": "warning",
+   "details": {
+    "return_codes": [
+     "127.0.0.2"
+    ],
+    "decoded": [
+     {
+      "code": "127.0.0.2",
+      "name": "Barracuda reputation: poor",
+      "severity": "warning"
+     }
+    ],
+    "human_reason": "Barracuda reputation: poor",
+    "rating": "fair",
+    "removal_url": "https://www.barracudacentral.org/rbl/removal-request"
+   },
+   "first_seen": "2026-09-07 06:01:00",
+   "last_checked": "2026-09-18 06:10:11",
+   "last_cleared": null,
+   "alert_sent_at": "2026-09-10 07:30:00",
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://www.barracudacentral.org/lookups/lookup-reputation?ip=192.0.2.25"
+  },
+  {
+   "finding_id": 115,
+   "asset_id": 10,
+   "asset_type": "ip",
+   "asset_value": "198.51.100.41",
+   "owner": "Örnek Müşteri A",
+   "notes": "Uzak masaüstü geçidi",
+   "provider_key": "uceprotect_l1",
+   "provider_name": "UCEPROTECT Level 1",
+   "provider_category": "dnsbl",
+   "status": "listed",
+   "severity": "warning",
+   "details": {
+    "return_codes": [
+     "127.0.0.2"
+    ],
+    "decoded": [
+     {
+      "code": "127.0.0.2",
+      "name": "UCEPROTECT L1: tekil IP",
+      "severity": "warning"
+     }
+    ],
+    "human_reason": "UCEPROTECT L1: tekil IP",
+    "rating": "fair",
+    "removal_url": null
+   },
+   "first_seen": "2026-09-04 06:01:00",
+   "last_checked": "2026-09-18 06:10:11",
+   "last_cleared": null,
+   "alert_sent_at": "2026-09-13 07:30:00",
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://www.uceprotect.net/en/rblcheck.php?ipr=198.51.100.41"
+  },
+  {
+   "finding_id": 133,
+   "asset_id": 12,
+   "asset_type": "ip",
+   "asset_value": "203.0.113.15",
+   "owner": "Örnek Müşteri A",
+   "notes": "Kampanya mail sunucusu",
+   "provider_key": "virustotal",
+   "provider_name": "VirusTotal v3 API",
+   "provider_category": "abuse",
+   "status": "listed",
+   "severity": "critical",
+   "details": {
+    "malicious": 4,
+    "suspicious": 2,
+    "total": 92,
+    "reputation": -18,
+    "categories": {
+     "Sophos": "spam",
+     "Forcepoint ThreatSeeker": "bulk email"
+    },
+    "flagged": [
+     {
+      "vendor": "CRDF",
+      "result": "malicious"
+     },
+     {
+      "vendor": "Fortinet",
+      "result": "spam"
+     },
+     {
+      "vendor": "Kaspersky",
+      "result": "spam"
+     },
+     {
+      "vendor": "Spamhaus",
+      "result": "phishing"
+     }
+    ],
+    "firewall_verdicts": {
+     "Fortinet": {
+      "category": "malicious",
+      "result": "spam"
+     }
+    },
+    "vt_permalink": "https://www.virustotal.com/gui/ip-address/203.0.113.15"
+   },
+   "first_seen": "2026-09-04 06:01:00",
+   "last_checked": "2026-09-18 06:10:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://www.virustotal.com/gui/ip-address/203.0.113.15"
+  },
+  {
+   "finding_id": 123,
+   "asset_id": 12,
+   "asset_type": "ip",
+   "asset_value": "203.0.113.15",
+   "owner": "Örnek Müşteri A",
+   "notes": "Kampanya mail sunucusu",
+   "provider_key": "truncate",
+   "provider_name": "Truncate GBUdb",
+   "provider_category": "dnsbl",
+   "status": "listed",
+   "severity": "critical",
+   "details": {
+    "return_codes": [
+     "127.0.0.2"
+    ],
+    "decoded": [
+     {
+      "code": "127.0.0.2",
+      "name": "GBUdb truncate: spam kaynağı",
+      "severity": "warning"
+     }
+    ],
+    "human_reason": "GBUdb truncate: spam kaynağı",
+    "rating": "poor",
+    "removal_url": null
+   },
+   "first_seen": "2026-09-06 06:01:00",
+   "last_checked": "2026-09-18 06:09:11",
+   "last_cleared": null,
+   "alert_sent_at": "2026-09-12 07:30:00",
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "http://www.gbudb.com/truncate/index.jsp?ip=203.0.113.15"
+  },
+  {
+   "finding_id": 132,
+   "asset_id": 12,
+   "asset_type": "ip",
+   "asset_value": "203.0.113.15",
+   "owner": "Örnek Müşteri A",
+   "notes": "Kampanya mail sunucusu",
+   "provider_key": "shodan_db",
+   "provider_name": "Shodan InternetDB",
+   "provider_category": "exposure",
+   "status": "listed",
+   "severity": "critical",
+   "details": {
+    "ports": [
+     25,
+     465,
+     6379
+    ],
+    "vulns": [
+     "CVE-2022-0543"
+    ],
+    "hostnames": [
+     "bulk.example.internal"
+    ],
+    "tags": [],
+    "critical_ports": [
+     6379
+    ],
+    "other_ports": [
+     25,
+     465
+    ],
+    "human_reason": "Redis (6379) internete açık + 1 CVE",
+    "shodan_permalink": "https://www.shodan.io/host/203.0.113.15",
+    "risk": {
+     "score": 62,
+     "severity": "critical",
+     "compliance": [
+      "PCI-DSS 2.2.2",
+      "NIST CM-7",
+      "CIS 4.6"
+     ],
+     "findings": [
+      "Redis (6379) internete açık + 1 CVE"
+     ]
+    }
+   },
+   "first_seen": "2026-09-03 06:01:00",
+   "last_checked": "2026-09-18 06:09:11",
+   "last_cleared": null,
+   "alert_sent_at": "2026-09-15 07:31:00",
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://www.shodan.io/host/203.0.113.15"
+  },
+  {
+   "finding_id": 122,
+   "asset_id": 12,
+   "asset_type": "ip",
+   "asset_value": "203.0.113.15",
+   "owner": "Örnek Müşteri A",
+   "notes": "Kampanya mail sunucusu",
+   "provider_key": "mailspike_bl",
+   "provider_name": "Mailspike Reputation BL",
+   "provider_category": "dnsbl",
+   "status": "listed",
+   "severity": "critical",
+   "details": {
+    "return_codes": [
+     "127.0.0.10"
+    ],
+    "decoded": [
+     {
+      "code": "127.0.0.10",
+      "name": "Mailspike L1: kötü reputation",
+      "severity": "warning"
+     }
+    ],
+    "human_reason": "Mailspike L1: kötü reputation",
+    "rating": "poor",
+    "removal_url": null
+   },
+   "first_seen": "2026-09-05 06:01:00",
+   "last_checked": "2026-09-18 06:08:11",
+   "last_cleared": null,
+   "alert_sent_at": "2026-09-12 07:30:00",
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://mailspike.org/iprep?ip=203.0.113.15"
+  },
+  {
+   "finding_id": 131,
+   "asset_id": 11,
+   "asset_type": "ip",
+   "asset_value": "198.51.100.42",
+   "owner": "Örnek Müşteri A",
+   "notes": "Müşteri VPN uç noktası",
+   "provider_key": "shodan_db",
+   "provider_name": "Shodan InternetDB",
+   "provider_category": "exposure",
+   "status": "listed",
+   "severity": "warning",
+   "details": {
+    "ports": [
+     22,
+     8443
+    ],
+    "vulns": [],
+    "hostnames": [
+     "vpn.example.internal"
+    ],
+    "tags": [
+     "vpn"
+    ],
+    "critical_ports": [],
+    "other_ports": [
+     22,
+     8443
+    ],
+    "human_reason": "Yönetim portu 8443 — baseline kabul edildi",
+    "shodan_permalink": "https://www.shodan.io/host/198.51.100.42",
+    "risk": {
+     "score": 18,
+     "severity": "medium",
+     "compliance": [
+      "CIS 4.6"
+     ],
+     "findings": [
+      "Yönetim portu 8443 — baseline kabul edildi"
+     ]
+    }
+   },
+   "first_seen": "2026-09-02 06:01:00",
+   "last_checked": "2026-09-18 06:08:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://www.shodan.io/host/198.51.100.42"
+  },
+  {
+   "finding_id": 130,
+   "asset_id": 10,
+   "asset_type": "ip",
+   "asset_value": "198.51.100.41",
+   "owner": "Örnek Müşteri A",
+   "notes": "Uzak masaüstü geçidi",
+   "provider_key": "shodan_db",
+   "provider_name": "Shodan InternetDB",
+   "provider_category": "exposure",
+   "status": "listed",
+   "severity": "critical",
+   "details": {
+    "ports": [
+     3389,
+     445,
+     443
+    ],
+    "vulns": [
+     "CVE-2019-0708",
+     "CVE-2020-0796",
+     "CVE-2017-0144"
+    ],
+    "hostnames": [
+     "rdgw.example.internal"
+    ],
+    "tags": [
+     "self-signed"
+    ],
+    "critical_ports": [
+     3389,
+     445
+    ],
+    "other_ports": [
+     443
+    ],
+    "human_reason": "RDP (3389) + SMB (445) internete açık, 3 CVE",
+    "shodan_permalink": "https://www.shodan.io/host/198.51.100.41",
+    "risk": {
+     "score": 95,
+     "severity": "critical",
+     "compliance": [
+      "PCI-DSS 2.2.2",
+      "NIST CM-7",
+      "CIS 4.6"
+     ],
+     "findings": [
+      "RDP (3389) + SMB (445) internete açık, 3 CVE"
+     ]
+    }
+   },
+   "first_seen": "2026-09-07 06:01:00",
+   "last_checked": "2026-09-18 06:07:11",
+   "last_cleared": null,
+   "alert_sent_at": "2026-09-15 07:31:00",
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://www.shodan.io/host/198.51.100.41"
+  },
+  {
+   "finding_id": 120,
+   "asset_id": 12,
+   "asset_type": "ip",
+   "asset_value": "203.0.113.15",
+   "owner": "Örnek Müşteri A",
+   "notes": "Kampanya mail sunucusu",
+   "provider_key": "psbl",
+   "provider_name": "Passive Spam Block List",
+   "provider_category": "dnsbl",
+   "status": "listed",
+   "severity": "critical",
+   "details": {
+    "return_codes": [
+     "127.0.0.2"
+    ],
+    "decoded": [
+     {
+      "code": "127.0.0.2",
+      "name": "Pasif spamtrap tespiti",
+      "severity": "warning"
+     }
+    ],
+    "human_reason": "Pasif spamtrap tespiti",
+    "rating": "poor",
+    "removal_url": null
+   },
+   "first_seen": "2026-09-03 06:01:00",
+   "last_checked": "2026-09-18 06:06:11",
+   "last_cleared": null,
+   "alert_sent_at": "2026-09-12 07:30:00",
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://psbl.org/listing?ip=203.0.113.15"
+  },
+  {
+   "finding_id": 119,
+   "asset_id": 12,
+   "asset_type": "ip",
+   "asset_value": "203.0.113.15",
+   "owner": "Örnek Müşteri A",
+   "notes": "Kampanya mail sunucusu",
+   "provider_key": "spamcop",
+   "provider_name": "SpamCop Blocking List",
+   "provider_category": "dnsbl",
+   "status": "listed",
+   "severity": "critical",
+   "details": {
+    "return_codes": [
+     "127.0.0.2"
+    ],
+    "decoded": [
+     {
+      "code": "127.0.0.2",
+      "name": "SpamCop listelendi",
+      "severity": "warning"
+     }
+    ],
+    "human_reason": "SpamCop listelendi",
+    "rating": "poor",
+    "removal_url": null
+   },
+   "first_seen": "2026-09-02 06:01:00",
+   "last_checked": "2026-09-18 06:05:11",
+   "last_cleared": null,
+   "alert_sent_at": "2026-09-12 07:30:00",
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://www.spamcop.net/w3m?action=checkblock&ip=203.0.113.15"
+  },
+  {
+   "finding_id": 128,
+   "asset_id": 5,
+   "asset_type": "ip",
+   "asset_value": "192.0.2.53",
+   "owner": "Cyberwebeyeos",
+   "notes": "Dış DNS çözümleyici",
+   "provider_key": "shodan_db",
+   "provider_name": "Shodan InternetDB",
+   "provider_category": "exposure",
+   "status": "listed",
+   "severity": "warning",
+   "details": {
+    "ports": [
+     53,
+     123
+    ],
+    "vulns": [],
+    "hostnames": [
+     "ns1.example.internal"
+    ],
+    "tags": [],
+    "critical_ports": [
+     123
+    ],
+    "other_ports": [
+     53
+    ],
+    "human_reason": "NTP (123) UDP amplification riski",
+    "shodan_permalink": "https://www.shodan.io/host/192.0.2.53",
+    "risk": {
+     "score": 50,
+     "severity": "high",
+     "compliance": [
+      "BCP38",
+      "PCI-DSS 2.2.2"
+     ],
+     "findings": [
+      "NTP (123) UDP amplification riski"
+     ]
+    }
+   },
+   "first_seen": "2026-09-05 06:01:00",
+   "last_checked": "2026-09-18 06:05:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://www.shodan.io/host/192.0.2.53"
+  },
+  {
+   "finding_id": 137,
+   "asset_id": 10,
+   "asset_type": "ip",
+   "asset_value": "198.51.100.41",
+   "owner": "Örnek Müşteri A",
+   "notes": "Uzak masaüstü geçidi",
+   "provider_key": "urlhaus",
+   "provider_name": "URLhaus",
+   "provider_category": "abuse",
+   "status": "listed",
+   "severity": "critical",
+   "details": {
+    "url_count": 2,
+    "firstseen": "2026-08-29",
+    "urlhaus_permalink": "https://urlhaus.abuse.ch/host/198.51.100.41/",
+    "human_reason": "Zararlı yazılım dağıtım URL kaydı"
+   },
+   "first_seen": "2026-09-02 06:01:00",
+   "last_checked": "2026-09-18 06:05:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://urlhaus.abuse.ch/host/198.51.100.41/"
+  },
+  {
+   "finding_id": 118,
+   "asset_id": 12,
+   "asset_type": "ip",
+   "asset_value": "203.0.113.15",
+   "owner": "Örnek Müşteri A",
+   "notes": "Kampanya mail sunucusu",
+   "provider_key": "barracuda",
+   "provider_name": "Barracuda Reputation Block List",
+   "provider_category": "dnsbl",
+   "status": "listed",
+   "severity": "critical",
+   "details": {
+    "return_codes": [
+     "127.0.0.2"
+    ],
+    "decoded": [
+     {
+      "code": "127.0.0.2",
+      "name": "Barracuda reputation: poor",
+      "severity": "warning"
+     }
+    ],
+    "human_reason": "Barracuda reputation: poor",
+    "rating": "poor",
+    "removal_url": "https://www.barracudacentral.org/rbl/removal-request"
+   },
+   "first_seen": "2026-09-07 06:01:00",
+   "last_checked": "2026-09-18 06:04:11",
+   "last_cleared": null,
+   "alert_sent_at": "2026-09-12 07:30:00",
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://www.barracudacentral.org/lookups/lookup-reputation?ip=203.0.113.15"
+  },
+  {
+   "finding_id": 127,
+   "asset_id": 4,
+   "asset_type": "ip",
+   "asset_value": "192.0.2.25",
+   "owner": "Cyberwebeyeos",
+   "notes": "Giden mail relay",
+   "provider_key": "shodan_db",
+   "provider_name": "Shodan InternetDB",
+   "provider_category": "exposure",
+   "status": "listed",
+   "severity": "warning",
+   "details": {
+    "ports": [
+     25,
+     587,
+     993,
+     22
+    ],
+    "vulns": [],
+    "hostnames": [
+     "mail.example.internal"
+    ],
+    "tags": [],
+    "critical_ports": [],
+    "other_ports": [
+     25,
+     587,
+     993,
+     22
+    ],
+    "human_reason": "Mail servisleri + SSH (22) açık",
+    "shodan_permalink": "https://www.shodan.io/host/192.0.2.25",
+    "risk": {
+     "score": 25,
+     "severity": "medium",
+     "compliance": [
+      "PCI-DSS 2.2.2",
+      "NIST CM-7"
+     ],
+     "findings": [
+      "Mail servisleri + SSH (22) açık"
+     ]
+    }
+   },
+   "first_seen": "2026-09-04 06:01:00",
+   "last_checked": "2026-09-18 06:04:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://www.shodan.io/host/192.0.2.25"
+  },
+  {
+   "finding_id": 108,
+   "asset_id": 4,
+   "asset_type": "ip",
+   "asset_value": "192.0.2.25",
+   "owner": "Cyberwebeyeos",
+   "notes": "Giden mail relay",
+   "provider_key": "psbl",
+   "provider_name": "Passive Spam Block List",
+   "provider_category": "dnsbl",
+   "status": "listed",
+   "severity": "warning",
+   "details": {
+    "return_codes": [
+     "127.0.0.2"
+    ],
+    "decoded": [
+     {
+      "code": "127.0.0.2",
+      "name": "Pasif spamtrap tespiti",
+      "severity": "warning"
+     }
+    ],
+    "human_reason": "Pasif spamtrap tespiti",
+    "rating": "fair",
+    "removal_url": null
+   },
+   "first_seen": "2026-09-03 06:01:00",
+   "last_checked": "2026-09-18 06:03:11",
+   "last_cleared": null,
+   "alert_sent_at": "2026-09-10 07:30:00",
+   "ack_state": "accepted",
+   "ack_note": "Mail relay — bilinen geçici kayıt, 48 saat izleniyor",
+   "ack_by": "ayse.demir",
+   "ack_at": "2026-09-16 11:05:00",
+   "lookup_url": "https://psbl.org/listing?ip=192.0.2.25"
+  },
+  {
+   "finding_id": 126,
+   "asset_id": 3,
+   "asset_type": "ip",
+   "asset_value": "192.0.2.12",
+   "owner": "Cyberwebeyeos",
+   "notes": "Yönetim erişim noktası",
+   "provider_key": "shodan_db",
+   "provider_name": "Shodan InternetDB",
+   "provider_category": "exposure",
+   "status": "listed",
+   "severity": "warning",
+   "details": {
+    "ports": [
+     22,
+     443
+    ],
+    "vulns": [],
+    "hostnames": [
+     "bastion.example.internal"
+    ],
+    "tags": [],
+    "critical_ports": [],
+    "other_ports": [
+     22,
+     443
+    ],
+    "human_reason": "SSH (22) internete açık — beklenmedik port",
+    "shodan_permalink": "https://www.shodan.io/host/192.0.2.12",
+    "risk": {
+     "score": 20,
+     "severity": "medium",
+     "compliance": [
+      "PCI-DSS 2.2.2",
+      "CIS 4.6"
+     ],
+     "findings": [
+      "SSH (22) internete açık — beklenmedik port"
+     ]
+    }
+   },
+   "first_seen": "2026-09-03 06:01:00",
+   "last_checked": "2026-09-18 06:03:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://www.shodan.io/host/192.0.2.12"
+  },
+  {
+   "finding_id": 107,
+   "asset_id": 4,
+   "asset_type": "ip",
+   "asset_value": "192.0.2.25",
+   "owner": "Cyberwebeyeos",
+   "notes": "Giden mail relay",
+   "provider_key": "spamcop",
+   "provider_name": "SpamCop Blocking List",
+   "provider_category": "dnsbl",
+   "status": "listed",
+   "severity": "warning",
+   "details": {
+    "return_codes": [
+     "127.0.0.2"
+    ],
+    "decoded": [
+     {
+      "code": "127.0.0.2",
+      "name": "SpamCop listelendi",
+      "severity": "warning"
+     }
+    ],
+    "human_reason": "SpamCop listelendi",
+    "rating": "fair",
+    "removal_url": null
+   },
+   "first_seen": "2026-09-02 06:01:00",
+   "last_checked": "2026-09-18 06:02:11",
+   "last_cleared": null,
+   "alert_sent_at": "2026-09-10 07:30:00",
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://www.spamcop.net/w3m?action=checkblock&ip=192.0.2.25"
+  },
+  {
+   "finding_id": 143,
+   "asset_id": 13,
+   "asset_type": "prefix",
+   "asset_value": "198.51.100.0/24",
+   "owner": "Örnek Müşteri A",
+   "notes": "Müşteri A prefix",
+   "provider_key": "ripestat",
+   "provider_name": "RIPEstat",
+   "provider_category": "routing",
+   "status": "listed",
+   "severity": "warning",
+   "details": {
+    "ownership": "ours",
+    "rpki_worst": "unknown",
+    "origin_asns": [
+     {
+      "asn": 64501,
+      "holder": "Ornek Musteri A Network"
+     }
+    ],
+    "human_reason": "RPKI ROA kaydı yok (unknown) — ROA oluşturulması önerilir"
+   },
+   "first_seen": "2026-09-02 06:01:00",
+   "last_checked": "2026-09-18 06:02:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://stat.ripe.net/198.51.100.0/24"
+  },
+  {
+   "finding_id": 124,
+   "asset_id": 1,
+   "asset_type": "ip",
+   "asset_value": "192.0.2.10",
+   "owner": "Cyberwebeyeos",
+   "notes": "Portal web sunucusu (VIP)",
+   "provider_key": "shodan_db",
+   "provider_name": "Shodan InternetDB",
+   "provider_category": "exposure",
+   "status": "clean",
+   "severity": null,
+   "details": {
+    "ports": [],
+    "vulns": [],
+    "note": "Shodan InternetDB kaydı yok"
+   },
+   "first_seen": null,
+   "last_checked": "2026-09-18 06:10:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://www.shodan.io/host/192.0.2.10"
+  },
+  {
+   "finding_id": 142,
+   "asset_id": 6,
+   "asset_type": "prefix",
+   "asset_value": "192.0.2.0/24",
+   "owner": "Cyberwebeyeos",
+   "notes": "Ana genel prefix",
+   "provider_key": "ripestat",
+   "provider_name": "RIPEstat",
+   "provider_category": "routing",
+   "status": "clean",
+   "severity": null,
+   "details": {
+    "ownership": "ours",
+    "rpki_worst": "valid",
+    "origin_asns": [
+     {
+      "asn": 64500,
+      "holder": "Cyberwebeyeos Network"
+     }
+    ]
+   },
+   "first_seen": null,
+   "last_checked": "2026-09-18 06:10:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://stat.ripe.net/192.0.2.0/24"
+  },
+  {
+   "finding_id": 105,
+   "asset_id": 1,
+   "asset_type": "ip",
+   "asset_value": "192.0.2.10",
+   "owner": "Cyberwebeyeos",
+   "notes": "Portal web sunucusu (VIP)",
+   "provider_key": "truncate",
+   "provider_name": "Truncate GBUdb",
+   "provider_category": "dnsbl",
+   "status": "clean",
+   "severity": null,
+   "details": {
+    "return_codes": []
+   },
+   "first_seen": null,
+   "last_checked": "2026-09-18 06:09:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "http://www.gbudb.com/truncate/index.jsp?ip=192.0.2.10"
+  },
+  {
+   "finding_id": 114,
+   "asset_id": 10,
+   "asset_type": "ip",
+   "asset_value": "198.51.100.41",
+   "owner": "Örnek Müşteri A",
+   "notes": "Uzak masaüstü geçidi",
+   "provider_key": "psbl",
+   "provider_name": "Passive Spam Block List",
+   "provider_category": "dnsbl",
+   "status": "clean",
+   "severity": null,
+   "details": {
+    "return_codes": []
+   },
+   "first_seen": null,
+   "last_checked": "2026-09-18 06:09:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://psbl.org/listing?ip=198.51.100.41"
+  },
+  {
+   "finding_id": 141,
+   "asset_id": 15,
+   "asset_type": "domain",
+   "asset_value": "app.example.internal",
+   "owner": "Örnek Müşteri A",
+   "notes": "Uygulama alan adı",
+   "provider_key": "talos",
+   "provider_name": "Cisco Talos Intelligence",
+   "provider_category": "web_cat",
+   "status": "clean",
+   "severity": null,
+   "details": {
+    "category_pretty": "Computers and Internet",
+    "threat_level": "Neutral",
+    "web_score": "Good"
+   },
+   "first_seen": null,
+   "last_checked": "2026-09-18 06:09:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://talosintelligence.com/reputation_center/lookup?search=app.example.internal"
+  },
+  {
+   "finding_id": 104,
+   "asset_id": 1,
+   "asset_type": "ip",
+   "asset_value": "192.0.2.10",
+   "owner": "Cyberwebeyeos",
+   "notes": "Portal web sunucusu (VIP)",
+   "provider_key": "mailspike_bl",
+   "provider_name": "Mailspike Reputation BL",
+   "provider_category": "dnsbl",
+   "status": "clean",
+   "severity": null,
+   "details": {
+    "return_codes": []
+   },
+   "first_seen": null,
+   "last_checked": "2026-09-18 06:08:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://mailspike.org/iprep?ip=192.0.2.10"
+  },
+  {
+   "finding_id": 113,
+   "asset_id": 10,
+   "asset_type": "ip",
+   "asset_value": "198.51.100.41",
+   "owner": "Örnek Müşteri A",
+   "notes": "Uzak masaüstü geçidi",
+   "provider_key": "spamcop",
+   "provider_name": "SpamCop Blocking List",
+   "provider_category": "dnsbl",
+   "status": "clean",
+   "severity": null,
+   "details": {
+    "return_codes": []
+   },
+   "first_seen": null,
+   "last_checked": "2026-09-18 06:08:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://www.spamcop.net/w3m?action=checkblock&ip=198.51.100.41"
+  },
+  {
+   "finding_id": 140,
+   "asset_id": 8,
+   "asset_type": "domain",
+   "asset_value": "mail.example.internal",
+   "owner": "Cyberwebeyeos",
+   "notes": "Mail alan adı",
+   "provider_key": "talos",
+   "provider_name": "Cisco Talos Intelligence",
+   "provider_category": "web_cat",
+   "status": "clean",
+   "severity": null,
+   "details": {
+    "category_pretty": "Business and Industry",
+    "threat_level": "Neutral",
+    "web_score": "Good"
+   },
+   "first_seen": null,
+   "last_checked": "2026-09-18 06:08:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://talosintelligence.com/reputation_center/lookup?search=mail.example.internal"
+  },
+  {
+   "finding_id": 103,
+   "asset_id": 1,
+   "asset_type": "ip",
+   "asset_value": "192.0.2.10",
+   "owner": "Cyberwebeyeos",
+   "notes": "Portal web sunucusu (VIP)",
+   "provider_key": "uceprotect_l1",
+   "provider_name": "UCEPROTECT Level 1",
+   "provider_category": "dnsbl",
+   "status": "clean",
+   "severity": null,
+   "details": {
+    "return_codes": []
+   },
+   "first_seen": null,
+   "last_checked": "2026-09-18 06:07:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://www.uceprotect.net/en/rblcheck.php?ipr=192.0.2.10"
+  },
+  {
+   "finding_id": 112,
+   "asset_id": 10,
+   "asset_type": "ip",
+   "asset_value": "198.51.100.41",
+   "owner": "Örnek Müşteri A",
+   "notes": "Uzak masaüstü geçidi",
+   "provider_key": "barracuda",
+   "provider_name": "Barracuda Reputation Block List",
+   "provider_category": "dnsbl",
+   "status": "clean",
+   "severity": null,
+   "details": {
+    "return_codes": []
+   },
+   "first_seen": null,
+   "last_checked": "2026-09-18 06:07:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://www.barracudacentral.org/lookups/lookup-reputation?ip=198.51.100.41"
+  },
+  {
+   "finding_id": 121,
+   "asset_id": 12,
+   "asset_type": "ip",
+   "asset_value": "203.0.113.15",
+   "owner": "Örnek Müşteri A",
+   "notes": "Kampanya mail sunucusu",
+   "provider_key": "uceprotect_l1",
+   "provider_name": "UCEPROTECT Level 1",
+   "provider_category": "dnsbl",
+   "status": "clean",
+   "severity": null,
+   "details": {
+    "return_codes": []
+   },
+   "first_seen": null,
+   "last_checked": "2026-09-18 06:07:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://www.uceprotect.net/en/rblcheck.php?ipr=203.0.113.15"
+  },
+  {
+   "finding_id": 139,
+   "asset_id": 7,
+   "asset_type": "domain",
+   "asset_value": "portal.example.internal",
+   "owner": "Cyberwebeyeos",
+   "notes": "Portal alan adı",
+   "provider_key": "talos",
+   "provider_name": "Cisco Talos Intelligence",
+   "provider_category": "web_cat",
+   "status": "clean",
+   "severity": null,
+   "details": {
+    "category_pretty": "Computers and Internet",
+    "threat_level": "Neutral",
+    "web_score": "Good"
+   },
+   "first_seen": null,
+   "last_checked": "2026-09-18 06:07:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://talosintelligence.com/reputation_center/lookup?search=portal.example.internal"
+  },
+  {
+   "finding_id": 102,
+   "asset_id": 1,
+   "asset_type": "ip",
+   "asset_value": "192.0.2.10",
+   "owner": "Cyberwebeyeos",
+   "notes": "Portal web sunucusu (VIP)",
+   "provider_key": "psbl",
+   "provider_name": "Passive Spam Block List",
+   "provider_category": "dnsbl",
+   "status": "clean",
+   "severity": null,
+   "details": {
+    "return_codes": []
+   },
+   "first_seen": null,
+   "last_checked": "2026-09-18 06:06:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://psbl.org/listing?ip=192.0.2.10"
+  },
+  {
+   "finding_id": 111,
+   "asset_id": 4,
+   "asset_type": "ip",
+   "asset_value": "192.0.2.25",
+   "owner": "Cyberwebeyeos",
+   "notes": "Giden mail relay",
+   "provider_key": "truncate",
+   "provider_name": "Truncate GBUdb",
+   "provider_category": "dnsbl",
+   "status": "clean",
+   "severity": null,
+   "details": {
+    "return_codes": []
+   },
+   "first_seen": null,
+   "last_checked": "2026-09-18 06:06:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "http://www.gbudb.com/truncate/index.jsp?ip=192.0.2.25"
+  },
+  {
+   "finding_id": 129,
+   "asset_id": 9,
+   "asset_type": "ip",
+   "asset_value": "198.51.100.40",
+   "owner": "Örnek Müşteri A",
+   "notes": "Web sunucusu",
+   "provider_key": "shodan_db",
+   "provider_name": "Shodan InternetDB",
+   "provider_category": "exposure",
+   "status": "clean",
+   "severity": null,
+   "details": {
+    "ports": [],
+    "vulns": [],
+    "note": "Shodan InternetDB kaydı yok"
+   },
+   "first_seen": null,
+   "last_checked": "2026-09-18 06:06:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://www.shodan.io/host/198.51.100.40"
+  },
+  {
+   "finding_id": 138,
+   "asset_id": 12,
+   "asset_type": "ip",
+   "asset_value": "203.0.113.15",
+   "owner": "Örnek Müşteri A",
+   "notes": "Kampanya mail sunucusu",
+   "provider_key": "urlhaus",
+   "provider_name": "URLhaus",
+   "provider_category": "abuse",
+   "status": "clean",
+   "severity": null,
+   "details": {
+    "url_count": 0
+   },
+   "first_seen": null,
+   "last_checked": "2026-09-18 06:06:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://urlhaus.abuse.ch/host/203.0.113.15/"
+  },
+  {
+   "finding_id": 101,
+   "asset_id": 1,
+   "asset_type": "ip",
+   "asset_value": "192.0.2.10",
+   "owner": "Cyberwebeyeos",
+   "notes": "Portal web sunucusu (VIP)",
+   "provider_key": "spamcop",
+   "provider_name": "SpamCop Blocking List",
+   "provider_category": "dnsbl",
+   "status": "clean",
+   "severity": null,
+   "details": {
+    "return_codes": []
+   },
+   "first_seen": null,
+   "last_checked": "2026-09-18 06:05:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://www.spamcop.net/w3m?action=checkblock&ip=192.0.2.10"
+  },
+  {
+   "finding_id": 110,
+   "asset_id": 4,
+   "asset_type": "ip",
+   "asset_value": "192.0.2.25",
+   "owner": "Cyberwebeyeos",
+   "notes": "Giden mail relay",
+   "provider_key": "mailspike_bl",
+   "provider_name": "Mailspike Reputation BL",
+   "provider_category": "dnsbl",
+   "status": "clean",
+   "severity": null,
+   "details": {
+    "return_codes": []
+   },
+   "first_seen": null,
+   "last_checked": "2026-09-18 06:05:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://mailspike.org/iprep?ip=192.0.2.25"
+  },
+  {
+   "finding_id": 100,
+   "asset_id": 1,
+   "asset_type": "ip",
+   "asset_value": "192.0.2.10",
+   "owner": "Cyberwebeyeos",
+   "notes": "Portal web sunucusu (VIP)",
+   "provider_key": "barracuda",
+   "provider_name": "Barracuda Reputation Block List",
+   "provider_category": "dnsbl",
+   "status": "clean",
+   "severity": null,
+   "details": {
+    "return_codes": []
+   },
+   "first_seen": null,
+   "last_checked": "2026-09-18 06:04:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://www.barracudacentral.org/lookups/lookup-reputation?ip=192.0.2.10"
+  },
+  {
+   "finding_id": 109,
+   "asset_id": 4,
+   "asset_type": "ip",
+   "asset_value": "192.0.2.25",
+   "owner": "Cyberwebeyeos",
+   "notes": "Giden mail relay",
+   "provider_key": "uceprotect_l1",
+   "provider_name": "UCEPROTECT Level 1",
+   "provider_category": "dnsbl",
+   "status": "clean",
+   "severity": null,
+   "details": {
+    "return_codes": []
+   },
+   "first_seen": null,
+   "last_checked": "2026-09-18 06:04:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://www.uceprotect.net/en/rblcheck.php?ipr=192.0.2.25"
+  },
+  {
+   "finding_id": 136,
+   "asset_id": 10,
+   "asset_type": "ip",
+   "asset_value": "198.51.100.41",
+   "owner": "Örnek Müşteri A",
+   "notes": "Uzak masaüstü geçidi",
+   "provider_key": "virustotal",
+   "provider_name": "VirusTotal v3 API",
+   "provider_category": "abuse",
+   "status": "clean",
+   "severity": null,
+   "details": {
+    "malicious": 0,
+    "suspicious": 0,
+    "total": 92,
+    "reputation": 0
+   },
+   "first_seen": null,
+   "last_checked": "2026-09-18 06:04:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://www.virustotal.com/gui/ip-address/198.51.100.41"
+  },
+  {
+   "finding_id": 117,
+   "asset_id": 10,
+   "asset_type": "ip",
+   "asset_value": "198.51.100.41",
+   "owner": "Örnek Müşteri A",
+   "notes": "Uzak masaüstü geçidi",
+   "provider_key": "truncate",
+   "provider_name": "Truncate GBUdb",
+   "provider_category": "dnsbl",
+   "status": "clean",
+   "severity": null,
+   "details": {
+    "return_codes": []
+   },
+   "first_seen": null,
+   "last_checked": "2026-09-18 06:03:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "http://www.gbudb.com/truncate/index.jsp?ip=198.51.100.41"
+  },
+  {
+   "finding_id": 135,
+   "asset_id": 4,
+   "asset_type": "ip",
+   "asset_value": "192.0.2.25",
+   "owner": "Cyberwebeyeos",
+   "notes": "Giden mail relay",
+   "provider_key": "virustotal",
+   "provider_name": "VirusTotal v3 API",
+   "provider_category": "abuse",
+   "status": "clean",
+   "severity": null,
+   "details": {
+    "malicious": 0,
+    "suspicious": 0,
+    "total": 92,
+    "reputation": 0
+   },
+   "first_seen": null,
+   "last_checked": "2026-09-18 06:03:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://www.virustotal.com/gui/ip-address/192.0.2.25"
+  },
+  {
+   "finding_id": 144,
+   "asset_id": 14,
+   "asset_type": "prefix",
+   "asset_value": "203.0.113.0/24",
+   "owner": "Örnek Müşteri A",
+   "notes": "Müşteri A yedek prefix",
+   "provider_key": "ripestat",
+   "provider_name": "RIPEstat",
+   "provider_category": "routing",
+   "status": "clean",
+   "severity": null,
+   "details": {
+    "ownership": "ours",
+    "rpki_worst": "valid",
+    "origin_asns": [
+     {
+      "asn": 64501,
+      "holder": "Ornek Musteri A Network"
+     }
+    ]
+   },
+   "first_seen": null,
+   "last_checked": "2026-09-18 06:03:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://stat.ripe.net/203.0.113.0/24"
+  },
+  {
+   "finding_id": 116,
+   "asset_id": 10,
+   "asset_type": "ip",
+   "asset_value": "198.51.100.41",
+   "owner": "Örnek Müşteri A",
+   "notes": "Uzak masaüstü geçidi",
+   "provider_key": "mailspike_bl",
+   "provider_name": "Mailspike Reputation BL",
+   "provider_category": "dnsbl",
+   "status": "clean",
+   "severity": null,
+   "details": {
+    "return_codes": []
+   },
+   "first_seen": null,
+   "last_checked": "2026-09-18 06:02:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://mailspike.org/iprep?ip=198.51.100.41"
+  },
+  {
+   "finding_id": 125,
+   "asset_id": 2,
+   "asset_type": "ip",
+   "asset_value": "192.0.2.11",
+   "owner": "Cyberwebeyeos",
+   "notes": "API ağ geçidi",
+   "provider_key": "shodan_db",
+   "provider_name": "Shodan InternetDB",
+   "provider_category": "exposure",
+   "status": "clean",
+   "severity": null,
+   "details": {
+    "ports": [],
+    "vulns": [],
+    "note": "Shodan InternetDB kaydı yok"
+   },
+   "first_seen": null,
+   "last_checked": "2026-09-18 06:02:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://www.shodan.io/host/192.0.2.11"
+  },
+  {
+   "finding_id": 134,
+   "asset_id": 1,
+   "asset_type": "ip",
+   "asset_value": "192.0.2.10",
+   "owner": "Cyberwebeyeos",
+   "notes": "Portal web sunucusu (VIP)",
+   "provider_key": "virustotal",
+   "provider_name": "VirusTotal v3 API",
+   "provider_category": "abuse",
+   "status": "clean",
+   "severity": null,
+   "details": {
+    "malicious": 0,
+    "suspicious": 0,
+    "total": 92,
+    "reputation": 0
+   },
+   "first_seen": null,
+   "last_checked": "2026-09-18 06:02:11",
+   "last_cleared": null,
+   "alert_sent_at": null,
+   "ack_state": "active",
+   "ack_note": null,
+   "ack_by": null,
+   "ack_at": null,
+   "lookup_url": "https://www.virustotal.com/gui/ip-address/192.0.2.10"
+  }
+ ]
+}

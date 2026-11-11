@@ -1,0 +1,1 @@
+{"target":{"id":2,"name":"Core DNS Primary","host":"192.0.2.53","port":53,"type":"dns","profile":"dns_server","tags":"[\"dns\",\"core\"]","enabled":1,"created_at":1763942400,"notes":"Dahili çözümleyici"}}

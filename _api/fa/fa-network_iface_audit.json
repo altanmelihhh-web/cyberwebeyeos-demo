@@ -1,0 +1,1 @@
+{"success": true, "interfaces": [{"device": "Core Switch", "name": "Gi1/0/1", "status": "up", "vlan": 100}, {"device": "WAN Router", "name": "ge-0/0/0", "status": "up", "description": "Uplink"}]}

@@ -1,0 +1,122 @@
+[
+ {
+  "filename": "backup_prod_20260902.log",
+  "type": "info",
+  "tenant": "prod",
+  "date": "2026-09-02",
+  "size": 48210,
+  "modified": "2026-09-02 08:00:12"
+ },
+ {
+  "filename": "backup_test_20260902.log",
+  "type": "info",
+  "tenant": "test",
+  "date": "2026-09-02",
+  "size": 12044,
+  "modified": "2026-09-02 08:05:41"
+ },
+ {
+  "filename": "backup_prod_error_20260902.log",
+  "type": "error",
+  "tenant": "prod",
+  "date": "2026-09-02",
+  "size": 1822,
+  "modified": "2026-09-02 08:00:30"
+ },
+ {
+  "filename": "backup_prod_20260901.log",
+  "type": "info",
+  "tenant": "prod",
+  "date": "2026-09-01",
+  "size": 49123,
+  "modified": "2026-09-01 08:00:12"
+ },
+ {
+  "filename": "backup_test_20260901.log",
+  "type": "info",
+  "tenant": "test",
+  "date": "2026-09-01",
+  "size": 12421,
+  "modified": "2026-09-01 08:05:41"
+ },
+ {
+  "filename": "backup_prod_20260831.log",
+  "type": "info",
+  "tenant": "prod",
+  "date": "2026-08-31",
+  "size": 50036,
+  "modified": "2026-08-31 08:00:12"
+ },
+ {
+  "filename": "backup_test_20260831.log",
+  "type": "info",
+  "tenant": "test",
+  "date": "2026-08-31",
+  "size": 12798,
+  "modified": "2026-08-31 08:05:41"
+ },
+ {
+  "filename": "backup_prod_20260830.log",
+  "type": "info",
+  "tenant": "prod",
+  "date": "2026-08-30",
+  "size": 50949,
+  "modified": "2026-08-30 08:00:12"
+ },
+ {
+  "filename": "backup_test_20260830.log",
+  "type": "info",
+  "tenant": "test",
+  "date": "2026-08-30",
+  "size": 13175,
+  "modified": "2026-08-30 08:05:41"
+ },
+ {
+  "filename": "backup_prod_error_20260830.log",
+  "type": "error",
+  "tenant": "prod",
+  "date": "2026-08-30",
+  "size": 1942,
+  "modified": "2026-08-30 08:00:30"
+ },
+ {
+  "filename": "backup_prod_20260829.log",
+  "type": "info",
+  "tenant": "prod",
+  "date": "2026-08-29",
+  "size": 51862,
+  "modified": "2026-08-29 08:00:12"
+ },
+ {
+  "filename": "backup_test_20260829.log",
+  "type": "info",
+  "tenant": "test",
+  "date": "2026-08-29",
+  "size": 13552,
+  "modified": "2026-08-29 08:05:41"
+ },
+ {
+  "filename": "backup_prod_20260828.log",
+  "type": "info",
+  "tenant": "prod",
+  "date": "2026-08-28",
+  "size": 52775,
+  "modified": "2026-08-28 08:00:12"
+ },
+ {
+  "filename": "backup_test_20260828.log",
+  "type": "info",
+  "tenant": "test",
+  "date": "2026-08-28",
+  "size": 13929,
+  "modified": "2026-08-28 08:05:41"
+ },
+ {
+  "filename": "backup_prod_error_20260828.log",
+  "type": "error",
+  "tenant": "prod",
+  "date": "2026-08-28",
+  "size": 2022,
+  "modified": "2026-08-28 08:00:30"
+ }
+]

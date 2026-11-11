@@ -1,0 +1,274 @@
+{
+ "success": true,
+ "logs": [
+  {
+   "id": 4800,
+   "user_id": 1,
+   "username": "ayse.demir",
+   "action": "login_success",
+   "details": "Başarılı giriş (parola + TOTP)",
+   "category": "auth",
+   "ip_address": "192.0.2.101",
+   "created_at": "2026-09-18T16:00:00+03:00"
+  },
+  {
+   "id": 4799,
+   "user_id": 3,
+   "username": "zeynep.arslan",
+   "action": "login_failed",
+   "details": "Hatalı parola denemesi (2/5)",
+   "category": "auth",
+   "ip_address": "198.51.100.201",
+   "created_at": "2026-09-18T16:17:29+03:00"
+  },
+  {
+   "id": 4798,
+   "user_id": 1,
+   "username": "ayse.demir",
+   "action": "logout",
+   "details": "Oturum kapatıldı",
+   "category": "auth",
+   "ip_address": "192.0.2.101",
+   "created_at": "2026-09-18T16:34:58+03:00"
+  },
+  {
+   "id": 4797,
+   "user_id": 2,
+   "username": "mehmet.kaya",
+   "action": "user_update",
+   "details": "Kullanıcı yetkileri güncellendi: zeynep.arslan (reputation=true)",
+   "category": "user",
+   "ip_address": "192.0.2.102",
+   "created_at": "2026-09-17T15:51:27+03:00"
+  },
+  {
+   "id": 4796,
+   "user_id": 4,
+   "username": "can.ozturk",
+   "action": "password_change",
+   "details": "Parola değiştirildi",
+   "category": "user",
+   "ip_address": "203.0.113.31",
+   "created_at": "2026-09-17T15:08:56+03:00"
+  },
+  {
+   "id": 4795,
+   "user_id": 1,
+   "username": "ayse.demir",
+   "action": "document_create",
+   "details": "Doküman yüklendi: Core-SW değişiklik prosedürü.pdf",
+   "category": "document",
+   "ip_address": "192.0.2.101",
+   "created_at": "2026-09-17T15:25:25+03:00"
+  },
+  {
+   "id": 4794,
+   "user_id": 2,
+   "username": "mehmet.kaya",
+   "action": "document_delete",
+   "details": "Doküman çöp kutusuna taşındı: eski-topoloji-v1.vsdx",
+   "category": "document",
+   "ip_address": "192.0.2.102",
+   "created_at": "2026-09-16T14:42:54+03:00"
+  },
+  {
+   "id": 4793,
+   "user_id": 3,
+   "username": "zeynep.arslan",
+   "action": "certificate_update",
+   "details": "Sertifika yenileme tarihi güncellendi: portal.example.internal",
+   "category": "certificate",
+   "ip_address": "198.51.100.201",
+   "created_at": "2026-09-16T14:59:23+03:00"
+  },
+  {
+   "id": 4792,
+   "user_id": 1,
+   "username": "ayse.demir",
+   "action": "certificate_create",
+   "details": "Sertifika eklendi: api.example.internal",
+   "category": "certificate",
+   "ip_address": "192.0.2.101",
+   "created_at": "2026-09-16T14:16:52+03:00"
+  },
+  {
+   "id": 4791,
+   "user_id": 2,
+   "username": "mehmet.kaya",
+   "action": "blacklist_add",
+   "details": "Engel listesine eklendi: 203.0.113.77 (tarama kaynağı)",
+   "category": "blacklist",
+   "ip_address": "192.0.2.102",
+   "created_at": "2026-09-15T13:33:21+03:00"
+  },
+  {
+   "id": 4790,
+   "user_id": 4,
+   "username": "can.ozturk",
+   "action": "blacklist_remove",
+   "details": "Engel listesinden çıkarıldı: 198.51.100.200",
+   "category": "blacklist",
+   "ip_address": "203.0.113.31",
+   "created_at": "2026-09-15T13:50:50+03:00"
+  },
+  {
+   "id": 4789,
+   "user_id": 1,
+   "username": "ayse.demir",
+   "action": "ipam_update",
+   "details": "IPAM kaydı güncellendi: 198.51.100.64/26 (VLAN 110)",
+   "category": "ipam",
+   "ip_address": "192.0.2.101",
+   "created_at": "2026-09-15T13:07:19+03:00"
+  },
+  {
+   "id": 4788,
+   "user_id": 2,
+   "username": "mehmet.kaya",
+   "action": "task_create",
+   "details": "Görev oluşturuldu: DYF-142 Core-SW firmware yükseltme",
+   "category": "task",
+   "ip_address": "192.0.2.102",
+   "created_at": "2026-09-14T12:24:48+03:00"
+  },
+  {
+   "id": 4787,
+   "user_id": 3,
+   "username": "zeynep.arslan",
+   "action": "task_update",
+   "details": "Görev durumu değişti: DYF-138 -> Tamamlandı",
+   "category": "task",
+   "ip_address": "198.51.100.201",
+   "created_at": "2026-09-14T12:41:17+03:00"
+  },
+  {
+   "id": 4786,
+   "user_id": 1,
+   "username": "ayse.demir",
+   "action": "settings_update",
+   "details": "Bildirim ayarı güncellendi: alert_email",
+   "category": "settings",
+   "ip_address": "192.0.2.101",
+   "created_at": "2026-09-14T12:58:46+03:00"
+  },
+  {
+   "id": 4785,
+   "user_id": 4,
+   "username": "can.ozturk",
+   "action": "device_create",
+   "details": "Cihaz eklendi: access-sw-12 (198.51.100.26)",
+   "category": "device",
+   "ip_address": "203.0.113.31",
+   "created_at": "2026-09-13T11:15:15+03:00"
+  },
+  {
+   "id": 4784,
+   "user_id": 2,
+   "username": "mehmet.kaya",
+   "action": "backup_download",
+   "details": "Yedek indirildi: core-sw-01_20260901.cfg",
+   "category": "backup",
+   "ip_address": "192.0.2.102",
+   "created_at": "2026-09-13T11:32:44+03:00"
+  },
+  {
+   "id": 4783,
+   "user_id": 3,
+   "username": "zeynep.arslan",
+   "action": "f5_pool_update",
+   "details": "Pool üyesi devre dışı bırakıldı: web-pool / 192.0.2.10:443",
+   "category": "f5",
+   "ip_address": "198.51.100.201",
+   "created_at": "2026-09-13T11:49:13+03:00"
+  },
+  {
+   "id": 4782,
+   "user_id": 1,
+   "username": null,
+   "action": "session_expired",
+   "details": "Oturum zaman aşımı",
+   "category": "system",
+   "ip_address": "192.0.2.101",
+   "created_at": "2026-09-12T10:06:42+03:00"
+  },
+  {
+   "id": 4781,
+   "user_id": 1,
+   "username": "ayse.demir",
+   "action": "reputation_finding_ack_accepted",
+   "details": "Bulgu kabul edildi (192.0.2.25 / PSBL)",
+   "category": "reputation",
+   "ip_address": "192.0.2.101",
+   "created_at": "2026-09-12T10:23:11+03:00"
+  },
+  {
+   "id": 4780,
+   "user_id": 2,
+   "username": "mehmet.kaya",
+   "action": "login_success",
+   "details": "Başarılı giriş (parola + TOTP)",
+   "category": "auth",
+   "ip_address": "192.0.2.102",
+   "created_at": "2026-09-12T10:40:40+03:00"
+  },
+  {
+   "id": 4779,
+   "user_id": 3,
+   "username": "zeynep.arslan",
+   "action": "device_update",
+   "details": "Cihaz bilgisi güncellendi: edge-fw-01 (lokasyon)",
+   "category": "device",
+   "ip_address": "198.51.100.201",
+   "created_at": "2026-09-11T09:57:09+03:00"
+  },
+  {
+   "id": 4778,
+   "user_id": 4,
+   "username": "can.ozturk",
+   "action": "backup_create",
+   "details": "Manuel yedek tetiklendi: wan-router-01",
+   "category": "backup",
+   "ip_address": "203.0.113.31",
+   "created_at": "2026-09-11T09:14:38+03:00"
+  },
+  {
+   "id": 4777,
+   "user_id": 2,
+   "username": "mehmet.kaya",
+   "action": "logout",
+   "details": "Oturum kapatıldı",
+   "category": "auth",
+   "ip_address": "192.0.2.102",
+   "created_at": "2026-09-11T09:31:07+03:00"
+  },
+  {
+   "id": 4776,
+   "user_id": 1,
+   "username": "ayse.demir",
+   "action": "api_token_create",
+   "details": "API token oluşturuldu: monitoring-readonly",
+   "category": "settings",
+   "ip_address": "192.0.2.101",
+   "created_at": "2026-09-10T16:48:36+03:00"
+  }
+ ],
+ "total": 25,
+ "page": 1,
+ "per_page": 50,
+ "total_pages": 1,
+ "categories": [
+  "auth",
+  "backup",
+  "blacklist",
+  "certificate",
+  "device",
+  "document",
+  "f5",
+  "ipam",
+  "reputation",
+  "settings",
+  "system",
+  "task",
+  "user"
+ ]
+}

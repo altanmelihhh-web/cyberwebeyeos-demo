@@ -1,0 +1,16 @@
+{
+ "success": true,
+ "settings": {
+  "enabled": true,
+  "email_recipients": "guvenlik-ekibi@example.internal; ag-operasyon@example.internal",
+  "expire_thresholds": [
+   30,
+   7,
+   3,
+   1
+  ],
+  "notify_undated": true,
+  "notify_undated_interval_days": 7,
+  "_last_undated_notify": "2026-09-08 07:00:00"
+ }
+}

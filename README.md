@@ -35,6 +35,12 @@ Tarayıcı kontrolü: `CWE_PUPPETEER=/path/to/puppeteer-core node tests/demo-fil
 Chrome yolu isteğe bağlı `CWE_CHROME` ile değiştirilebilir. Kontrol gerçek önizlemeleri,
 indirilen dosyaları ve 390/820/1440/1920 px sayfa düzenini doğrular.
 
+F5 Operations ortam seçimi TEST/PROD/DRC için ayrı sentetik node, adres ve pool adları
+gösterir; ortam değişince eski seçimler ve izleme zamanlayıcıları temizlenir.
+Firewall Audit Log arama, cihaz, kullanıcı, işlem, config path, tarih ve oturum filtrelerini
+birlikte uygular. Sayfalama ve CSV/Excel indirme de aynı filtrelenmiş kayıtları kullanır.
+Bu akışların kontrolü: `CWE_PUPPETEER=/path/to/puppeteer-core node tests/demo-operations.browser.cjs [base-url]`.
+
 ## Lisans ve veri
 Lisans: Tüm hakları saklıdır © 2026 Cyberwebeyeos — demo yalnız tanıtım amaçlıdır; kaynak kod özeldir.
 Veri: tamamı sentetik; gerçek cihaz, kişi, adres veya kural içermez.

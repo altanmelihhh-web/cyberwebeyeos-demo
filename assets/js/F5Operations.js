@@ -11,15 +11,34 @@
     };
 
     window.f5SetEnv = function(env, btn) {
-    if (env !== 'test' && env !== F5.env) {
+    if (!window.CWE_STATIC_DEMO && env !== 'test' && env !== F5.env) {
         if (!confirm(env.toUpperCase() + ' ortamina geciyorsunuz. Bu ortamda yapilan islemler gercek sunuculari etkiler. Emin misiniz?')) return;
     }
 
+    if (['test', 'prod', 'drc'].indexOf(env) < 0) return;
+    Object.keys(F5.drainTimers).forEach(function(key) { clearInterval(F5.drainTimers[key]); });
+    F5.currentPool = '';
+    F5.members = [];
+    F5.drainTargets = [];
+    document.querySelectorAll('#f5-operations-page .f5-drain-panel').forEach(function(panel) { panel.classList.remove('active'); });
+    ['f5-member-list', 'f5-ratio-members', 'f5-pool-select', 'f5-pool-loading', 'f5-ratio-loading', 'f5-ratio-custom-members', 'f5-ratio-custom-pool-select', 'f5-ratio-custom-loading'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+    });
+    ['f5-ratio-mode-select', 'f5-ratio-pool-select', 'f5-ratio-custom-app-select'].forEach(function(id) {
+        var el = document.getElementById(id); if (el) el.value = '';
+    });
+    f5RatioModeChange();
+    ['f5-node-sel-count', 'f5-member-sel-count'].forEach(function(id) {
+        var el = document.getElementById(id); if (el) el.textContent = '';
+    });
     F5.env = env;
     document.querySelectorAll('#f5-operations-page .f5-env-btn').forEach(function(b) { b.classList.remove('active'); });
     btn.classList.add('active');
     f5LoadNodes();
     f5LoadPools();
+    f5LoadFavorites();
+    f5LoadAudit();
 
     var page = document.getElementById('f5-operations-page');
     page.classList.remove('f5-env-test', 'f5-env-prod', 'f5-env-drc');
@@ -29,11 +48,12 @@
 
     function api(params, cb) {
         params.env = F5.env;
+        var requestEnv = F5.env;
         var qs = Object.keys(params).map(function(k) { return encodeURIComponent(k) + '=' + encodeURIComponent(params[k]); }).join('&');
         fetch('f5-api.php?' + qs)
             .then(function(r) { return r.json(); })
-            .then(cb)
-            .catch(function() { cb({success: false, error: 'Baglanti hatasi'}); });
+            .then(function(res) { if (F5.env === requestEnv) cb(res); })
+            .catch(function() { if (F5.env === requestEnv) cb({success: false, error: 'Baglanti hatasi'}); });
     }
 
     function apiPost(data, cb) {

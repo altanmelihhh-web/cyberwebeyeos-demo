@@ -2,14 +2,15 @@
  * This page was rendered by the real application; there is no backend here.
  * GET requests to known captured endpoints are answered from files captured
  * at build time. Matching is done by base path, and — for multi-action
- * endpoints — by the "action" query parameter (ignoring other params like
- * pagination/filters, since those vary per real call but our capture is a
- * single fixed snapshot). Anything else returns a 404 JSON payload plus a
+ * endpoints — by the "action" query parameter. F5 views honor the selected
+ * environment; firewall audit supports filters, pagination and exports.
+ * Other captures are fixed snapshots. Anything else returns a 404 payload plus a
  * toast; writes return 403 except the small POST_OK list (simulated success);
  * confirm()/alert()/form submits show a toast.
  * Nothing fails silently.
  */
 (function () {
+  window.CWE_STATIC_DEMO = true;
   // basePath -> captured JSON (used when the request has no action= param,
   // or the endpoint doesn't branch by action)
   var CAPTURED_BARE = {
@@ -253,6 +254,107 @@
       status: status || 200, headers: { 'Content-Type': 'application/json' }
     });
   }
+
+  // Keep environment-dependent F5 views consistent across nodes, pools and favorites.
+  function f5DemoResponse(url) {
+    var env = url.searchParams.get('env') || 'test';
+    if (['test', 'prod', 'drc'].indexOf(env) < 0) return Promise.resolve(jsonResponse({ success: false, error: 'Geçersiz ortam' }, 400));
+    var action = url.searchParams.get('action') || 'get_pools';
+    var captured = CAPTURED_BY_ACTION['f5-api.php::' + action];
+    if (!captured) return null;
+    function poolName(name) { return String(name).replace(/_(?:test|prod|drc)(?=_|$)/g, '_' + env); }
+    function nodeName(name) { return String(name).replace(/^(node-[^:]+)(:.*)?$/, '$1-' + env + '$2'); }
+    function address(value) {
+      return String(value).replace(/^198\.51\.100\./, { test: '192.0.2.', prod: '198.51.100.', drc: '203.0.113.' }[env]);
+    }
+    return realFetch(captured).then(function (r) { return r.json(); }).then(function (data) {
+      data.environment = env;
+      if (data.nodes || data.members) {
+        (data.nodes || data.members).forEach(function (item) {
+          item.name = nodeName(item.name);
+          if (item.address) item.address = address(item.address);
+          if (item.description) item.description = env.toUpperCase() + ' — ' + item.description;
+        });
+      }
+      if (data.pools) {
+        Object.keys(data.pools).forEach(function (app) {
+          var seen = new Set();
+          data.pools[app] = data.pools[app].map(function (pool) {
+            return { name: poolName(pool.name), label: poolName(pool.label) };
+          }).filter(function (pool) {
+            if (seen.has(pool.name)) return false;
+            seen.add(pool.name); return true;
+          });
+        });
+      }
+      if (data.favorites) data.favorites.forEach(function (favorite) {
+        favorite.env = env;
+        favorite.items.forEach(function (item) {
+          item.value = nodeName(item.value);
+          if (item.pool) item.pool = poolName(item.pool);
+        });
+      });
+      if (data.logs) data.logs = data.logs.filter(function (log) {
+        return log.environment === env;
+      }).map(function (log) {
+        log.target = nodeName(poolName(log.target));
+        if (log.pool) log.pool = poolName(log.pool);
+        return log;
+      });
+      return jsonResponse(data);
+    });
+  }
+
+  function firewallAuditResponse(url) {
+    var action = url.searchParams.get('action');
+    if (['get_logs', 'get_stats', 'export_csv', 'export_xlsx'].indexOf(action) < 0) return null;
+    return realFetch('_api/firewall-audit-get_logs.json').then(function (r) { return r.json(); }).then(function (data) {
+      var params = url.searchParams;
+      var all = data.logs || [];
+      var sessions = function (log) { return /^(login|logout)$/i.test(log.action); };
+      if (action === 'get_stats') return jsonResponse({
+        success: true, total: all.length,
+        today: all.filter(function (log) { return log.date === new Date().toLocaleDateString('en-CA'); }).length,
+        config_count: all.filter(function (log) { return !sessions(log); }).length,
+        session_count: all.filter(sessions).length
+      });
+      var lower = function (value) { return String(value || '').toLocaleLowerCase('tr-TR'); };
+      var search = lower(params.get('search'));
+      var logs = all.filter(function (log) {
+        if (params.get('hide_sessions') === '1' && sessions(log)) return false;
+        if (params.get('fw_slug') && log.fw_slug !== params.get('fw_slug')) return false;
+        if (params.get('user') && log.user !== params.get('user')) return false;
+        if (params.get('action_filter') && log.action !== params.get('action_filter')) return false;
+        if (params.get('cfgpath') && lower(log.cfgpath).indexOf(lower(params.get('cfgpath'))) < 0) return false;
+        if (params.get('date_from') && log.date < params.get('date_from')) return false;
+        if (params.get('date_to') && log.date > params.get('date_to')) return false;
+        return !search || ['fw_slug', 'user', 'src_ip', 'ui', 'action', 'cfgpath', 'cfgobj', 'cfgattr', 'msg'].some(function (key) {
+          return lower(log[key]).indexOf(search) >= 0;
+        });
+      }).sort(function (a, b) { return (b.date + ' ' + b.time).localeCompare(a.date + ' ' + a.time) || b.id - a.id; });
+      if (action === 'export_csv' || action === 'export_xlsx') {
+        var fields = ['fw_slug', 'date', 'time', 'user', 'src_ip', 'action', 'cfgpath', 'cfgobj', 'cfgattr', 'msg'];
+        var rows = [fields].concat(logs.map(function (log) { return fields.map(function (key) { return String(log[key] || ''); }); }));
+        var excel = action === 'export_xlsx';
+        var escape = function (value) { return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); };
+        var content = excel ? '<!doctype html><meta charset="utf-8"><table>' + rows.map(function (row) {
+          return '<tr>' + row.map(function (cell) { return '<td>' + escape(cell) + '</td>'; }).join('') + '</tr>';
+        }).join('') + '</table>' : '\uFEFF' + rows.map(function (row) {
+          return row.map(function (cell) { return '"' + cell.replace(/"/g, '""') + '"'; }).join(',');
+        }).join('\r\n');
+        return new Response(content, { status: 200, headers: {
+          'Content-Type': excel ? 'application/vnd.ms-excel; charset=utf-8' : 'text/csv; charset=utf-8',
+          'Content-Disposition': 'attachment; filename="firewall_audit_demo.' + (excel ? 'xls' : 'csv') + '"',
+          'X-Total-Rows': String(logs.length)
+        } });
+      }
+      var perPage = Math.min(500, Math.max(1, parseInt(params.get('per_page'), 10) || 50));
+      var totalPages = Math.max(1, Math.ceil(logs.length / perPage));
+      var page = Math.min(totalPages, Math.max(1, parseInt(params.get('page'), 10) || 1));
+      return jsonResponse({ success: true, total: logs.length, page: page, per_page: perPage,
+        total_pages: totalPages, logs: logs.slice((page - 1) * perPage, page * perPage) });
+    });
+  }
   // Files are real static assets, shared by previews and downloads.
   var manifests = {};
   function files(kind) {
@@ -310,6 +412,12 @@
 
     // Let the browser load actual assets (including binary DOCX/PDF/JPEG files).
     if (!/\.php$/i.test(p.base)) return realFetch(input, init);
+
+    if (method === 'GET' && (p.base === 'f5-api.php' || p.base === 'firewall-audit-api.php')) {
+      var demoUrl = new URL(raw, window.location.href);
+      var demoResponse = p.base === 'f5-api.php' ? f5DemoResponse(demoUrl) : firewallAuditResponse(demoUrl);
+      if (demoResponse) return demoResponse;
+    }
 
     if ((method === 'GET' || method === 'HEAD') &&
         /^(view-document|download-document|get-backup-preview)\.php$/.test(p.base)) {

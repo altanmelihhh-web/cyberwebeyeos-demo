@@ -10,8 +10,10 @@
 
     // Mevcut sayfadaki log kayitlari — detay modalindan erisim icin
     var fwAuditCurrentLogs = [];
+    var fwAuditRequest = 0;
 
     window.loadFirewallAuditLogs = function(page) {
+        var request = ++fwAuditRequest;
         if (page) fwAuditPage = page;
 
         var search = document.getElementById('fw-audit-search').value.trim();
@@ -38,6 +40,7 @@
         fetch('/portal/firewall-audit-api.php?' + params)
             .then(function(r) { return r.json(); })
             .then(function(res) {
+                if (request !== fwAuditRequest) return;
                 if (!res.success) {
                     tbody.innerHTML = '<tr><td colspan="8" class="audit-empty"><i class="fas fa-exclamation-triangle"></i> ' + (res.error || 'Hata olustu') + '</td></tr>';
                     return;
@@ -74,6 +77,7 @@
                 renderFwAuditPagination(res.total);
             })
             .catch(function(err) {
+                if (request !== fwAuditRequest) return;
                 tbody.innerHTML = '<tr><td colspan="8" class="audit-empty"><i class="fas fa-exclamation-triangle"></i> Baglanti hatasi: ' + escapeHtml(err.message) + '</td></tr>';
             });
     };

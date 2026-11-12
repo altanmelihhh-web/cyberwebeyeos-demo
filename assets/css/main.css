@@ -4142,6 +4142,7 @@ body, .card, .sidebar, .main-content {
 .documents-content {
     width: 100% !important;
     max-width: 100% !important;
+    min-width: 0;
     flex: 1 !important;
 }
 
@@ -9293,3 +9294,66 @@ textarea.zbx-form-input { font-family: monospace; resize: vertical; }
 }
 .cli-snap-output.cli-snap-output-error { color: #FCA5A5; }
 .cli-snap-output.cli-snap-output-empty { color: #64748B; font-style: italic; }
+
+/* File browsers occupy the available page height; cards keep a readable size. */
+#documents-page > .documents-layout,
+#backups-page > .documents-layout {
+    height: calc(100dvh - 84px);
+    min-height: 560px;
+}
+#documents-page .folder-tree-panel,
+#backups-page .folder-tree-panel {
+    width: 240px;
+    min-width: 240px;
+}
+#files-grid,
+#backups-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr));
+    align-content: start;
+    min-height: 0;
+}
+#files-grid .document-card,
+#backups-grid .document-card {
+    min-width: 0;
+    height: auto;
+}
+#documents-page .documents-content,
+#backups-page .documents-content {
+    min-height: 0;
+}
+body.dark-mode #documents-page h4,
+body.dark-mode #documents-page .folder-item,
+body.dark-mode #documents-page .document-name,
+body.dark-mode #backups-page h3,
+body.dark-mode #backups-page .folder-item,
+body.dark-mode #backups-grid .backup-file-card > div[title] {
+    color: var(--text-color, #e2e8f0) !important;
+}
+@media (max-width: 768px) {
+    #documents-page > .documents-layout,
+    #backups-page > .documents-layout {
+        height: auto;
+        min-height: calc(100dvh - 130px);
+    }
+    #documents-page .folder-tree-panel,
+    #backups-page .folder-tree-panel {
+        width: 100%;
+        min-width: 0;
+        max-height: 220px;
+        flex-shrink: 0;
+    }
+    #documents-page .documents-content,
+    #backups-page .documents-content {
+        flex: auto !important;
+        overflow: visible;
+    }
+    #documents-page .page-header,
+    #backups-page .page-header {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    #files-grid,
+    #backups-grid {
+        grid-template-columns: repeat(auto-fit, minmax(min(210px, 100%), 1fr));
+    }
+}

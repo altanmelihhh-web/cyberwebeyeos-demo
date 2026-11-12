@@ -48,7 +48,6 @@
     'get-backup-status.php': '_api/get-backup-status.json',
     'get-librenms-health.php': '_api/get-librenms-health.json',
     'librenms-proxy.php': '_api/librenms-clearcache.json',
-    'get-backup-preview.php': '_api/get-backup-preview.json',
     'api/doc-tags.php': '_api/doc-tags.json',
     'api/doc-comments.php': '_api/doc-comments.json',
     'api/doc-favorites.php': '_api/doc-favorites.json',
@@ -56,8 +55,6 @@
     'api/doc-search.php': '_api/doc-search.json',
     'api/classification-rules.php': '_api/classification-rules.json',
     'get-trash.php': '_api/get-trash.json',
-    'view-document.php': '_api/view-document.json',
-    'download-document.php': '_api/view-document.json',
     'api/cert-history.php': '_api/cert-history.json',
     'api/cert-renewal-status.php': '_api/cert-renewal-status.json',
     'api/cert-chain-status.php': '_api/cert-chain-status.json',
@@ -251,6 +248,47 @@
   var norm = function (s) { return String(s || '').toLowerCase().replace(/[^a-z0-9]/g, ''); };
   var realFetch = window.fetch ? window.fetch.bind(window) : null;
 
+  function jsonResponse(data, status) {
+    return new Response(JSON.stringify(data), {
+      status: status || 200, headers: { 'Content-Type': 'application/json' }
+    });
+  }
+  // Files are real static assets, shared by previews and downloads.
+  var manifests = {};
+  function files(kind) {
+    if (!manifests[kind]) {
+      manifests[kind] = realFetch('_api/get-' + kind + '.json').then(function (r) {
+        if (!r.ok) throw new Error('Dosya listesi yüklenemedi');
+        return r.json();
+      }).then(function (data) { return data.documents || data.files || []; });
+    }
+    return manifests[kind];
+  }
+  function findFile(kind, id) {
+    return files(kind).then(function (items) {
+      var file = items.find(function (f) {
+        return String(f.id) === String(id) || f.file_id === id || f.relativePath === id;
+      });
+      if (!file || !file.url) throw new Error('Bu dosya demo kütüphanesinde bulunamadı.');
+      return file;
+    });
+  }
+  window.demoFiles = {
+    download: function (url, name) {
+      var link = document.createElement('a');
+      link.href = url;
+      link.download = name || '';
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+    },
+    downloadBackup: function (id) {
+      return findFile('backups', id).then(function (file) {
+        window.demoFiles.download(file.url, file.name);
+      }).catch(function (err) { toast(err.message); });
+    }
+  };
+
   function parse(url) {
     var full;
     try { full = new URL(url, window.location.href); }
@@ -269,6 +307,24 @@
     var raw = typeof input === 'string' ? input : (input && input.url) || '';
     var p = parse(raw);
     var method = ((init && init.method) || 'GET').toUpperCase();
+
+    // Let the browser load actual assets (including binary DOCX/PDF/JPEG files).
+    if (!/\.php$/i.test(p.base)) return realFetch(input, init);
+
+    if ((method === 'GET' || method === 'HEAD') &&
+        /^(view-document|download-document|get-backup-preview)\.php$/.test(p.base)) {
+      var id = new URL(raw, window.location.href).searchParams.get('id');
+      var isBackup = p.base === 'get-backup-preview.php';
+      return findFile(isBackup ? 'backups' : 'documents', id).then(function (file) {
+        return realFetch(file.url).then(function (r) {
+          if (!r.ok) throw new Error('Dosya yüklenemedi');
+          if (!isBackup) return r;
+          return r.text().then(function (content) {
+            return jsonResponse({ status: 'success', file: file, preview: { type: 'text', content: content } });
+          });
+        });
+      }).catch(function (err) { return jsonResponse({ error: err.message }, 404); });
+    }
 
     if (method !== 'GET' && method !== 'HEAD') {
       var act = p.action, b = init && init.body;
@@ -366,6 +422,28 @@
     e.preventDefault();
     toast('Statik demo — formlar devre dışı. Gerçek işlevi görmek için uygulamayı yerel olarak çalıştırın.');
   }, true);
+
+  // Server-only account actions and reports must not navigate to missing PHP pages.
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest && e.target.closest('a[href]');
+    if (!link) return;
+    var url = new URL(link.href, window.location.href);
+    if (url.origin === window.location.origin && /\.php$/i.test(url.pathname)) {
+      e.preventDefault();
+      toast('Statik demo — bu işlem canlı uygulamada kullanılabilir.');
+    }
+  }, true);
+  var realOpen = window.open.bind(window);
+  window.open = function (url) {
+    if (url) {
+      var target = new URL(url, window.location.href);
+      if (target.origin === window.location.origin && /\.php$/i.test(target.pathname)) {
+        toast('Statik demo — bu rapor veya işlem canlı uygulamada kullanılabilir.');
+        return null;
+      }
+    }
+    return realOpen.apply(window, arguments);
+  };
 
   // Dashboard "Tümünü Gör" düğmeleri switchToTab() çağırır ama kaynakta tanımlı değil; Görevler sekmesini aç
   window.switchToTab = function (id) {

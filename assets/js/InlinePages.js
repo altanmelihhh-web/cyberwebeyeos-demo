@@ -1580,7 +1580,7 @@ function downloadBackupFromPreview() {
 
 // Backup dosyasını indir
 function downloadBackupFile(fileId, fileName) {
-    window.location.href = `download-backup.php?id=${fileId}`;
+    window.demoFiles.downloadBackup(fileId);
 }
 
 // HTML escape

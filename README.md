@@ -23,6 +23,18 @@ Arayüz 390 px (telefon) ve 820 px (tablet) genişlikte yatay kaydırma olmadan 
 Hub'lar, Blacklist, Netwatch, F5 Admin Operations ve blockharbor-demo gibi alt uygulamalar
 iframe ile dış GitHub Pages adreslerinden yüklenir (`apps/` altındaki kopyalar hariç).
 
+## Örnek dosyalar ve bağlantılar
+Dokümanlar bölümünde JPEG ağ topolojisi, DOCX operasyon prosedürü, CSV cihaz envanteri,
+PDF güvenlik politikası, TXT bakım listesi ve JSON adres planı bulunur. Önizleme ve indirme
+aynı gerçek dosyayı kullanır (`assets/documents/`). Backup önizlemeleri ve indirmeleri de
+seçilen cihaza ait sentetik CFG dosyalarını kullanır (`assets/backups/`).
+Faydalı Linkler resmi ürün ve dokümantasyon sayfalarını açar. Sunucu gerektiren hesap
+işlemleri, olmayan PHP sayfalarına gitmek yerine demo açıklaması gösterir.
+
+Tarayıcı kontrolü: `CWE_PUPPETEER=/path/to/puppeteer-core node tests/demo-files.browser.cjs [base-url]`.
+Chrome yolu isteğe bağlı `CWE_CHROME` ile değiştirilebilir. Kontrol gerçek önizlemeleri,
+indirilen dosyaları ve 390/820/1440/1920 px sayfa düzenini doğrular.
+
 ## Lisans ve veri
 Lisans: Tüm hakları saklıdır © 2026 Cyberwebeyeos — demo yalnız tanıtım amaçlıdır; kaynak kod özeldir.
 Veri: tamamı sentetik; gerçek cihaz, kişi, adres veya kural içermez.

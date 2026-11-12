@@ -1735,7 +1735,7 @@ function loadSecurityDashboardCardData(container) {
 
 // Helper function for downloading backups from widget
 function downloadBackup(backupId) {
-    window.location.href = `download-backup.php?id=${backupId}`;
+    window.demoFiles.downloadBackup(backupId);
 }
 
 // ============================================================================

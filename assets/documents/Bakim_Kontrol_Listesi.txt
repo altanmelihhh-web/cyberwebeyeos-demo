@@ -1,0 +1,11 @@
+CYBERWEBEYEOS — BAKIM KONTROL LİSTESİ
+Sentetik demo / 12.11.2026
+
+[ ] Değişiklik kaydı ve bakım zamanı onaylandı.
+[ ] Etkilenecek cihazlar ve servisler belirlendi.
+[ ] Güncel konfigürasyon yedeği indirildi.
+[ ] Yönetim erişimi ve konsol erişimi doğrulandı.
+[ ] Uygulama ve geri dönüş adımları gözden geçirildi.
+[ ] Değişiklik sonrası ping, DNS ve uygulama testleri tamamlandı.
+[ ] İzleme alarmları ve arayüz hata sayaçları kontrol edildi.
+[ ] Yeni yedek alındı, görev kaydı kapatıldı.

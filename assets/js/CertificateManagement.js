@@ -1512,7 +1512,7 @@ function setupCertificateTabs() {
 
 // CSV sablonu indirme fonksiyonu
 function downloadCsvTemplate() {
-    window.location.href = 'download-certificate-template.php';
+    window.demoFiles.download('assets/documents/Sertifika_Sablonu.csv', 'Sertifika_Sablonu.csv');
 }
 
 // Toplu yükleme formu isleme

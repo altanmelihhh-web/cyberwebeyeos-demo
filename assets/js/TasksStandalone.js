@@ -612,7 +612,7 @@ const TasksStandalone = {
 
     viewTask(taskId) {
         console.log('👁️ Görüntüleme:', taskId);
-        window.open(`view-task.php?id=${taskId}`, '_blank');
+        window.open(`_api/preview-task.html?id=${encodeURIComponent(taskId)}`, '_blank');
     },
 
     editTask(taskId) {

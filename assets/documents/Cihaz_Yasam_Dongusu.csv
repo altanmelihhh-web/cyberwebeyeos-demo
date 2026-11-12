@@ -1,0 +1,8 @@
+﻿Cihaz,IP,Üretici,Model,Sürüm,Yaşam Döngüsü
+core-sw-01,198.51.100.21,Cisco,Catalyst 9300,17.6.1,eol_soon
+core-sw-02,198.51.100.22,Cisco,Catalyst 9300,17.6.1,eol_soon
+lb-01,198.51.100.24,F5,BIG-IP i4800,16.1.3,eol_soon
+edge-fw-01,198.51.100.23,Fortinet,FortiGate 200F,7.2.5,ok
+access-sw-12,198.51.100.26,Huawei,S5720,V200R019,eos
+wan-router-01,198.51.100.25,Juniper,MX204,21.4R3,no_data
+dell-sw-05,203.0.113.27,Dell,PowerSwitch S5248F-ON,10.5.4,ok

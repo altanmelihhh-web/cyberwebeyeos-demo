@@ -601,7 +601,7 @@ function refreshOrnekMusteriADYF() {
  * View issue details
  */
 function viewDYFIssue(jiraKey) {
-    window.open(`https://jira.example.com/browse/${jiraKey}`, '_blank');
+    window.open(`_api/preview-task.html?jira=${encodeURIComponent(jiraKey)}`, '_blank');
 }
 
 /**

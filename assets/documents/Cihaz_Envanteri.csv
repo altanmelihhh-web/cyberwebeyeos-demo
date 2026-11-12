@@ -1,0 +1,7 @@
+﻿Cihaz,Üretici,Model,Yönetim IP,Konum,Rol,Durum
+core-sw-01,Cisco,Catalyst 9300,10.64.10.21,Demo DC / Rack A1,Core switch,Aktif
+edge-fw-01,Fortinet,FortiGate 200F,10.64.10.23,Demo DC / Rack A1,Firewall,Aktif
+wan-rtr-01,Cisco,ISR 4331,10.64.10.1,Demo DC / Rack A1,WAN router,Aktif
+access-sw-01,Cisco,Catalyst 9200,10.64.10.31,Demo Ofis / Kat 1,Access switch,Aktif
+lb-01,F5,BIG-IP VE,10.64.10.41,Demo DC / Sanal,Load balancer,Aktif
+monitor-01,LibreNMS,VM,10.64.10.50,Demo DC / Sanal,İzleme,Aktif

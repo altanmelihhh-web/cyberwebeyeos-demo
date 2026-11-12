@@ -1,1 +1,76 @@
-{"status":"success","files":[{"id":1,"file_id":"demo0001","name":"core-sw-01_198.51.100.21_20260901.cfg","category":"network","path":"\/demo\/backups\/core-sw-01.cfg","local_path":null,"size":24576,"size_formatted":null,"extension":null,"modified":"2026-09-02 10:10:04.340955","modified_formatted":"02.09.2026 10:10","synced_at":"2026-09-02 10:10:04.340955","synced_at_formatted":"02.09.2026 10:10","downloaded":false,"download_count":0,"last_downloaded_at":null,"last_downloaded_by":null,"tags":[],"icon":"fa-file"},{"id":2,"file_id":"demo0002","name":"edge-fw-01_198.51.100.23_20260901.cfg","category":"network","path":"\/demo\/backups\/edge-fw-01.cfg","local_path":null,"size":51200,"size_formatted":null,"extension":null,"modified":"2026-09-02 10:10:04.340955","modified_formatted":"02.09.2026 10:10","synced_at":"2026-09-02 10:10:04.340955","synced_at_formatted":"02.09.2026 10:10","downloaded":false,"download_count":0,"last_downloaded_at":null,"last_downloaded_by":null,"tags":[],"icon":"fa-file"}],"total":2,"count":2,"stats":[{"category":"network","0":"network","file_count":2,"1":2,"total_size":"75776","2":"75776"}],"overall_stats":{"total_files":2,"successful_files":2,"empty_files":0,"total_size":75776,"total_size_formatted":"74 KB","category_count":1,"last_backup_date":"2026-09-02 10:10:04.340955","last_1h_count":2},"filters":{"category":"all","search":"","sort":"date_desc"}}
+{
+  "status": "success",
+  "files": [
+    {
+      "id": 1,
+      "file_id": "demo0001",
+      "name": "core-sw-01_198.51.100.21_20260901.cfg",
+      "category": "network",
+      "path": "assets/backups/core-sw-01_198.51.100.21_20260901.cfg",
+      "local_path": null,
+      "size": 546,
+      "size_formatted": "546 B",
+      "extension": "cfg",
+      "modified": "2026-09-02 10:10:04.340955",
+      "modified_formatted": "02.09.2026 10:10",
+      "synced_at": "2026-09-02 10:10:04.340955",
+      "synced_at_formatted": "02.09.2026 10:10",
+      "downloaded": false,
+      "download_count": 0,
+      "last_downloaded_at": null,
+      "last_downloaded_by": null,
+      "tags": [],
+      "icon": "fa-file-code",
+      "url": "assets/backups/core-sw-01_198.51.100.21_20260901.cfg"
+    },
+    {
+      "id": 2,
+      "file_id": "demo0002",
+      "name": "edge-fw-01_198.51.100.23_20260901.cfg",
+      "category": "network",
+      "path": "assets/backups/edge-fw-01_198.51.100.23_20260901.cfg",
+      "local_path": null,
+      "size": 511,
+      "size_formatted": "511 B",
+      "extension": "cfg",
+      "modified": "2026-09-02 10:10:04.340955",
+      "modified_formatted": "02.09.2026 10:10",
+      "synced_at": "2026-09-02 10:10:04.340955",
+      "synced_at_formatted": "02.09.2026 10:10",
+      "downloaded": false,
+      "download_count": 0,
+      "last_downloaded_at": null,
+      "last_downloaded_by": null,
+      "tags": [],
+      "icon": "fa-file-code",
+      "url": "assets/backups/edge-fw-01_198.51.100.23_20260901.cfg"
+    }
+  ],
+  "total": 2,
+  "count": 2,
+  "stats": [
+    {
+      "category": "network",
+      "0": "network",
+      "file_count": 2,
+      "1": 2,
+      "total_size": "1057",
+      "2": "1057"
+    }
+  ],
+  "overall_stats": {
+    "total_files": 2,
+    "successful_files": 2,
+    "empty_files": 0,
+    "total_size": 1057,
+    "total_size_formatted": "1.0 KB",
+    "category_count": 1,
+    "last_backup_date": "2026-09-02 10:10:04.340955",
+    "last_1h_count": 2
+  },
+  "filters": {
+    "category": "all",
+    "search": "",
+    "sort": "date_desc"
+  }
+}

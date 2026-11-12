@@ -1,21 +1,21 @@
 {
- "success": true,
- "query": "ağ",
- "count": 2,
- "results": [
-  {
-   "document_id": "64c178c1cb85cf8863bff630abd8364a",
-   "file_path": "Ag_Sema.pdf",
-   "index_method": "fulltext",
-   "snippet": "... core-sw-01 ve edge-fw-01 arasındaki <b>ağ</b> topolojisi ...",
-   "rank": 0.42
-  },
-  {
-   "document_id": "8203da3f5ed964f0b45f9a51919cbc67",
-   "file_path": "Ornek Dokuman.pdf",
-   "index_method": "fulltext",
-   "snippet": "... <b>ağ</b> erişim politikası ve yedekleme prosedürü ...",
-   "rank": 0.31
-  }
- ]
+  "success": true,
+  "query": "ağ",
+  "count": 2,
+  "results": [
+    {
+      "document_id": "64c178c1cb85cf8863bff630abd8364a",
+      "file_path": "Ag_Topolojisi.jpeg",
+      "index_method": "fulltext",
+      "snippet": "... core-sw-01 ve edge-fw-01 arasındaki <b>ağ</b> topolojisi ...",
+      "rank": 0.42
+    },
+    {
+      "document_id": "8203da3f5ed964f0b45f9a51919cbc67",
+      "file_path": "Ag_Guvenligi_Politikasi.pdf",
+      "index_method": "fulltext",
+      "snippet": "... <b>ağ</b> erişim politikası ve yedekleme prosedürü ...",
+      "rank": 0.31
+    }
+  ]
 }

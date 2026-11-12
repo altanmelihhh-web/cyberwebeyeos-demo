@@ -1,1 +1,83 @@
-{"documents":[{"id":"64c178c1cb85cf8863bff630abd8364a","name":"Ag_Sema.pdf","isDirectory":false,"relativePath":"Ag_Sema.pdf","fullPath":"\/tmp\/claude-0\/-var-www-portal\/836361c6-7edb-4d44-a373-2ab26c47f00f\/scratchpad\/cyberwebeyeos-demo-build\/src\/uploads\/Ag_Sema.pdf","type":"pdf","category":"Diger","size":"21 B","date":"02.09.2026","owner":"Sistem"},{"id":"8203da3f5ed964f0b45f9a51919cbc67","name":"Ornek Dokuman.pdf","isDirectory":false,"relativePath":"Ornek Dokuman.pdf","fullPath":"\/tmp\/claude-0\/-var-www-portal\/836361c6-7edb-4d44-a373-2ab26c47f00f\/scratchpad\/cyberwebeyeos-demo-build\/src\/uploads\/Ornek Dokuman.pdf","type":"pdf","category":"Diger","size":"14 B","date":"02.09.2026","owner":"Sistem"}],"currentPath":"","debug":{"rootExists":true,"rootReadable":true,"currentDir":"\/tmp\/claude-0\/-var-www-portal\/836361c6-7edb-4d44-a373-2ab26c47f00f\/scratchpad\/cyberwebeyeos-demo-build\/src\/uploads","currentDirExists":true,"currentDirReadable":true,"requestedPath":"","mode":"tree"}}
+{
+  "documents": [
+    {
+      "id": "64c178c1cb85cf8863bff630abd8364a",
+      "name": "Ag_Topolojisi.jpeg",
+      "isDirectory": false,
+      "relativePath": "Ag_Topolojisi.jpeg",
+      "path": "Ag_Topolojisi.jpeg",
+      "url": "assets/documents/Ag_Topolojisi.jpeg",
+      "type": "jpeg",
+      "category": "Demo",
+      "size": "161.6 KB",
+      "date": "12.11.2026",
+      "owner": "Demo Sistem"
+    },
+    {
+      "id": "demo-operations-docx",
+      "name": "Ag_Operasyon_Proseduru.docx",
+      "isDirectory": false,
+      "relativePath": "Ag_Operasyon_Proseduru.docx",
+      "path": "Ag_Operasyon_Proseduru.docx",
+      "url": "assets/documents/Ag_Operasyon_Proseduru.docx",
+      "type": "docx",
+      "category": "Demo",
+      "size": "1.8 KB",
+      "date": "12.11.2026",
+      "owner": "Demo Sistem"
+    },
+    {
+      "id": "demo-inventory-csv",
+      "name": "Cihaz_Envanteri.csv",
+      "isDirectory": false,
+      "relativePath": "Cihaz_Envanteri.csv",
+      "path": "Cihaz_Envanteri.csv",
+      "url": "assets/documents/Cihaz_Envanteri.csv",
+      "type": "csv",
+      "category": "Demo",
+      "size": "505 B",
+      "date": "12.11.2026",
+      "owner": "Demo Sistem"
+    },
+    {
+      "id": "8203da3f5ed964f0b45f9a51919cbc67",
+      "name": "Ag_Guvenligi_Politikasi.pdf",
+      "isDirectory": false,
+      "relativePath": "Ag_Guvenligi_Politikasi.pdf",
+      "path": "Ag_Guvenligi_Politikasi.pdf",
+      "url": "assets/documents/Ag_Guvenligi_Politikasi.pdf",
+      "type": "pdf",
+      "category": "Demo",
+      "size": "84.2 KB",
+      "date": "12.11.2026",
+      "owner": "Demo Sistem"
+    },
+    {
+      "id": "demo-maintenance-txt",
+      "name": "Bakim_Kontrol_Listesi.txt",
+      "isDirectory": false,
+      "relativePath": "Bakim_Kontrol_Listesi.txt",
+      "path": "Bakim_Kontrol_Listesi.txt",
+      "url": "assets/documents/Bakim_Kontrol_Listesi.txt",
+      "type": "txt",
+      "category": "Demo",
+      "size": "525 B",
+      "date": "12.11.2026",
+      "owner": "Demo Sistem"
+    },
+    {
+      "id": "demo-addresses-json",
+      "name": "Ag_Adres_Plani.json",
+      "isDirectory": false,
+      "relativePath": "Ag_Adres_Plani.json",
+      "path": "Ag_Adres_Plani.json",
+      "url": "assets/documents/Ag_Adres_Plani.json",
+      "type": "json",
+      "category": "Demo",
+      "size": "702 B",
+      "date": "12.11.2026",
+      "owner": "Demo Sistem"
+    }
+  ],
+  "currentPath": ""
+}

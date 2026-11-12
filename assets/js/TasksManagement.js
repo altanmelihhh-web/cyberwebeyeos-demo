@@ -699,7 +699,7 @@ function createRoadmapRow(task) {
 
 // Is görüntüleme fonksiyonu
 function viewTask(id) {
-  window.open(`view-task.php?id=${id}`, '_blank', 'width=800,height=600');
+  window.open(`_api/preview-task.html?id=${encodeURIComponent(id)}`, '_blank', 'width=800,height=600');
 }
 
 // Silme islemini de düzenle

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Görev Detayı — CyberWebEyeOS Demo</title>
+  <link rel="icon" href="../assets/images/cyberwebeyeos.png" type="image/png">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #0f172a; color: #e2e8f0; font: 15px/1.6 system-ui, sans-serif; padding: 32px 16px; }
+    main { max-width: 900px; margin: auto; background: #172235; padding: 32px; border: 1px solid #334155; border-radius: 16px; }
+    h1 { font-size: 26px; overflow-wrap: anywhere; }
+    .label { color: #38bdf8; font-size: 12px; letter-spacing: 2px; }
+    p { color: #94a3b8; }
+    dl { display: grid; grid-template-columns: minmax(110px, 180px) 1fr; margin-top: 28px; }
+    dt, dd { border-bottom: 1px solid #334155; margin: 0; padding: 12px 0; overflow-wrap: anywhere; white-space: pre-wrap; }
+    dt { color: #94a3b8; padding-right: 16px; }
+    a { color: #38bdf8; }
+    @media(max-width: 480px) { main { padding: 20px; } dl { grid-template-columns: 1fr; } dt { border: 0; padding-bottom: 0; } }
+  </style>
+</head>
+<body><main>
+  <div class="label">CYBERWEBEYEOS / DEMO</div>
+  <h1 id="title">Görev yükleniyor…</h1>
+  <p>Bu görev sentetik demo verisidir.</p>
+  <dl id="details"></dl>
+  <p><a href="../#isler">Görevlere dön</a> · <a href="https://www.atlassian.com/software/jira" target="_blank" rel="noopener noreferrer">Jira resmi sitesi</a></p>
+</main>
+<script>
+(async function () {
+  const params = new URLSearchParams(location.search);
+  const isJira = params.has('jira');
+  try {
+    const response = await fetch(isJira ? 'get-jira-issues.json' : 'get-tasks.json');
+    if (!response.ok) throw new Error('Görev listesi yüklenemedi.');
+    const data = await response.json();
+    const task = isJira ? data.issues.find(t => t.jira_key === params.get('jira')) : data.find(t => t.id === params.get('id'));
+    if (!task) throw new Error('Bu görev demo veri setinde bulunamadı. Görevler sayfasından bir kayıt seçebilirsiniz.');
+    document.getElementById('title').textContent = isJira ? task.jira_key + ' — ' + task.summary : task.record + ' — ' + task.device;
+    const fields = isJira ? [['Kayıt', 'jira_key'], ['Proje', 'project'], ['Şirket', 'company'], ['Durum', 'status'], ['Açıklama', 'summary'], ['Sorumlu', 'assignee_display_name'], ['Oluşturulma', 'created_at'], ['Güncellenme', 'updated_at'], ['CAB onayı', 'cab_approval']] : [['Kayıt', 'record'], ['Cihaz', 'device'], ['Tür', 'type'], ['Durum', 'status'], ['Açıklama', 'description'], ['Gerekçe', 'reason'], ['Kapsam', 'scope'], ['Uygulayan', 'maker'], ['Kontrol eden', 'checker'], ['Tarih', 'dateFormatted'], ['Notlar', 'notes']];
+    for (const [label, key] of fields) {
+      const dt = document.createElement('dt'), dd = document.createElement('dd');
+      dt.textContent = label; dd.textContent = task[key] || '—';
+      document.getElementById('details').append(dt, dd);
+    }
+  } catch (err) { document.getElementById('title').textContent = err.message; }
+})();
+</script>
+</body></html>

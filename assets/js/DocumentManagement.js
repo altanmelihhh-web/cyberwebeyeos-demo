@@ -540,11 +540,11 @@ const DocMgmt = {
     },
 
     _previewPDF(docId, container) {
-        container.innerHTML = '<iframe src="view-document.php?id=' + this.esc(docId) + '" style="width:100%;height:75vh;border:none;border-radius:6px;"></iframe>';
+        container.innerHTML = '<iframe title="PDF önizleme" src="' + this.esc(this._documentUrl(docId)) + '" style="width:100%;height:75vh;border:none;border-radius:6px;"></iframe>';
     },
 
     _previewWord(docId, container) {
-        fetch('view-document.php?id=' + docId)
+        fetch(this._documentUrl(docId))
             .then(r => r.arrayBuffer())
             .then(buf => {
                 const bytes = new Uint8Array(buf);
@@ -597,7 +597,7 @@ const DocMgmt = {
             container.innerHTML = '<div style="text-align:center;padding:60px;color:#e74c3c;"><p>Excel onizleme kutuphanesi yuklu degil</p><button onclick="DocMgmt.downloadDocument(\'' + this.esc(docId) + '\')" style="margin-top:15px;padding:10px 20px;background:#27ae60;color:white;border:none;border-radius:6px;cursor:pointer;"><i class="fas fa-download"></i> Indir</button></div>';
             return;
         }
-        fetch('view-document.php?id=' + docId)
+        fetch(this._documentUrl(docId))
             .then(r => r.arrayBuffer())
             .then(async (data) => {
                 const wb = XLSX.read(data, { type: 'array' });
@@ -739,7 +739,7 @@ const DocMgmt = {
     },
 
     _previewImage(docId, container) {
-        container.innerHTML = '<div style="text-align:center;background:var(--card-bg,white);padding:20px;border-radius:8px;"><img src="view-document.php?id=' + this.esc(docId) + '" style="max-width:100%;max-height:70vh;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,0.1);" onerror="this.parentElement.innerHTML=\'<p style=color:#e74c3c>Resim yuklenemedi</p>\'"></div>';
+        container.innerHTML = '<div style="text-align:center;background:var(--card-bg,white);padding:20px;border-radius:8px;"><img alt="Doküman önizleme" src="' + this.esc(this._documentUrl(docId)) + '" style="max-width:100%;max-height:70vh;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,0.1);" onerror="this.parentElement.innerHTML=\'<p style=color:#e74c3c>Resim yuklenemedi</p>\'"></div>';
     },
 
     _mediaDirectUrl(doc, docId) {
@@ -776,7 +776,7 @@ const DocMgmt = {
     },
 
     _previewText(docId, container) {
-        fetch('view-document.php?id=' + docId)
+        fetch(this._documentUrl(docId))
             .then(r => r.text())
             .then(text => {
                 container.innerHTML = '<div style="background:var(--card-bg,white);padding:20px;border-radius:8px;font-family:monospace;white-space:pre-wrap;line-height:1.5;">' + this.esc(text) + '</div>';
@@ -841,7 +841,7 @@ const DocMgmt = {
     // ============================================================================
     _previewEml(docId, container) {
         const self = this;
-        fetch('view-document.php?id=' + docId)
+        fetch(this._documentUrl(docId))
             .then(r => r.text())
             .then(raw => {
                 const dbl = raw.indexOf('\r\n\r\n') >= 0 ? '\r\n\r\n' : '\n\n';
@@ -954,7 +954,7 @@ const DocMgmt = {
         container.innerHTML = '<div style="text-align:center;padding:40px;color:#3498db;"><i class="fas fa-spinner fa-spin" style="font-size:2em;"></i><p style="margin-top:12px;">ZIP icerigi yukleniyor...</p></div>';
 
         const doLoad = () => {
-            fetch('view-document.php?id=' + docId)
+            fetch(this._documentUrl(docId))
                 .then(r => r.arrayBuffer())
                 .then(buf => JSZip.loadAsync(buf))
                 .then(zip => {
@@ -1036,7 +1036,7 @@ const DocMgmt = {
                 container.innerHTML = '<div style="background:var(--card-bg,white);padding:20px;border-radius:8px;font-family:monospace;white-space:pre-wrap;line-height:1.6;">' + self.esc(text) + '</div>';
             }
         };
-        fetch('view-document.php?id=' + docId)
+        fetch(this._documentUrl(docId))
             .then(r => r.text())
             .then(text => {
                 this._loadScript(
@@ -1055,7 +1055,7 @@ const DocMgmt = {
     // ============================================================================
     _previewRtf(docId, container) {
         const self = this;
-        fetch('view-document.php?id=' + docId)
+        fetch(this._documentUrl(docId))
             .then(r => r.text())
             .then(raw => {
                 const text = raw
@@ -1092,8 +1092,18 @@ const DocMgmt = {
     // ============================================================================
     // DOWNLOAD
     // ============================================================================
+    _documentUrl(docId) {
+        const doc = this.findDocumentById(docId);
+        return doc && doc.url ? doc.url : 'view-document.php?id=' + encodeURIComponent(docId);
+    },
+
     downloadDocument(docId) {
-        window.location.href = 'download-document.php?id=' + docId;
+        const doc = this.findDocumentById(docId);
+        if (doc && doc.url) {
+            window.demoFiles.download(doc.url, doc.name);
+        } else {
+            alert('Bu doküman demo dosya kütüphanesinde bulunamadı.');
+        }
     },
 
     // ============================================================================

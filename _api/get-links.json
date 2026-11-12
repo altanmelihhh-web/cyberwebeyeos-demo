@@ -1,1 +1,78 @@
-{"success":true,"total":3,"links":[{"id":"1","title":"NetBox IPAM","url":"http:\/\/198.51.100.10","category":"Araçlar"},{"id":"2","title":"LibreNMS","url":"http:\/\/198.51.100.11","category":"İzleme"},{"id":"3","title":"Dokümantasyon","url":"https:\/\/example.com\/docs","category":"Referans"}],"debug":["Link dosyasi yolu: \/tmp\/claude-0\/-var-www-portal\/836361c6-7edb-4d44-a373-2ab26c47f00f\/scratchpad\/cyberwebeyeos-demo-build\/src\/links.json","Dosya boyutu: 288 bayt","Ilk 50 karakter: [\n  {&quot;id&quot;: &quot;1&quot;, &quot;title&quot;: &quot;NetBox IPAM&quot;, &quot;url&quot;: &quot;ht","Toplam link sayisi: 3"]}
+{
+  "success": true,
+  "total": 9,
+  "links": [
+    {
+      "id": "1",
+      "title": "NetBox IPAM",
+      "url": "https://netboxlabs.com/",
+      "category": "portal",
+      "description": "IP adres yönetimi ve ağ envanteri — resmi NetBox sitesi",
+      "environment": "public"
+    },
+    {
+      "id": "2",
+      "title": "LibreNMS",
+      "url": "https://www.librenms.org/",
+      "category": "monitoring",
+      "description": "Ağ cihazlarını izleme — resmi LibreNMS sitesi",
+      "environment": "public"
+    },
+    {
+      "id": "3",
+      "title": "NetBox Dokümantasyon",
+      "url": "https://netboxlabs.com/docs/netbox/",
+      "category": "destek",
+      "description": "NetBox kurulum ve kullanım belgeleri",
+      "environment": "public"
+    },
+    {
+      "id": "4",
+      "title": "Wireshark",
+      "url": "https://www.wireshark.org/",
+      "category": "kontrol",
+      "description": "Paket analizi ve resmi indirmeler",
+      "environment": "public"
+    },
+    {
+      "id": "5",
+      "title": "Fortinet Dokümantasyon",
+      "url": "https://docs.fortinet.com/",
+      "category": "destek",
+      "description": "FortiGate / FortiOS ürün belgeleri",
+      "environment": "public"
+    },
+    {
+      "id": "6",
+      "title": "F5 MyF5",
+      "url": "https://my.f5.com/",
+      "category": "destek",
+      "description": "BIG-IP bilgi bankası ve ürün desteği",
+      "environment": "public"
+    },
+    {
+      "id": "7",
+      "title": "Cisco Destek",
+      "url": "https://www.cisco.com/c/en/us/support/index.html",
+      "category": "destek",
+      "description": "Cisco ürün belgeleri ve teknik destek",
+      "environment": "public"
+    },
+    {
+      "id": "8",
+      "title": "Let’s Encrypt",
+      "url": "https://letsencrypt.org/",
+      "category": "sertifika",
+      "description": "ACME ve ücretsiz TLS sertifikaları",
+      "environment": "public"
+    },
+    {
+      "id": "9",
+      "title": "RIPEstat",
+      "url": "https://stat.ripe.net/",
+      "category": "kontrol",
+      "description": "IP ve ASN yönlendirme bilgileri",
+      "environment": "public"
+    }
+  ]
+}
